@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.slider-frame{
+    width: 300%;
+    height: auto;
+    margin:  0;
+    overflow: hidden;
+}
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: auto;  
+}
+
+.slider-frame li {
+  list-style: none;
+  width: 100%;
+    
+}
+
+.slider-frame img{
+    width: 100%;
+}
+
+.flechasCarrusel{
+    position: absolute;
+    top: 0;
+    height: 10%;
+    width: 10%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    
+    
+}

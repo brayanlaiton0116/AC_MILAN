@@ -1,0 +1,29 @@
+.container{
+    background-color: #ff0000;
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+
+
+}
+
+img {
+    width: 35px;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 17px;
+    align-items: center;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+

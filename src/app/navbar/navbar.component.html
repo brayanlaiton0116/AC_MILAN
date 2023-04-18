@@ -1,0 +1,54 @@
+<nav class="container">
+    
+    <ul>
+      
+      <li>
+        <a  href=""><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
+      </li> 
+         
+        <li>
+          <a href=""> HOME </a>
+        </li>
+
+        <li>
+          <a href="">SHOP</a>
+        </li>
+
+        <li>
+          <a href="">THE CLUB</a>
+        </li>
+
+      </ul>
+      
+      <ul>
+        <li>
+          <a href=""><img src="./assets/img/Logo.png" alt="Logo"></a>
+        </li> 
+      </ul>
+
+      <ul>
+        <li>
+          <a href=""><img src="./assets/img/Vector.png" alt="Buscador" (click) ="menu=!menu"></a>
+        </li>
+     
+
+        <li>
+          <a href="">Login</a>
+        </li>
+
+        <li>
+          <a href="">Registrar</a>
+        </li>
+
+      </ul>
+ 
+
+
+
+  </nav>              
+  
+  <div *ngIf="menu" style="background-color: #1A161A";>
+        <a href="">NEWS</a>
+        <a href="">FANS</a>
+        <a href="">ACADEMY</a>
+  </div>
