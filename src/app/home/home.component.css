@@ -8,7 +8,7 @@ div img{
     
     background-position: auto;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 650px;
     width: 100%;
 
 }
@@ -32,13 +32,13 @@ button span{
     height: 120px;
     width: 100%;
     padding: 20px;
-    object-fit: cover;
+    
 }
 a img{
     height: 90px;
     width: 100%;
-    margin: 10px;
-    padding: 20px;
+    margin: 1px;
+    padding: 14px;
     object-fit: cover;
    
 }
