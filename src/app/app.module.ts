@@ -12,7 +12,8 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     HomeComponent,
     FooterComponent,
- 
+
+
     
   ],
   imports: [
