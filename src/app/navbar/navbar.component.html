@@ -1,6 +1,6 @@
-<nav class="container">
+<nav class="navbar">
     
-    <ul>
+    <ul class="menu_izquierda">
       
       <li>
         <a  href=""><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
@@ -20,15 +20,15 @@
 
       </ul>
       
-      <ul>
+      <ul class="menu_centro">
         <li>
           <a href=""><img src="./assets/img/Logo.png" alt="Logo"></a>
         </li> 
       </ul>
 
-      <ul>
+      <ul class="menu_derecha">
         <li>
-          <a href=""><img src="./assets/img/Vector.png" alt="Buscador" (click) ="menu=!menu"></a>
+          <a href=""><img src="./assets/img/Vector.png" alt="Buscador"></a>
         </li>
      
 
@@ -47,7 +47,7 @@
 
   </nav>              
   
-  <div *ngIf="menu" style="background-color: #1A161A";>
+  <div class="menu_lateral"   *ngIf="menu" ;>
         <a href="">NEWS</a>
         <a href="">FANS</a>
         <a href="">ACADEMY</a>

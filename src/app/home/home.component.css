@@ -2,37 +2,43 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
-.slider-frame{
-    width: 300%;
-    height: auto;
-    margin:  0;
-    overflow: hidden;
-}
-.slider-frame ul {
-    display: flex;
-    padding: 0;
-    width: auto;  
-}
-
-.slider-frame li {
-  list-style: none;
-  width: 100%;
+div img{
     
-}
-
-.slider-frame img{
+    background-position: auto;
+    background-repeat: no-repeat;
+    height: 600px;
     width: 100%;
+
 }
 
-.flechasCarrusel{
-    position: absolute;
-    top: 0;
-    height: 10%;
-    width: 10%;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    
-    
+.carousel-inner{
+    display: flex;
+    background-position: auto;
+    background-color: #1A161A;
+}
+
+
+button span{
+    background-color: #1A161A;
+    background-position: absolute;
+}
+
+.logos{
+    margin: 10px;
+    display: flex;
+    background-position: auto;
+    height: 120px;
+    width: 100%;
+    padding: 20px;
+    object-fit: cover;
+}
+a img{
+    height: 90px;
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    object-fit: cover;
+   
 }

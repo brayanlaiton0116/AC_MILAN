@@ -1,16 +1,17 @@
-.container{
-    background-color: #ff0000;
+.navbar{
+    background-color: #AE0000;
     display:flex;
     justify-content: space-between;
-    width: 100%;
     align-items: center;
-
-
+    margin: auto;
+   
+  
 }
 
 img {
-    width: 35px;
-
+    width: 40px;
+    justify-content: center;
+   
 }
 
 ul{
@@ -18,12 +19,32 @@ ul{
     display: flex;
     gap: 17px;
     align-items: center;
+    
+}
 
+.menu_izquierda{
+    margin: 15px;
+    display: flex;
+}
+
+.menu_centro{
+    margin: auto;
+    justify-content: center;
+    
+}
+.menu_derecha{
+    margin: 17px;
 }
 
 a{
     text-decoration: none;
     color: white;
+    
 }
+
+.menu_lateral{
+    position: absolute;
+}
+
 
 
