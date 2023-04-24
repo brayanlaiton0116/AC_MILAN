@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
 export class LoginComponent {
 
   persona={
-  email: new FormControl (''),
-  password: new FormControl (''),
+  email: '',
+  password:'' ,
   
 };
 
