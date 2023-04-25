@@ -3,11 +3,11 @@
     <ul class="menu_izquierda">
       
       <li>
-        <a  href=""><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
+        <a  routerlink="" ><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
       </li> 
          
         <li>
-          <a href=""> HOME </a>
+          <a href="http://localhost:4200/home"> HOME </a>
         </li>
 
         <li>
@@ -33,11 +33,11 @@
      
 
         <li>
-          <a href="">Login</a>
+          <a href="http://localhost:4200/login">Login</a>
         </li>
 
         <li>
-          <a href="">Registrar</a>
+          <a href="http://localhost:4200/registro">Registrar</a>
         </li>
 
       </ul>
@@ -47,7 +47,7 @@
 
   </nav>              
   
-  <div class="menu_lateral"   *ngIf="menu" ;>
+  <div class="menu_lateral" *ngIf="menu";>
         <a href="">NEWS</a>
         <a href="">FANS</a>
         <a href="">ACADEMY</a>
