@@ -8,11 +8,15 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
-  persona={
+  persona = {  
   email: '',
   password:'' ,
+  };
+
+  procesar(){
+      console.log(this.persona);
+  }
   
 };
 
 
-}

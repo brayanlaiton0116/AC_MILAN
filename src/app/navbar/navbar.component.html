@@ -3,52 +3,53 @@
     <ul class="menu_izquierda">
       
       <li>
-        <a  routerlink="" ><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
+        <a  href="#" ><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
       </li> 
          
-        <li>
-          <a href="http://localhost:4200/home"> HOME </a>
+        <li>   
+          <a [routerLink]="['/home']"> HOME </a>
         </li>
 
         <li>
-          <a href="">SHOP</a>
+          <a href="#">SHOP</a>
         </li>
 
         <li>
-          <a href="">THE CLUB</a>
+          <a href="#">THE CLUB</a>
         </li>
 
       </ul>
       
       <ul class="menu_centro">
         <li>
-          <a href=""><img src="./assets/img/Logo.png" alt="Logo"></a>
+          <a href="#"><img src="./assets/img/Logo.png" alt="Logo"></a>
         </li> 
       </ul>
 
       <ul class="menu_derecha">
         <li>
-          <a href=""><img src="./assets/img/Vector.png" alt="Buscador"></a>
+          <a> <img src="./assets/img/Vector.png" alt="Buscador"></a>
         </li>
      
 
         <li>
-          <a href="http://localhost:4200/login">Login</a>
+        
+          <a [routerLink] = "['/login']" > Login </a>
         </li>
 
         <li>
-          <a href="http://localhost:4200/registro">Registrar</a>
+          <a [routerLink]="['/registro']" >Registrar</a>
         </li>
-
       </ul>
- 
-
-
-
   </nav>              
   
-  <div class="menu_lateral" *ngIf="menu";>
-        <a href="">NEWS</a>
-        <a href="">FANS</a>
-        <a href="">ACADEMY</a>
+  <div class="menu" *ngIf="menu">
+    <ul>
+      <li>
+        <a [routerLink]="['#']">NEWS</a>
+        <a [routerLink]="['#']">FANS</a>
+        <a [routerLink]="['#']">ACADEMY</a>
+      </li>
+    </ul>
   </div>
+  

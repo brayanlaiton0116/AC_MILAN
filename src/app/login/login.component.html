@@ -1,5 +1,3 @@
-<app-navbar></app-navbar>
-
 <section class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -15,31 +13,31 @@
                   <h4 class="mt-2 mb-5 pb-1">Welcome back, milanista</h4>
                 </div>
 
-                <form>
+                <form (ngSubmit)="procesar()">
                   
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example22">Email</label>
-                    <input type="email"  id="form2Example11" class="form-control"
-                      placeholder="Enter your email"/>
+                    <input type="email" name="email"  id="form2Example11" class="form-control"
+                      placeholder="Enter your email" [(ngModel)]="persona.email" required #email="ngModel"/>
                     <label class="form-label" for="form2Example11"></label>
                   </div>
 
                   <div class="form-outline mb-4">
                     <label class="form-label" for="form2Example22">Password</label>
-                    <input type="password"  id="form2Example22" class="form-control"   
-                    placeholder="Enter your password"/>
+                    <input type="password" name="password"  id="form2Example22" class="form-control"   
+                    placeholder="Enter your password" [(ngModel)]="persona.password" required #password="ngModel"/>
                     
                   </div>
 
                   <div class="text-center pt-1 mb-5 pb-1">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" style="width: 150px; height: 60px;">Log
-                      in</button>
+                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" style="width: 150px; height: 60px;">
+                      Log in</button>
                   </div>
 
                   <div class="d-flex align-items-center justify-content-center pb-4">
                     <p class="mb-0 me-2">Not registerred yet?</p>
 
-                    <a type="button" class="btn btn-outline-danger" href="http://localhost:4200/registro" target= "_blank" >Sign up</a>
+                    <a type="button" class="btn btn-outline-danger" [routerLink]="['/registro']" >Sign up</a>
                   </div>
 
                 </form>

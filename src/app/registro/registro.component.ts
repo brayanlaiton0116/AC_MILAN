@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class RegistroComponent {
 
+  usuario = {
+    UserName:'',
+    Name:'',
+    LastName: '',
+    Password:'',
+    
+  }
+  proceso(){
+    console.log(this.usuario)
+  }
+
 }

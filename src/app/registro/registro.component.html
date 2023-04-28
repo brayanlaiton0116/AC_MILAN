@@ -1,4 +1,3 @@
-<app-navbar></app-navbar>
 
 <section class="h-100 gradient-form" style="background-color: #eee;">
   <div class="container py-5 h-100">
@@ -8,57 +7,46 @@
           <div class="row g-0">
             <div class="col-lg-6">
               <div class="card-body p-md-5 mx-md-4">
-                
                 <div class="text-center">
                   <img src="./assets/img/Logo.png"
                     style="width: 45px; margin: 16px"  alt="logo">
                   <h4 class="mt-2 mb-5 pb-1">CREATE AN ACCOUNT </h4>
                 </div>
 
-                <form>
-                    <p>UserName (Email)</p>
+                <form (ngSubmit)="proceso()">
+                    
                     <div class="form-outline mb-3">
-                    <input type="email" id="form2Example11" class="form-control" placeholder="Enter your Email"/>
-                    <label class="form-label" for="form2Example11"></label>
+                      <label class="form-label" for="form2Example11">UserName</label>
+                      <input type="email" id="form2Example11" class="form-control" placeholder="Enter your Email" [(ngModel)]="usuario.UserName" required #UserName="ngModel"/>
                     </div>
 
-                  <p>Name</p>
                   <div class="form-outline mb-3">
+                    <label class="form-label" for="form2Example11">Name</label>
                     <input type="text" id="form2Example11" class="form-control"
-                      placeholder="Enter your name"/>
-                    <label class="form-label" for="form2Example11"></label>
-                  </div>
+                      placeholder="Enter your name" [(ngModel)]="usuario.Name" required #Name="ngModel"/>
+                   </div>
 
-                  <p>Last Name</p>
                   <div class="form-outline mb-3">
+                    <label class="form-label" for="form2Example11">LastName</label>
                     <input type="text" id="form2Example11" class="form-control"
-                      placeholder="Enter your Last name"/>
-                    <label class="form-label" for="form2Example11"></label>
-                  </div>
+                      placeholder="Enter your Last name" [(ngModel)]="usuario.LastName" required #LastName="ngModel"/>
+                   </div>
 
                   <div class="form-outline mb-5">
-                    <label class="form-label" for="form2Example22">Password</label>
+                    <label class="form-label" for="form2Example22"></label>
                     <input type="password" id="form2Example22" class="form-control"   
-                    placeholder="Enter your password" />
+                    placeholder="Enter your password" [(ngModel)]="usuario.Password" required #Password="ngModel"/>   
                   </div>
 
-                  <div class="form-outline mb-5">
-                    <label class="form-label" for="form2Example22">Password Confirmation</label>
-                    <input type="password" id="form2Example22" class="form-control"   
-                    placeholder="Enter your password confirmation" />
-                  </div>
-
-                  <div class="text-center pt-1 mb-5 pb-1">
+                    <div class="text-center pt-1 mb-5 pb-1">
                     <button class="btn btn-outline-danger" type="button" style="width: 150px; height: 60px;">
                         Register</button>
                     </div>                                           
-                   
-                   
-
-                  <div class="d-flex align-items-center justify-content-center ">
+                        
+                 <div class="d-flex align-items-center justify-content-center ">
                     <p class="mb-0 me-2">Have already an account?</p>
                 
-                    <a type="button" class="btn btn-outline-danger" style="width: 90px; height: 60px;" href="http://localhost:4200/login" target= "_blank">Login here</a>
+                    <a type="button" class="btn btn-outline-danger" style="width: 90px; height: 60px;" [routerLink]="['/login']" >Login here</a>
                   </div>
 
                 </form>
