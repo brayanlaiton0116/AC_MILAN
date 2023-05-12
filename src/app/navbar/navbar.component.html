@@ -1,55 +1,58 @@
 <nav class="navbar">
     
-    <ul class="menu_izquierda">
-      
-      <li>
-        <a  href="#" ><img src="assets/img/menu.png" (click) ="menu=!menu"></a>
-      </li> 
-         
-        <li>   
-          <a [routerLink]="['/home']"> HOME </a>
-        </li>
-
-        <li>
-          <a href="#">SHOP</a>
-        </li>
-
-        <li>
-          <a href="#">THE CLUB</a>
-        </li>
-
-      </ul>
-      
-      <ul class="menu_centro">
-        <li>
-          <a href="#"><img src="./assets/img/Logo.png" alt="Logo"></a>
-        </li> 
-      </ul>
-
-      <ul class="menu_derecha">
-        <li>
-          <a> <img src="./assets/img/Vector.png" alt="Buscador"></a>
-        </li>
-     
-
-        <li>
+  <div class="menu_izquierda">
         
-          <a [routerLink] = "['/login']" > Login </a>
-        </li>
-
-        <li>
-          <a [routerLink]="['/registro']" >Registrar</a>
-        </li>
-      </ul>
-  </nav>              
-  
-  <div class="menu" *ngIf="menu">
-    <ul>
+    <div class="menu_d">
+          <a (click) ="menu=!menu"><img src="assets/img/menu.png" ></a>
+    </div>       
+      
+      <li>   
+        <a [routerLink]="['/home']"> HOME </a>
+      </li>
       <li>
-        <a [routerLink]="['#']">NEWS</a>
-        <a [routerLink]="['#']">FANS</a>
-        <a [routerLink]="['#']">ACADEMY</a>
+        <a href="#">SHOP</a>
+      </li>
+      <li>
+        <a href="#">THE CLUB</a>
+      </li>
+    </div>
+    <ul class="menu_centro">
+      <li>
+        <a href="http://localhost:50395/home"><img src="./assets/img/Logo.png" alt="Logo"></a>
+      </li> 
+    </ul>
+    <div class="menu_derecha">
+      
+      <li>
+        <a> <img src="./assets/img/Vector.png" alt="Buscador"></a>
+      </li>
+      <ul>
+      <li>
+        <a [routerLink] = "['/login']" > Login </a>
       </li>
     </ul>
-  </div>
-  
+    <ul>
+      <li>
+        <a [routerLink]="['/registro']" >Registrar</a>
+      </li>
+    </ul>
+    </div>
+</nav>              
+
+<div class="menu" *ngIf="menu">
+  <ul>
+    <li>
+      <a [routerLink]="['/registro']">NEWS</a> 
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a [routerLink]="['/home']">FANS</a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a [routerLink]="['/login']">ACADEMY</a>
+    </li>
+  </ul>
+</div>

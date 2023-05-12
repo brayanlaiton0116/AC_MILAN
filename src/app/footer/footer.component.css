@@ -2,7 +2,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-background-color: #AE0000;
+background-color: #1A161A;
 justify-content: center;
 text-align: center;
 }
@@ -11,7 +11,7 @@ width: 90px;
 height: auto;
 margin: 0;
 justify-content: right;
-background-color: #AE0000;
+background-color: #1A161A;
 color: #F6F6F6;
 text-decoration: none;
 padding: 30px;
@@ -21,7 +21,7 @@ padding: 30px;
 .letras a{
     height: auto;
     color: #F6F6F6; 
-    background-color: #AE0000;
+    background-color: #1A161A;
     padding: 22px;
     text-decoration: none;
 }
@@ -29,7 +29,7 @@ padding: 30px;
 .texto{
     height: auto;
     color: #F6F6F6; 
-    background-color: #AE0000;
+    background-color: #1A161A;
     padding: 15px;
     text-decoration: none;
     
