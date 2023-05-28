@@ -2,7 +2,9 @@
     background: #161615; 
     background: -webkit-linear-gradient(to right ,  #1A161A, #1A161A, );
     background: linear-gradient(to right, #AE0000,#AE0000);
-    }
+    
+}
+    
 .form div{
     width: 290px;
 }
@@ -19,15 +21,22 @@
     
 }
 .comunicado{
-    display: grid;
-    width: 100px;
-    height: 80px;
-    grid-template-columns: 120px 100px ;
-    grid-template-rows: 80px;
+    display: flex;
+    width: 100%;
+    height: 100px;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    text-align: center;
+    gap: 25px;
     font-size: center;
+    top: 2px;
+}
+.comunicado p{
+
+    text-align: center;
+    justify-content: center;
+    
+    
 }
 .boton button{
     color: white; background-color: #1A161A;
@@ -43,8 +52,8 @@
 .comunicado button{
     color: white;
     background-color: #1A161A;
-    width: 80px;
-    height: 42px;
+    width: 90px;
+    height: 40px;
     border-radius: 5px;
 
 }

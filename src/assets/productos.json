@@ -1,0 +1,309 @@
+
+{
+    "productos":[
+        {
+            "id": "prod1",
+            "marca": "puma",
+            "nombre": "AUTHENTIC AC MILAN 1ST SHIRT",
+            "descripcion": "It is the first kit of the ac milan for the matches",
+            "precio": "$900",
+            "categoria": "Camisa1",
+            "tallas": [
+            {
+                "talla": "S",
+                "stock": 7
+            },
+            {
+                "talla": "M",
+                "stock": 8
+            },
+            {
+                "talla": "L",
+                "stock": 2
+            },
+            {
+                "talla": "XL",
+                "stock": 4
+            }
+        ],
+        "imagen": "assets/imgP/primera.webp",
+        "imagenes":[
+            "assets/imgP/primera.webp",
+            "assets/imgP/primera2.webp",
+            "assets/imgP/primera3.webp",
+            "assets/imgP/primera4.webp"
+            
+        ]   
+
+    },
+    
+    {
+        "id": "prod2",
+        "marca": "puma",
+        "nombre": "AUTHENTIC AC MILAN 2ST SHIRT ",
+        "descripcion": "It is the second kit of the ac milan for the matches",
+        "precio": "$800",
+        "categoria": "Camisa2",
+        "tallas": [
+    {
+        "talla": "S",
+        "stock": 2
+    },
+    {
+        "talla": "M",
+        "stock": 4
+    },
+    {
+        "talla": "L",
+        "stock": 1
+    },
+    {
+        "talla": "XL",
+        "stock": 7
+    }
+    ],
+        "imagen": "assets/imgP/segunda.webp",
+        "imagenes":[
+            "assets/imgP/segunda.webp",
+            "assets/imgP/segunda2.webp",
+            "assets/imgP/segunda3.webp",
+            "assets/imgP/segunda4.webp"
+            ]        
+        },
+    {
+        "id": "prod3",
+        "marca": "puma",
+        "nombre": "AUTHENTIC AC MILAN 3ST SHIRT",
+        "descripcion": "It is the third kit of the ac milan for the matches",
+        "precio": "$700",
+        "categoria": "Camisa3",
+        "tallas": [
+    {
+        "talla": "S",
+        "stock": 2
+    },
+    {
+        "talla": "M",
+        "stock": 4
+    },
+    {
+        "talla": "L",
+        "stock": 1
+    },
+    {
+        "talla": "XL",
+        "stock": 7
+    }
+    ],
+        "imagen": "assets/imgP/tercera.webp",
+        "imagenes":[
+            "assets/imgP/tercera.webp",
+            "assets/imgP/tercera2.webp",
+            "assets/imgP/tercera3.webp",
+            "assets/imgP/tercera4.webp"
+            ]        
+        },
+
+        {
+            "id": "prod4",
+            "marca": "puma",
+            "nombre": "MILAN HERITAGE SWEATSHIRT 1",
+            "descripcion": "Camisa importade desde ita",
+            "precio": "$940",
+            "categoria": "Camisa4",
+            "tallas": [
+        {
+            "talla": "S",
+            "stock": 2
+        },
+        {
+            "talla": "M",
+            "stock": 4
+        },
+        {
+            "talla": "L",
+            "stock": 1
+        },
+        {
+            "talla": "XL",
+            "stock": 7
+        }
+        ],
+            "imagen": "assets/imgP/chaqueta1.webp",
+            "imagenes":[
+                "assets/imgP/chaqueta1.webp",
+                "assets/imgP/chaqueta12.webp",
+                "assets/imgP/chaqueta13.webp",
+                "assets/imgP/chaqueta14.webp"
+                ]        
+            },
+            {
+                "id": "prod5",
+                "marca": "puma",
+                "nombre": "MILAN HERITAGE SWEATSHIRT 2",
+                "descripcion": "Camisa importade desde ita",
+                "precio": "$940",
+                "categoria": "Camisa5",
+                "tallas": [
+            {
+                "talla": "S",
+                "stock": 2
+            },
+            {
+                "talla": "M",
+                "stock": 4
+            },
+            {
+                "talla": "L",
+                "stock": 1
+            },
+            {
+                "talla": "XL",
+                "stock": 7
+            }
+            ],
+                "imagen": "assets/imgP/chaqueta2.webp",
+                "imagenes":[
+                    "assets/imgP/chaqueta2.webp",
+                    "assets/imgP/chaqueta22.webp",
+                    "assets/imgP/chaqueta23.webp",
+                    "assets/imgP/chaqueta24.webp"
+                    
+                    ]        
+                },
+                {
+                    "id": "prod6",
+                    "marca": "puma",
+                    "nombre": "MILAN HERITAGE TROUSERS",
+                    "descripcion": "Camisa importade desde ita",
+                    "precio": "$750",
+                    "categoria": "Camisa6",
+                    "tallas": [
+                {
+                    "talla": "S",
+                    "stock": 2
+                },
+                {
+                    "talla": "M",
+                    "stock": 4
+                },
+                {
+                    "talla": "L",
+                    "stock": 1
+                },
+                {
+                    "talla": "XL",
+                    "stock": 7
+                }
+                ],
+                    "imagen": "assets/imgP/pantalon.webp",
+                    "imagenes":[
+                        "assets/imgP/pantalon.webp",
+                        "assets/imgP/pantalon2.webp",
+                        "assets/imgP/pantalon3.webp"
+                        
+                        ]        
+        },
+        {
+            "id": "prod7",
+            "marca": "puma",
+            "nombre": "SUDADERA MILAN HERITAGE",
+            "descripcion": "Camisa importade desde ita",
+            "precio": "$400",
+            "categoria": "Camisa7",
+            "tallas": [
+        {
+            "talla": "S",
+            "stock": 2
+        },
+        {
+            "talla": "M",
+            "stock": 4
+        },
+        {
+            "talla": "L",
+            "stock": 1
+        },
+        {
+            "talla": "XL",
+            "stock": 7
+        }
+        ],
+            "imagen": "assets/imgP/chaqueta3.webp",
+            "imagenes":[
+                "assets/imgP/chaqueta3.webp",
+                "assets/imgP/chaqueta32.webp",
+                "assets/imgP/chaqueta33.webp",
+                "assets/imgP/chaqueta34.webp"
+                
+                ]        
+            },
+            {
+                "id": "prod8",
+                "marca": "puma",
+                "nombre": "SUDADERA MILAN HERITAGE",
+                "descripcion": "Camisa importade desde ita",
+                "precio": "$800",
+                "categoria": "Camisa8",
+                "tallas": [
+            {
+                "talla": "S",
+                "stock": 2
+            },
+            {
+                "talla": "M",
+                "stock": 4
+            },
+            {
+                "talla": "L",
+                "stock": 1
+            },
+            {
+                "talla": "XL",
+                "stock": 7
+            }
+            ],
+                "imagen": "assets/imgP/chaqueta4.webp",
+                "imagenes":[
+                    "assets/imgP/chaqueta4.webp",
+                    "assets/imgP/chaqueta42.webp",
+                    "assets/imgP/chaqueta43.webp",
+                    "assets/imgP/chaqueta44.webp"
+                    ]        
+                },
+                {
+                    "id": "prod9",
+                    "marca": "puma",
+                    "nombre": "MILAN REVERSIBLE 1/2 ZIP JACKET",
+                    "descripcion": "Camisa importade desde ita",
+                    "precio": "$800",
+                    "categoria": "Camisa9",
+                    "tallas": [
+                {
+                    "talla": "S",
+                    "stock": 2
+                },
+                {
+                    "talla": "M",
+                    "stock": 4
+                },
+                {
+                    "talla": "L",
+                    "stock": 1
+                },
+                {
+                    "talla": "XL",
+                    "stock": 7
+                }
+                ],
+                    "imagen": "assets/imgP/chaqueta5.webp",
+                    "imagenes":[
+                        "assets/imgP/chaqueta5.webp",
+                        "assets/imgP/chaqueta52.webp",
+                        "assets/imgP/chaqueta53.webp",
+                        "assets/imgP/chaqueta54.webp"
+                        
+                        ]        
+        }
+    ]
+}

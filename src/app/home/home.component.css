@@ -2,13 +2,13 @@
 display: grid;
 color: rgb(12, 12, 12);
 grid-template-columns: 380px 380px 380px  ;
-grid-template-rows: 200px ;
+grid-template-rows: 100px ;
 gap:12px;
 justify-content: center;
 border-radius: 8px;
 padding: 12px;
 display: flex;
-
+top: 25px;
 
 }
 .card12{
@@ -41,14 +41,27 @@ margin: 15px;
     
 } 
 
+h3{
+    text-align: center;
+    margin-top: 25px;
+    margin: 15px;
+}
+
+.mas{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 38px;
+    margin-top: 20px;
+    
+}
 .mas button{
-border-radius: 60px;
+border-radius: px;
 background-color: #1A161A ;
 color: rgb(247, 244, 244);
-width: 100%;
+width: 200px;
 height: 38px;
-text-align: center;
-align-items: center;
+margin-top: 8px;
 }
 .mas button:hover{
     background-color: #AE0000;
@@ -81,6 +94,26 @@ div a img{
     margin: 15px;
 
 }
+
+.noticias{
+    display: flex;
+    margin-top: 8px;
+    padding: 10px;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+.marcas{
+    margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    background-color: #ebdddd;
+    padding: 10px;
+    
+}
 @media screen and (min-width: 768px){
 .container-img {
     display: block;
@@ -98,6 +131,7 @@ div a img{
     height: 100vh
 }
 
+
 @media screen and (max-width: 768px){ 
     .col{
         width: 100%;
@@ -109,6 +143,7 @@ div a img{
         justify-content: center;
         gap: 20;
     }
+    
 }
 @media screen and (max-width: 458px){ 
     .contar{

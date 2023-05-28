@@ -10,14 +10,18 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
 import { CaruselComponent } from './carusel/carusel.component';
-
+import { ShopComponent } from './shop/shop.component';
+import { ProductoComponent } from './producto/producto.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
-  
+  { path: 'shop', component: ShopComponent },
+  { path: 'producto', component: ProductoComponent },
+  { path: 'productos/:id', component: ProductoComponent },
+
 
 ];
 @NgModule({
@@ -29,14 +33,14 @@ const routes: Routes = [
     LoginComponent,
     RegistroComponent,
     CaruselComponent,
-    
+    ShopComponent,
+    ProductoComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgIf,
     ReactiveFormsModule,
-    FormsModule,
     [RouterModule.forRoot(routes)]
   ],
 
@@ -44,6 +48,5 @@ const routes: Routes = [
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  
 
 }

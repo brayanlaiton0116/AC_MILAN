@@ -23,16 +23,16 @@
 }
 .comunicado{
     display: grid;
-    width: 100px;
-    height: 80px;
+    width: 100%;
+    height: 100px;
     grid-template-columns: 120px 100px ;
-    grid-template-rows: 80px;
+    grid-template-rows: 100px;
     align-items: center;
     justify-content: center;
-    gap: 2px;
+    gap: 40px;
     font-size: center;
-padding: 10px;
-top: 4px;
+
+
 }
 .boton button{
     color: white; background-color: #1A161A;

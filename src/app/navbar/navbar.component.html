@@ -10,21 +10,22 @@
         <a [routerLink]="['/home']"> HOME </a>
       </li>
       <li>
-        <a href="#">SHOP</a>
+        <a [routerLink] = "['/shop']">SHOP</a>
       </li>
       <li>
         <a href="#">THE CLUB</a>
       </li>
     </div>
-    <ul class="menu_centro">
+
+    <div class="menu_centro">
       <li>
         <a href="http://localhost:50395/home"><img src="./assets/img/Logo.png" alt="Logo"></a>
       </li> 
-    </ul>
+    </div>
     <div class="menu_derecha">
       
       <li>
-        <a> <img src="./assets/img/Vector.png" alt="Buscador"></a>
+        <a (click) ="search=!search"> <img src="./assets/img/Vector.png" alt="Buscador"></a>
       </li>
       <ul>
       <li>
@@ -33,18 +34,18 @@
     </ul>
     <ul>
       <li>
-        <a [routerLink]="['/registro']" >Registrar</a>
+        <a [routerLink]="['/registro']" >Register</a>
       </li>
     </ul>
     </div>
 </nav>              
 
+<div class="search" *ngIf="search" >
+<input type="text" placeholder="Search">
+</div>
+
+
 <div class="menu" *ngIf="menu">
-  <ul>
-    <li>
-      <a [routerLink]="['/registro']">NEWS</a> 
-    </li>
-  </ul>
   <ul>
     <li>
       <a [routerLink]="['/home']">FANS</a>
@@ -53,6 +54,16 @@
   <ul>
     <li>
       <a [routerLink]="['/login']">ACADEMY</a>
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a [routerLink]="['/login']">LOGIN</a> 
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <a [routerLink]="['/registro']">REGISTER</a> 
     </li>
   </ul>
 </div>

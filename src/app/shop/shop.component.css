@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+nav{
+    background-color: #1A161A;
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    top: 100px;
+    width: 100%;
+    height: 10%;
+    color: white;
+    margin: 0 ;
+}
+
+.min_menu{
+width: 100%;
+color: white;
+display: flex;
+margin: 10px;
+justify-content: space-between;
+align-items: flex-start;
+
+}
+
+.min_menu a img{
+width: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px 10px;
+text-align: center;
+}
+.dos{
+    width: 15%;
+    height: 28px;
+    display: flex;
+    text-align: 20px;
+    margin-top:  15px;
+    justify-content: center;
+    align-items: right;
+    margin: auto 10px;
+
+}
+
+.tres {
+width: 10%;
+height: 28px;
+display: flex;
+text-align: center;
+margin-top:  0;
+justify-content: center;
+align-items: right;
+margin: auto 20px;
+border-radius: 3px;
+background-color: #8b898b;
+gap: 20px;
+
+}
+
+.tres:hover{
+    background-color: rgb(255, 0, 0); 
+    transition: .5s; 
+}
+
+.row{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto 0;
+    top: 60px;
+
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    grid-auto-rows: auto;
+    gap: 20px;
+    justify-content: center;
+    z-index: 5;
+    margin: 80px 0;
+    padding: 1px 0;
+    width: 100%;
+}
+.container img{
+    border-radius: 4px;
+
+} 
+.card{
+    top: 5px;
+    margin: 8px;
+    border-radius: 4px;
+}
+
+.card-body{
+    
+    margin: 15px;
+    justify-content: center;
+    padding: 0 15px; 
+    
+}
+
+.producto{
+    display: flex;
+    text-align: center;
+    color: black;
+    text-decoration: solid;
+    
+}
+.categoria{
+    display: flex;
+    color: black;
+    text-decoration: solid;
+
+}
+.precio{
+    text-align: center;
+    margin: 10px;
+    top:5px;
+    padding: 10px 2px;
+}
+
+.boton{
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #1A161A;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+.boton:hover{
+    background-color: #AE0000; 
+    transition: .5s; 
+}
+.menu{
+    width: 40%;
+    height: 450px;
+    background: #1A161A;
+    color: white;
+    margin: 40px 720px;
+    position: absolute;
+    top:68px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    z-index: 15;
+    padding: 30px 25px;
+    
+}
+.hombre{
+    margin: 8px;
+    margin-top: 8px;
+}
+.hombre:hover{
+    background-color: #AE0000; 
+    transition: .5s; 
+}
+.hombre input{
+    margin: 8px;
+}
+.mujer{
+    margin: 8px;
+    margin-top: 8px;
+}
+.mujer:hover{
+    background-color: #AE0000; 
+    transition: .5s; 
+}
+.mujer input{
+    margin: 8px;
+}
+
+.price{
+    padding: 15px 0;
+}
+.barra{
+    width: 100%;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+.contador1{
+    width: 92%;
+    margin: 10px;
+}
+.colores{
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+    
+}
+.cuadrado1{
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    margin: 2px ;
+}
+.cuadrado2{
+    width: 40px;
+    height: 40px;
+    background: #AE0000;
+    margin: 2px ;
+}
+.apply{
+    margin: 20px 0;
+}
+.apply button{
+    width: 60%;
+    height: 40px;
+    background: #1d1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 95px;
+    border-radius: 5px;
+}
+.apply button:hover{
+    background-color: #AE0000; 
+    transition: .5s; 
+}
+@media screen and (max-width: 768px){ 
+    .container{
+        
+        grid-template-columns: 360px;
+    }
+    .min_menu{
+        width: 100%;
+        margin: 0;
+        display: relative;
+        justify-content: left;
+        align-items: start;
+        left: 0;
+    }
+    .menu{
+        width: 100%;
+        position: absolute;
+        display: block;
+        justify-content: center;
+        top: 120px;
+        left: 0;
+        margin:  0;
+
+        
+        
+    }
+    } 

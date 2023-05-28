@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 
 export class NavbarComponent {
   menu:boolean = false
+  search:boolean = false
+
+
+  
   } 
+  
+  
+  
+  
+  

@@ -1,0 +1,84 @@
+
+<nav>
+    <div class="min_menu">
+        <div class="uno">
+            <a><img src="assets/img/Logo.png" alt="menu"></a>
+        </div>  
+    </div >
+        
+    <div class="dos">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
+        Order
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" href="#">Shirts</a></li>
+        <li><a class="dropdown-item" href="#">Jackets</a></li>
+        <li><a class="dropdown-item" href="#">Pants</a></li>
+        </ul>
+    </div>
+            
+    <div class="tres">            
+        <li>
+            <a (click) ="menu=!menu">Filtro</a>
+        </li>
+    </div>
+</nav>
+
+<form>
+<div class="menu" *ngIf="menu">
+<div class="genero">
+    <h6>TYPE</h6>
+    <div class="hombre">      
+            <input  type="checkbox" value="" required>
+        <label>MAN</label>
+    </div>
+        
+        <div class="mujer">      
+            <input  type="checkbox"  required>
+        <label>WOMAN</label>
+        </div>
+</div>
+
+<div class="price">
+    <h6>PRICE</h6>
+        <input class="barra" type="range"   min="0" max="1000">
+
+        <div class="price-range__input input-prefix text--xsmall">
+            <span class="input-prefix__value text--subdued">€</span>
+            <input class="contador1" type="number" min="0" max="1500" placeholder="0">
+    </div>
+</div>
+
+        <div class="color">
+            <h6>COLOR</h6>
+
+        <div class="colores">       
+            <div class="cuadrado1"></div>
+            <div class="cuadrado2"></div>
+        </div>
+
+        <div class="apply">
+            <button>APPLY</button>
+        </div>
+    </div>
+</div>
+</form>
+
+<section class="row">
+        <div class="container">
+        <div class="card" *ngFor="let product of allProducts" >
+            <div class="imagen">
+            <img [src]="product.imagen" class="w-100" />
+            </div>
+            <div class="card-body">
+            <a class="producto">
+                <h5>{{product.nombre}}</h5>
+            </a>
+                <p class="categoria">{{product.descripcion}}</p>
+            <h6 class="precio">{{product.precio}}</h6>
+            <button class="boton" (click)="redirectToDetalleProducto(product.id)">ver mas</button>
+            </div>
+        </div>
+    </div>
+</section>
+
