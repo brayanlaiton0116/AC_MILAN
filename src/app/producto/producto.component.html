@@ -1,7 +1,25 @@
-<section *ngIf="!product"><p>PRODUCTO NO ENCONTRADO</p></section>
+<section *ngIf="!product">  
+    <div class="d-flex align-items-center justify-content-center vh-100">
+        <div class="text-center row">
+            <div class="imagen1" [routerLink] = "['/shop']">
+                <img class="img-fluid" src="./assets/img/Logo.png" alt="logo"
+                    >
+            </div>
+            <div class=" escrito">
+                <p class="fs-3"> <span class="error" [routerLink] = "['/shop']" >Opps!</span> Page not found.</p>
+                <p class="lead">
+                    The page you’re looking for doesn’t exist.
+                </p>
+                <button [routerLink] = "['/shop']" class="primary" [routerLink] = "['/shop']" >Refresh Page</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 <section *ngIf="product">
     <div class="volver">
-        <img src="assets/img/volver.png" alt="" [routerLink] = "['/shop']">
+        <img src="assets/img/volver.png" [routerLink] = "['/shop']" alt="volver" >
     </div>
 <div class="fotos">
     <div *ngFor="let imagen of product.imagenes" (click)="changeMainImage(imagen)"><img [src]="imagen" alt="primera"></div>
@@ -42,10 +60,11 @@
         </div>
 
         <h5>PRICE</h5>
-        <div class="precio">{{product.precio}}</div>   
+        <div class="precio">${{product.precio}}</div>   
         
         <div class="d-grid gap-2 col-6 mx-auto mt-5">
-            <button class="boton" type="button">ADD TO CARD</button>
+            <button  class="boton" (click)="addProduct(product)" type="button">
+                ADD TO CARD</button>
             
         </div>
     </div>

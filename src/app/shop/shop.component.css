@@ -3,6 +3,21 @@
     margin: 0;
     position: relative;
 }
+.X{
+    width: 30px;
+    height: 30px;
+    color: #fbfbfb;
+    background: #3a3737;
+    align-items: center;
+    margin: 0 410px;
+    border-radius: 5px;
+    
+}
+.X:hover{
+    color: #1A161A;
+    background-color: rgb(255, 0, 0); 
+    transition: .5s; 
+}
 nav{
     background-color: #1A161A;
     display: flex;
@@ -13,6 +28,7 @@ nav{
     height: 10%;
     color: white;
     margin: 0 ;
+    
 }
 
 .min_menu{
@@ -46,21 +62,22 @@ text-align: center;
 }
 
 .tres {
-width: 10%;
-height: 28px;
+width: 12%;
+height: 32px;
 display: flex;
 text-align: center;
 margin-top:  0;
 justify-content: center;
-align-items: right;
+align-items: center;
 margin: auto 20px;
 border-radius: 3px;
 background-color: #8b898b;
-gap: 20px;
+color: #ffffff;
 
 }
 
 .tres:hover{
+    
     background-color: rgb(255, 0, 0); 
     transition: .5s; 
 }
@@ -71,6 +88,7 @@ gap: 20px;
     position: relative;
     margin: auto 0;
     top: 60px;
+    
 
 }
 
@@ -81,10 +99,10 @@ gap: 20px;
     grid-auto-rows: auto;
     gap: 20px;
     justify-content: center;
-    z-index: 5;
     margin: 80px 0;
     padding: 1px 0;
     width: 100%;
+    
 }
 .container img{
     border-radius: 4px;
@@ -123,26 +141,29 @@ gap: 20px;
     top:5px;
     padding: 10px 2px;
 }
-
 .boton{
-    width: 50%;
+    width: 40%;
     height: 30px;
     display: flex;
     justify-content: center;
     color: white;
-    background-color: #1A161A;
+    background-color: #d01f1f;
     margin: 0 auto;
     margin-top: 20px;
-    border-radius: 12px;
+    border-radius: 5px;
 }
 
 .boton:hover{
-    background-color: #AE0000; 
+color: rgb(255, 0, 0);
+    background-color: white; 
     transition: .5s; 
+}
+.bolsa{
+    color: rgb(17, 17, 17);
 }
 .menu{
     width: 40%;
-    height: 450px;
+    height: 360px;
     background: #1A161A;
     color: white;
     margin: 40px 720px;
@@ -151,8 +172,9 @@ gap: 20px;
     display: block;
     justify-content: center;
     align-items: center;
-    z-index: 15;
+    z-index: 1;
     padding: 30px 25px;
+    border-radius: 5px;
     
 }
 .hombre{
@@ -209,8 +231,17 @@ gap: 20px;
     background: #AE0000;
     margin: 2px ;
 }
+.cuadrado1:hover{
+    border: 1px solid #AE0000 ;
+    transition: .5s; 
+}
+.cuadrado2:hover{
+    border: 1px solid #ffffff ;
+    transition: .5s; 
+}
 .apply{
     margin: 20px 0;
+    display: flex;
 }
 .apply button{
     width: 60%;
@@ -227,6 +258,16 @@ gap: 20px;
     background-color: #AE0000; 
     transition: .5s; 
 }
+
+.imagen{
+    cursor: pointer;
+
+}
+.imagen:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
 @media screen and (max-width: 768px){ 
     .container{
         
@@ -242,14 +283,33 @@ gap: 20px;
     }
     .menu{
         width: 100%;
-        position: absolute;
+        position: relative;
         display: block;
         justify-content: center;
         top: 120px;
         left: 0;
         margin:  0;
 
-        
-        
+    .X{
+        width: 10%;
+        justify-content: center;
+        margin: 0 490px;
+        }
+
+    .tres{
+        width: 100%;
+
     }
-    } 
+    .apply button{
+        width: 60%;
+        height: 40px;
+        background: #1d1c1c;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto 95px;
+        border-radius: 5px;
+    }
+}
+} 

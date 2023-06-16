@@ -12,6 +12,52 @@ section{
     background-color: rgb(242, 236, 236);
     
 }
+.error{
+    color: white;
+    
+}
+.error:hover{
+    color: rgb(255, 0, 0);
+    transition: .5s
+}
+.imagen1{
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 80px 110px;
+margin: 0;
+background-color: #d2d0d0;
+border-radius: 5px;
+}
+.imagen1:hover{
+    background-color: rgb(183, 182, 182);
+    transition: .5s
+}
+.primary{
+    width: 50%;
+    height: 20%;
+    color: #1A161A;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.primary:hover{
+    color: white;
+    background-color: rgb(255, 0, 0);
+    transition: .5s
+}
+.escrito{
+width: 100%;
+width: 100%;
+margin: 15px 0 ;
+padding: 12px 40px;
+background-color: #1A161A;
+justify-content: center;
+align-items: center;
+color: white;
+border-radius: 5px;
+}
 .volver {
     width: 8%;
     position: relative;
@@ -194,7 +240,7 @@ padding: 10px 1px;
         align-items: center;
     }
     .container{
-        width: 100%;
+        width: 1000px;
         display: block;
         
     }

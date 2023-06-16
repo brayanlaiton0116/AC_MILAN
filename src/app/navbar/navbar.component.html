@@ -15,6 +15,7 @@
       <li>
         <a href="#">THE CLUB</a>
       </li>
+      
     </div>
 
     <div class="menu_centro">
@@ -22,8 +23,9 @@
         <a href="http://localhost:50395/home"><img src="./assets/img/Logo.png" alt="Logo"></a>
       </li> 
     </div>
+    
+
     <div class="menu_derecha">
-      
       <li>
         <a (click) ="search=!search"> <img src="./assets/img/Vector.png" alt="Buscador"></a>
       </li>
@@ -37,15 +39,26 @@
         <a [routerLink]="['/registro']" >Register</a>
       </li>
     </ul>
+
+      <div class="cart ">
+      <div class="marcador">
+        <p class="cero">{{(myCart$ | async)?.length }}</p>
+      </div>
+        <img  class="carto" src="./assets/img/cart.png"  alt="carto" [ngClass]="{show:cart}" (click)="onToggleCard()" >
     </div>
+</div>
 </nav>              
+
+<div class="carrito" [ngClass]="{show:cart}">
+<app-cart></app-cart>
+</div>
 
 <div class="search" *ngIf="search" >
 <input type="text" placeholder="Search">
 </div>
 
-
-<div class="menu" *ngIf="menu">
+<div >
+<div class="menu" *ngIf="menu" >
   <ul>
     <li>
       <a [routerLink]="['/home']">FANS</a>
@@ -66,4 +79,5 @@
       <a [routerLink]="['/registro']">REGISTER</a> 
     </li>
   </ul>
+</div>
 </div>

@@ -1,4 +1,3 @@
-
 <nav>
     <div class="min_menu">
         <div class="uno">
@@ -6,27 +5,20 @@
         </div>  
     </div >
         
-    <div class="dos">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="" data-bs-toggle="dropdown" aria-expanded="false">
-        Order
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="#">Shirts</a></li>
-        <li><a class="dropdown-item" href="#">Jackets</a></li>
-        <li><a class="dropdown-item" href="#">Pants</a></li>
-        </ul>
-    </div>
             
     <div class="tres">            
         <li>
-            <a (click) ="menu=!menu">Filtro</a>
+            <a (click) ="menu=!menu">Filter</a>
         </li>
     </div>
 </nav>
 
 <form>
-<div class="menu" *ngIf="menu">
+    <div class="menu" *ngIf="menu">
+
 <div class="genero">
+    <button mat-button (click)="cerrarFuncion()" type="button" class="X">X</button>
+
     <h6>TYPE</h6>
     <div class="hombre">      
             <input  type="checkbox" value="" required>
@@ -34,51 +26,45 @@
     </div>
         
         <div class="mujer">      
-            <input  type="checkbox"  required>
+            <input  type="checkbox" required>
         <label>WOMAN</label>
         </div>
 </div>
 
 <div class="price">
     <h6>PRICE</h6>
-        <input class="barra" type="range"   min="0" max="1000">
-
-        <div class="price-range__input input-prefix text--xsmall">
-            <span class="input-prefix__value text--subdued">€</span>
-            <input class="contador1" type="number" min="0" max="1500" placeholder="0">
+    <ngx-slider [(value)]="selectedMinPrice" [(highValue)]="selectedMaxPrice" [options]="sliderOptions"></ngx-slider>
     </div>
-</div>
 
-        <div class="color">
-            <h6>COLOR</h6>
 
-        <div class="colores">       
-            <div class="cuadrado1"></div>
-            <div class="cuadrado2"></div>
-        </div>
 
         <div class="apply">
-            <button>APPLY</button>
+            <button (click)="filterProducts()">APPLY</button>
         </div>
     </div>
-</div>
+
+
 </form>
 
 <section class="row">
         <div class="container">
         <div class="card" *ngFor="let product of allProducts" >
-            <div class="imagen">
+            <div class="imagen" (click)="redirectToDetalleProducto(product.id)">
             <img [src]="product.imagen" class="w-100" />
+            
             </div>
             <div class="card-body">
             <a class="producto">
                 <h5>{{product.nombre}}</h5>
             </a>
                 <p class="categoria">{{product.descripcion}}</p>
-            <h6 class="precio">{{product.precio}}</h6>
-            <button class="boton" (click)="redirectToDetalleProducto(product.id)">ver mas</button>
-            </div>
+            <h6 class="precio">${{product.precio}}</h6>
+            
+            <button class="boton" (click)="addProduct(product)" >
+            <svg class="bolsa" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3.864 16.455c-.858-3.432-1.287-5.147-.386-6.301C4.378 9 6.148 9 9.685 9h4.63c3.538 0 5.306 0 6.207 1.154c.901 1.153.472 2.87-.386 6.301c-.546 2.183-.818 3.274-1.632 3.91c-.814.635-1.939.635-4.189.635h-4.63c-2.25 0-3.375 0-4.189-.635c-.814-.636-1.087-1.727-1.632-3.91Z"/><path d="m19.5 9.5l-.71-2.605c-.274-1.005-.411-1.507-.692-1.886A2.5 2.5 0 0 0 17 4.172C16.56 4 16.04 4 15 4M4.5 9.5l.71-2.605c.274-1.005.411-1.507.692-1.886A2.5 2.5 0 0 1 7 4.172C7.44 4 7.96 4 9 4"/><path d="M9 4a1 1 0 0 1 1-1h4a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1Z"/></g></svg>
+            </button>
+        </div>
         </div>
     </div>
+    
 </section>
-

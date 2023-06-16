@@ -1,0 +1,136 @@
+section{
+    position: sticky;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 4% 78% 18%;
+    gap: 20px;
+    background-color: rgb(225, 208, 208);
+    margin: 10px;
+    top: 125px;
+    
+}
+.cartTotal{
+    padding: 1rem;
+    &-total{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+.closed{
+    width: 40px;
+    height: 40px;
+    gap: 20px;
+    display: block;
+    border: none;
+    background-color: #AE0000;
+    color: #1A161A;
+}
+.closed:hover{
+    color: #1A161A;
+    transition: 1s;
+    background-color: rgb(255, 255, 255);
+}
+.close{
+    color: var(--primary-color);
+    font-size: 30px;
+}
+.content-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow: auto;
+}
+.card-product{
+    display: flex;
+    width: 100%;
+    height: 110px;
+    justify-content: space-between;
+    align-items: center;
+    background: #F4F4F4;
+    border-radius: 5px;
+    padding: 1px;
+    box-shadow: 1px 2px #685e5e4f;
+}
+.card-product > div{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.container-image{
+    display: inline-flex;
+    width: 95px;
+    height: 95px;
+    background-color: var(--secondary-col);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.container-image img{
+    width: 90px;
+}
+.description p{
+    margin: 2px;
+    font-weight: bold;
+}
+.cantidad{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.cantidad p{
+    font-weight: 400;
+}
+.cantidad div{
+    display: flex;
+    gap: 5px;
+}
+.container-button{
+    width: 100%;
+    height: 50%;
+    background: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    padding-right: 20px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 18px;
+}
+.bottom {
+    background-color: #AE0000(224, 61, 61);
+}
+
+.bottom div {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+.bottom button{
+    color: rgb(251, 251, 251);
+    background-color: var(--primary-color);
+    border: none;
+    width: 100%;
+    height: 65%;
+    border-radius: 5px;
+    background-color: #AE0000;
+}
+.bottom button:hover{
+    color: white;
+    transition: 1s;
+    background-color: #1A161A;
+}
+
+@media screen and (max-width: 620px) {
+    .card-product > div {
+        gap: 12px;
+    }
+}

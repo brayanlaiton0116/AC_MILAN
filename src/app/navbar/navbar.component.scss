@@ -10,12 +10,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 1;
     width: 100%;
     height: 15%;
     
 }
-
+h1{
+    top: 85;
+    text-align: center;
+}
 img {
     width: 20px;
     justify-content: center;
@@ -62,17 +65,18 @@ ul{
     padding: 5px;
 }
 .menu_centro img{
-    width: 30px;
-    display: grid;
+    width: 35px;
+    display: flex;
     place-items: center;
 }
 
-
 .menu_derecha{
-    margin: 15px;
+    padding: 1rem;
+    justify-content: space-between;
     display: flex;
+    margin: 15px  ;
     position: absolute;
-    right: 20px;
+    right: 10px;
     font-size: 18px;
     padding: 3px;
 }
@@ -83,7 +87,8 @@ ul{
     
 }
 
-.menu_derecha li a{
+.menu_derecha li a {
+    position: relative;
     border-radius:5px;
     line-height: 10px;
     margin-right: 10px;
@@ -96,6 +101,56 @@ a{
     color: white;
     
 }
+.cart{
+    position: relative;
+    margin: right 5px;;
+    
+        .marcador{
+            position: relative;
+            left: 8.5px ;
+            top:-0.4rem;
+            color: white;
+            border: 1px solid rgba(254, 181, 12, 0.1);
+            border-radius: 50%;
+            background-color: rgb(172,14,14);
+            height: 20px;
+            width: 20px;
+            .cero{
+                font-size: 1.0rem;
+                text-align: center;
+                margin-top: -0.4rem;
+            }
+        }
+    }
+
+.carto{
+    position: absolute;
+    width: 45px;
+    height: 35px;
+}
+.carrito{
+    display: none;
+}
+.show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    position:absolute;
+    border-radius: 0.5rem;
+    right: 0 ;
+    min-width: 10%;
+    margin: 0;
+
+    app-cart{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        margin: 15px;
+        
+    }
+}
+
 .menu{
 background-color:#221f1f;
 padding: 15px;
@@ -106,7 +161,7 @@ font-size: 20px;
 gap: 10px;
 position: fixed;
 top: 15%;
-z-index: 8;
+z-index: 2;
 }
 
 .menu a:hover{
@@ -132,13 +187,20 @@ z-index: 8;
     gap: 10px;
     position: fixed;
     top: 15%;
-    z-index: 8;
+    z-index: 4;
     }
     .search input{
         width: 100%;
         
     }
-    
+.cart{
+width: 30px ;
+height: 30px;
+margin: 0 10px ;
+border-radius: 5px;
+
+}
+
 @media only screen and (max-width: 368px){ 
     nav{
         width: 100%;
@@ -163,7 +225,13 @@ z-index: 8;
     display: block;
     border-radius: 5px;
 }
-
+.cart{
+    width: 30px ;
+    height: 30px;
+    margin: 0 10px ;
+    border-radius: 5px;
+    
+    }
 } 
 
 @media only screen and (max-width: 968px){ 
@@ -185,5 +253,11 @@ z-index: 8;
         display: block;
         border-radius: 5px;
     }
+    .cart{
+        width: 30px ;
+        height: 30px;
+        margin: 0 10px ;
+        border-radius: 5px;
+        }
     
     } 

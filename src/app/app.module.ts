@@ -1,4 +1,4 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { RouterModule, Routes } from '@angular/router';
@@ -12,6 +12,10 @@ import { RegistroComponent } from './registro/registro.component';
 import { CaruselComponent } from './carusel/carusel.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductoComponent } from './producto/producto.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {HttpClientModule} from '@angular/common/http';
+import { CartComponent } from './cart/cart.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -35,17 +39,21 @@ const routes: Routes = [
     CaruselComponent,
     ShopComponent,
     ProductoComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgIf,
     ReactiveFormsModule,
+    NgxSliderModule,
+    HttpClientModule,
     [RouterModule.forRoot(routes)]
+    
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
 

@@ -1,0 +1,37 @@
+<section *ngIf="cart">
+  <div class="completo">
+  <button class="closed" (click)="cerrarFuncion()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
+
+    <div class="top">
+      <i class="bi bi-x-lg" (click)="onCloseCart()"></i>
+    </div>
+    <div class="content-cards">
+      <div class="card-product" *ngFor="let product of myCart$ | async">
+        <div>
+          <div class="container-image">
+            <img [src]="product.imagen" [alt]="product.nombre" />
+          </div>
+          <div class="description">
+            <p>{{ product.nombre }}</p>
+            <p>${{product.precio}}</p>
+            <div class="cantidad">
+              <p>Cantidad: <span>{{ product.cantidad }}</span></p>
+              <div>
+                <i class="fa-solid fa-minus" (click)="update('minus', product.id)"></i>
+                <i class="fa-solid fa-plus" (click)="update('add', product.id)"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="fa-solid fa-trash" (click)="delete(product.id)"></i>
+      </div>
+    </div>
+    <div class="bottom">
+      <div>
+        <p class="cartTotal-total">Total: $ {{totalCart()}} </p>
+        <p class="cartTotal-total">Articulos: {{(myCart$ | async)?.length }}</p>
+    </div>
+      <button >USER</button>
+    </div>
+  </div>
+  </section>

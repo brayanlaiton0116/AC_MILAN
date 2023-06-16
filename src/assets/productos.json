@@ -6,20 +6,20 @@
             "marca": "puma",
             "nombre": "AUTHENTIC AC MILAN 1ST SHIRT",
             "descripcion": "It is the first kit of the ac milan for the matches",
-            "precio": "$900",
+            "precio": 900,
             "categoria": "Camisa1",
             "tallas": [
             {
                 "talla": "S",
-                "stock": 7
+                "stock": 1
             },
             {
                 "talla": "M",
-                "stock": 8
+                "stock": 2
             },
             {
                 "talla": "L",
-                "stock": 2
+                "stock": 3
             },
             {
                 "talla": "XL",
@@ -42,24 +42,24 @@
         "marca": "puma",
         "nombre": "AUTHENTIC AC MILAN 2ST SHIRT ",
         "descripcion": "It is the second kit of the ac milan for the matches",
-        "precio": "$800",
+        "precio": 800,
         "categoria": "Camisa2",
         "tallas": [
     {
         "talla": "S",
-        "stock": 2
-    },
-    {
-        "talla": "M",
-        "stock": 4
-    },
-    {
-        "talla": "L",
         "stock": 1
     },
     {
+        "talla": "M",
+        "stock": 2
+    },
+    {
+        "talla": "L",
+        "stock": 3
+    },
+    {
         "talla": "XL",
-        "stock": 7
+        "stock": 4
     }
     ],
         "imagen": "assets/imgP/segunda.webp",
@@ -75,24 +75,24 @@
         "marca": "puma",
         "nombre": "AUTHENTIC AC MILAN 3ST SHIRT",
         "descripcion": "It is the third kit of the ac milan for the matches",
-        "precio": "$700",
+        "precio": 700,
         "categoria": "Camisa3",
         "tallas": [
     {
         "talla": "S",
-        "stock": 2
-    },
-    {
-        "talla": "M",
-        "stock": 4
-    },
-    {
-        "talla": "L",
         "stock": 1
     },
     {
+        "talla": "M",
+        "stock": 2
+    },
+    {
+        "talla": "L",
+        "stock": 3
+    },
+    {
         "talla": "XL",
-        "stock": 7
+        "stock": 4
     }
     ],
         "imagen": "assets/imgP/tercera.webp",
@@ -108,8 +108,8 @@
             "id": "prod4",
             "marca": "puma",
             "nombre": "MILAN HERITAGE SWEATSHIRT 1",
-            "descripcion": "Camisa importade desde ita",
-            "precio": "$940",
+            "descripcion": "Is a 100% cotton jacket illustrated with the primary colors of our team.",
+            "precio": 940,
             "categoria": "Camisa4",
             "tallas": [
         {
@@ -133,7 +133,7 @@
             "imagenes":[
                 "assets/imgP/chaqueta1.webp",
                 "assets/imgP/chaqueta12.webp",
-                "assets/imgP/chaqueta13.webp",
+                "assets/imgP/chaqueta13.jpg",
                 "assets/imgP/chaqueta14.webp"
                 ]        
             },
@@ -141,8 +141,8 @@
                 "id": "prod5",
                 "marca": "puma",
                 "nombre": "MILAN HERITAGE SWEATSHIRT 2",
-                "descripcion": "Camisa importade desde ita",
-                "precio": "$940",
+                "descripcion": "Is a 100% cotton jacket illustrated with the secondary colors of our team.",
+                "precio": 940,
                 "categoria": "Camisa5",
                 "tallas": [
             {
@@ -166,7 +166,7 @@
                 "imagenes":[
                     "assets/imgP/chaqueta2.webp",
                     "assets/imgP/chaqueta22.webp",
-                    "assets/imgP/chaqueta23.webp",
+                    "assets/imgP/chaqueta23.jpg",
                     "assets/imgP/chaqueta24.webp"
                     
                     ]        
@@ -175,8 +175,8 @@
                     "id": "prod6",
                     "marca": "puma",
                     "nombre": "MILAN HERITAGE TROUSERS",
-                    "descripcion": "Camisa importade desde ita",
-                    "precio": "$750",
+                    "descripcion": "Is a 100% cotton pant illustrated with the primary colors of our team.",
+                    "precio": 750,
                     "categoria": "Camisa6",
                     "tallas": [
                 {
@@ -208,8 +208,8 @@
             "id": "prod7",
             "marca": "puma",
             "nombre": "SUDADERA MILAN HERITAGE",
-            "descripcion": "Camisa importade desde ita",
-            "precio": "$400",
+            "descripcion": "Is a windbreaker jacket illustrated with the primary colors of our team.",
+            "precio": 400,
             "categoria": "Camisa7",
             "tallas": [
         {
@@ -242,8 +242,8 @@
                 "id": "prod8",
                 "marca": "puma",
                 "nombre": "SUDADERA MILAN HERITAGE",
-                "descripcion": "Camisa importade desde ita",
-                "precio": "$800",
+                "descripcion": "Is a windbreaker jacket illustrated with the secondary colors of our team.",
+                "precio": 800,
                 "categoria": "Camisa8",
                 "tallas": [
             {
@@ -275,8 +275,9 @@
                     "id": "prod9",
                     "marca": "puma",
                     "nombre": "MILAN REVERSIBLE 1/2 ZIP JACKET",
-                    "descripcion": "Camisa importade desde ita",
-                    "precio": "$800",
+                    "descripcion": "Is a windbreaker jacket with hood in our team's primary colors."
+                    ,
+                    "precio": 800,
                     "categoria": "Camisa9",
                     "tallas": [
                 {
