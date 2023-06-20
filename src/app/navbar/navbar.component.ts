@@ -10,7 +10,7 @@ import { StoreService } from 'src/app/services/store.service';
 
 export class NavbarComponent implements OnInit{
 
-  cart:boolean =false;
+  isCartOpen:boolean = false;
   menu:boolean = false;
   search:boolean = false;
 
@@ -18,14 +18,13 @@ export class NavbarComponent implements OnInit{
   
   constructor(private storeService: StoreService) {}
   
-  ngOnInit(): void {
+  ngOnInit(): void {}
   
-  }
   onToggleCard(){
-    this.cart = !this.cart
+    this.isCartOpen = !this.isCartOpen
   }
   
-  onCloseCart() {
-    this.cart = false;
+  closeCart() {
+    this.isCartOpen = false;
   }
 }

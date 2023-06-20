@@ -1,7 +1,8 @@
 <section >
   <div class="completo">
-  <button class="closed" (click)="onCloseCart()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
-    <div class="content-cards">
+  <button class="closed" (click)="closeCart()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
+   
+  <div class="content-cards">
       <div class="card-product" *ngFor="let product of myCart$ | async">
         <div>
           <div class="container-image">

@@ -8,10 +8,10 @@ import { StoreService } from 'src/app/services/store.service';
 })
 export class CartComponent {
   
-  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
+  @Output() closeCartEvent: EventEmitter<void> = new EventEmitter<void>();
   
-  onCloseCart() {
-    this.closeCart.emit();
+  closeCart() {
+    this.closeCartEvent.emit();
   }
 
   myCart$ = this.storeService.myCart$
