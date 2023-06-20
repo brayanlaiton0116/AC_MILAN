@@ -13,7 +13,7 @@
         <a [routerLink] = "['/shop']">SHOP</a>
       </li>
       <li>
-        <a href="#">THE CLUB</a>
+        <a [routerLink] = "['']">THE CLUB</a>
       </li>
       
     </div>
@@ -44,8 +44,11 @@
       <div class="marcador">
         <p class="cero">{{(myCart$ | async)?.length }}</p>
       </div>
-        <img  class="carto" src="./assets/img/cart.png"  alt="carto" [ngClass]="{show:cart}" (click)="onToggleCard()" >
-    </div>
+      <i class="fa-solid fa-cart-arrow-down position-absolute mb-0" style="color: #c2c9d6;" [ngClass]="{show:cart}" (click)="onToggleCard()" ></i>
+      
+
+           
+      </div>
 </div>
 </nav>              
 
@@ -61,12 +64,12 @@
 <div class="menu" *ngIf="menu" >
   <ul>
     <li>
-      <a [routerLink]="['/home']">FANS</a>
+      <a [routerLink]="['']">FANS</a>
     </li>
   </ul>
   <ul>
     <li>
-      <a [routerLink]="['/login']">ACADEMY</a>
+      <a [routerLink]="['']">ACADEMY</a>
     </li>
   </ul>
   <ul>

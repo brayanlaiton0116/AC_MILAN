@@ -15,16 +15,19 @@ import { ProductoComponent } from './producto/producto.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import {HttpClientModule} from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
+import { PagErrorComponent } from './pag-error/pag-error.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: PagErrorComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'shop', component: ShopComponent },
   { path: 'producto', component: ProductoComponent },
   { path: 'productos/:id', component: ProductoComponent },
+  
 
 
 ];
@@ -40,6 +43,8 @@ const routes: Routes = [
     ShopComponent,
     ProductoComponent,
     CartComponent,
+    PagErrorComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

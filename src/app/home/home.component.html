@@ -9,8 +9,7 @@
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
-          <img  src="assets/imgP/primera.webp"
-            class="card-img-top" alt="camisa1" />
+          <img  (click)="redirectToDetalleProducto('prod1')" src="assets/imgP/primera.webp"class="card-img-top" alt="camisa1"/>
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -38,7 +37,7 @@
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
           <img class="card-img-top"src="assets/imgP/segunda.webp"
-            alt="camisa2" />
+            alt="camisa2" (click)="redirectToDetalleProducto('prod2')" />
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -65,7 +64,7 @@
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
           <img src="assets/imgP/tercera.webp"
-            class="card-img-top" alt="camisa3" />
+            class="card-img-top" alt="camisa3" (click)="redirectToDetalleProducto('prod3')" />
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -110,7 +109,7 @@
         </div>
         
         <div class=" card13">
-          <img class="a" src="assets/img/Frame2.jpg" alt="">
+          <img class="a" src="assets/img/Frame3.jpg" alt="">
           <h5 class="titulo">AC MILAN VS NAPOLE</h5>
           <p class="descripcion">
             This match will be played at the San Siro stadium.</p>
@@ -121,7 +120,7 @@
         </div>
 
         <div class=" card14">
-          <img class="a" src="assets/img/Frame3.jpg" alt="">
+          <img class="a" src="assets/img/Frame2.jpg" alt="">
           <h5 class="titulo">AC MILAN VS REAL MADRID</h5>
           <p class="descripcion">This match will be played at the Bernabeú stadium.</p>
 

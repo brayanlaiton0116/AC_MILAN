@@ -18,7 +18,7 @@ export class ShopComponent implements OnInit {
   selectedMaxPrice: number;
   products:IProduct[]=[];
   filteredProducts: IProduct[]=[];
-
+  
   constructor( private router: Router, private storeService: StoreService) { }
   
   menu:boolean = false
@@ -54,6 +54,7 @@ export class ShopComponent implements OnInit {
   
     this.router.navigate(['productos', productId])                    
     };
+    
   sliderOptions: Options = {
   floor: 100,
   ceil: 1500

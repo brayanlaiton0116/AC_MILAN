@@ -3,3 +3,13 @@
     justify-content: center;
     
 }
+.carousel-control-prev-icon {
+    color: black;
+    background-color: black;
+    border-radius: 5px;
+}
+.carousel-control-next-icon{
+    color: black;
+    background-color: black;
+    border-radius: 5px;
+}

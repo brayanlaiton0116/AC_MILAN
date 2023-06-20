@@ -32,7 +32,7 @@ export class RegistroComponent {
       email: new FormControl('', [Validators.required, Validators.pattern("^[^ ]+@[^ ]+\.[a-z]{2,6}$")]),
       name: new FormControl('',[Validators.required]),
       lastname: new FormControl('',[Validators.required]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+      password: new FormControl('', [Validators.required, Validators.minLength(8),Validators.maxLength(20)])
         }
     )
   }
