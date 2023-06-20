@@ -1,5 +1,4 @@
 .contar{
-
 color: rgb(12, 12, 12);
 gap:14px;
 display: flex;
@@ -7,12 +6,13 @@ justify-content: center;
 border-radius: 8px;
 padding: 12px;
 top: 25px;
-
 }
+
 .card-img-top{
     cursor: pointer;
 
 }
+
 .card-img-top:hover{
     transform: scale(1.1);
     transition: transform 1s;
@@ -99,7 +99,8 @@ div .andres:hover{
     transition: .5s;
 }
 div a img{
-    width: 165px;
+    position: relative;
+    width: 145px;
     height: 40;
     display: inline-block;
     border-radius: 18px;
@@ -125,7 +126,7 @@ div a img{
     padding: 16px;
     background-color: #ebdddd;
     padding: 10px;
-    
+    justify-content: z;
 }
 .a{
     width: 100%;
@@ -137,6 +138,25 @@ div a img{
     transform: scale(1.1);
     transition: transform 4s;
 }
+
+.logos{
+    width: 750px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logos{
+    width: 750px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 @media screen and (min-width: 768px){
 .container-img {
     display: block;
@@ -154,17 +174,31 @@ div a img{
     height: 100vh
 }
 
+.logos{
+    width: 750px;
+    height: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
 
-@media screen and (max-width: 568px){ 
+}
+
+@media screen and (max-width: 428px){  
+    
     .col{
         width: 100%;
         justify-content: center;
         gap: 20;
+        display: block;
     }
-    .logos{
-        width: 100%;
-        justify-content: center;
+    .marcas{
+        display: block;
+    }
+   .logos{
+        width: 145px;
+        height: 40px;
         gap: 20px;
+        display: block;
     }
     .card12{
     width: 100%;
@@ -193,7 +227,6 @@ div a img{
         
 }
         
-    
 }
 @media screen and (max-width: 458px){ 
     .contar{

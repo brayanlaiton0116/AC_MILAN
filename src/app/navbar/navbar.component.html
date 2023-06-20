@@ -13,7 +13,7 @@
         <a [routerLink] = "['/shop']">SHOP</a>
       </li>
       <li>
-        <a [routerLink] = "['']">THE CLUB</a>
+        <a [routerLink] = "['/error']">THE CLUB</a>
       </li>
       
     </div>
@@ -44,12 +44,9 @@
       <div class="marcador">
         <p class="cero">{{(myCart$ | async)?.length }}</p>
       </div>
-      <i class="fa-solid fa-cart-arrow-down position-absolute mb-0" style="color: #c2c9d6;" [ngClass]="{show:cart}" (click)="onToggleCard()" ></i>
-      
-
-           
+      <i (click)="cart=!cart" class="fa-solid fa-cart-arrow-down position-absolute mb-0" style="color: #c2c9d6;" [ngClass]="{show:cart}"  ></i>
       </div>
-</div>
+  </div>
 </nav>              
 
 <div class="carrito" [ngClass]="{show:cart}">
@@ -64,12 +61,12 @@
 <div class="menu" *ngIf="menu" >
   <ul>
     <li>
-      <a [routerLink]="['']">FANS</a>
+      <a [routerLink]="['/error']">FANS</a>
     </li>
   </ul>
   <ul>
     <li>
-      <a [routerLink]="['']">ACADEMY</a>
+      <a [routerLink]="['/error']">ACADEMY</a>
     </li>
   </ul>
   <ul>

@@ -107,8 +107,8 @@ a{
     
         .marcador{
             position: relative;
-            left: 8.5px ;
-            top:-0.4rem;
+            left: 5.1px ;
+            top:-1.0rem;
             color: white;
             border: 1px solid rgba(254, 181, 12, 0.1);
             border-radius: 50%;
@@ -123,10 +123,11 @@ a{
         }
     }
 
-.fa-solid fa-cart-arrow-down{
+.fa-solid {
     position: absolute;
     width: 45px;
     height: 35px;
+    top: 0.4rem;
 }
 .carrito{
     display: none;
@@ -136,7 +137,7 @@ a{
     flex-direction: column;
     justify-content: center;
     z-index: 5;
-    position:absolute;
+    position: fixed;
     border-radius: 0.5rem;
     right: 0 ;
     min-width: 10%;
@@ -147,6 +148,7 @@ a{
         flex-direction: column;
         justify-content:center;
         margin: 15px;
+        
         
     }
 }

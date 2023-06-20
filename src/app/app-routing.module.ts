@@ -15,6 +15,7 @@ const routes: Routes = [
   {path: 'registro',component: RegistroComponent},
   {path: 'shop', component: ShopComponent },
   {path: 'producto', component: ProductoComponent },
+  {path: 'error', component: PagErrorComponent },
   {path: 'productos/:id', component: ProductoComponent },
   
 ];

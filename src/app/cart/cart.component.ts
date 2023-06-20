@@ -7,15 +7,9 @@ import { StoreService } from 'src/app/services/store.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  cart:boolean = false ;
   
   @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
   
-  cerrarFuncion() {
-    this.cart = true;
-    return
-  }
-
   onCloseCart() {
     this.closeCart.emit();
   }

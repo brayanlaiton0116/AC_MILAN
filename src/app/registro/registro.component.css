@@ -47,10 +47,11 @@
 .comunicado button{
     color: white;
     background-color: #1A161A;
-    width: 80px;
-    height: 70px;
-    border-radius: 5px;
+    width: 84px;
+    height: 65px;
+    border-radius: 8px;
     padding: 7px;
+    margin: 0px 19px;
 
 }
 .comunicado button:hover{

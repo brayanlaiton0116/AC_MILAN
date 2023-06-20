@@ -1,10 +1,6 @@
-<section *ngIf="cart">
+<section >
   <div class="completo">
-  <button class="closed" (click)="cerrarFuncion()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
-
-    <div class="top">
-      <i class="bi bi-x-lg" (click)="onCloseCart()"></i>
-    </div>
+  <button class="closed" (click)="onCloseCart()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
     <div class="content-cards">
       <div class="card-product" *ngFor="let product of myCart$ | async">
         <div>

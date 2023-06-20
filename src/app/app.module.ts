@@ -20,11 +20,12 @@ import { PerfilComponent } from './perfil/perfil.component';
 
 
 const routes: Routes = [
-  { path: '', component: PagErrorComponent },
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'shop', component: ShopComponent },
+  { path: 'error', component: PagErrorComponent },
   { path: 'producto', component: ProductoComponent },
   { path: 'productos/:id', component: ProductoComponent },
   
