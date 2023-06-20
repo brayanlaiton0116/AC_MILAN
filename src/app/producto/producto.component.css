@@ -223,14 +223,10 @@ padding: 10px 1px;
         display: block;
         margin: 0;
     }
-
     .fotos{
         display: none;
         width: 100%;
-        
-
     }
-    
     .producto-foto{
         display: block;
         width: 100%; 
@@ -269,7 +265,7 @@ padding: 10px 1px;
 
 
 
-@media only screen and (max-width: 968px){ 
+@media only screen and (max-width: 428px){ 
     
     .menu_izquierda li a{
         display: none;
@@ -288,5 +284,11 @@ padding: 10px 1px;
         display: block;
         border-radius: 5px;
     }
-    
+    .container{
+        width: 20%;
+        display: block;
+    }
+    .acordion button {
+        width: 10px;
+    }
     } 
