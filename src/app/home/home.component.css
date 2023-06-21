@@ -203,9 +203,74 @@ div a img{
             height: 100%;
             justify-content: center;
             gap: 20;
+            margin: 0px 85px;
+        }
+}
+@media screen and (max-width: 550px){  
+    
+    .col{
+        width: 100%;
+        justify-content: center;
+        gap: 20;
+        display: block;
+    }
+    .marcas{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+   .logos{
+        width: 145px;
+        height: 40px;
+        gap: 20px;
+        display: block;
+    }
+    .card12{
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    justify-content: center;
+    display: block;
+    gap: 20px;
+}
+.card13{
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    justify-content: center;
+    display: block;
+    gap: 20px;
+    }
+    .card14{
+        width: 100%;
+        height: 100%;
+        border-style: solid;
+        justify-content: center;
+        display: block;
+        gap: 20px;
+        }  
+        .contar{
+            width: 30%;
+            justify-content: center;
+            gap: 20;
+            display: block;
+            grid-template-columns: 3fr 4fr;
+            align-items: center;
+            
+        }
+        .contar{
+            width: 100%;
+            display: block;
+        }      
+        .logos{
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            gap: 20;
             margin: 0px 40px;
         }
 }
+
 
 @media screen and (max-width: 358px){ 
     .contar{

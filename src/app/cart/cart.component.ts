@@ -7,7 +7,9 @@ import { StoreService } from 'src/app/services/store.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  
+  minimoPermitido: number = 0
+  maximoPermitido: number = 10;
+
   @Output() closeCartEvent: EventEmitter<void> = new EventEmitter<void>();
   
   closeCart() {
@@ -32,11 +34,12 @@ export class CartComponent {
     const product = this.storeService.findProductById(id)
 
     if(product){
-      if(operation === 'minus' && product.cantidad > 0){
+      if(operation === 'minus' && product.cantidad > this.minimoPermitido){
         product.cantidad = product.cantidad - 1;
+        
       }
-      if(operation === 'add'){
-        product.cantidad = product.cantidad + 1;
+      if(operation === 'add' && product.cantidad < this.maximoPermitido ){
+        product.cantidad = product.cantidad + 1 ;
       }
       if(product.cantidad === 0){
         this.delete(id)
@@ -47,5 +50,4 @@ export class CartComponent {
     const result = this.storeService.totalCart()
     return result
   }
-  
-}
+}    

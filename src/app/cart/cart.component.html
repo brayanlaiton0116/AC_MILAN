@@ -1,7 +1,7 @@
 <section >
   <div class="completo">
-  <button class="closed" (click)="closeCart()"><i class="fa-solid fa-xmark" style="color: #18191b;"></i></button>
-   
+  <button class="closed" (click)="closeCart()"><i class="fa-solid fa-xmark " style="color: #18191b;"></i></button>
+  <h6 class="titulo">Nothing in the cart</h6>
   <div class="content-cards">
       <div class="card-product" *ngFor="let product of myCart$ | async">
         <div>
@@ -12,10 +12,10 @@
             <p>{{ product.nombre }}</p>
             <p>${{product.precio}}</p>
             <div class="cantidad">
-              <p>Cantidad: <span>{{ product.cantidad }}</span></p>
+              <p>Cantidad: <span class="cuadro">{{ product.cantidad }}</span></p>
               <div>
-                <i class="fa-solid fa-minus" (click)="update('minus', product.id)"></i>
-                <i class="fa-solid fa-plus" (click)="update('add', product.id)"></i>
+                <i class="fa-solid fa-minus" (click)="update('minus', product.id)" ></i>
+                <i class="fa-solid fa-plus" (click)="update('add', product.id )" ma></i>
               </div>
             </div>
           </div>
