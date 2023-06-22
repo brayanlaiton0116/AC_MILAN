@@ -5,16 +5,16 @@ section{
     display: grid;
     grid-template-rows: 4% 78% 18%;
     gap: 20px;
-    background-color: rgb(225, 208, 208);
+    background-color: #2a242a;
     margin: 10px;
-    top: 125px;
-    
 }
+
+
 .titulo{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     margin: 10px 0px;
 }
 .cartTotal{
@@ -23,6 +23,8 @@ section{
         font-size: 1.2rem;
         font-weight: bold;
     }
+    max-height: 300px; 
+    overflow-y: auto; 
 }
 .closed{
     width: 40px;
@@ -37,7 +39,7 @@ section{
     
 }
 .closed:hover{
-    color: #1A161A;
+    color: rgb(19, 19, 19);
     transition: 1s;
     background-color: rgb(255, 255, 255);
 }
@@ -62,6 +64,7 @@ section{
     border-radius: 5px;
     padding: 1px;
     box-shadow: 1px 2px #685e5e4f;
+
 }
 .card-product > div{
     display: flex;
@@ -83,14 +86,18 @@ section{
 .description p{
     margin: 2px;
     font-weight: bold;
+    color: #1A161A;
 }
 .cantidad{
     display: flex;
     align-items: center;
     gap: 10px;
+    color: #1A161A;
+    
 }
 .cantidad p{
     font-weight: 400;
+    color: #1A161A;
 }
 .cantidad div{
     display: flex;
@@ -116,6 +123,7 @@ section{
     font-size: 18px;
 }
 .bottom {
+    color: white;
     background-color: #AE0000(224, 61, 61);
 }
 
@@ -134,9 +142,9 @@ section{
     background-color: #AE0000;
 }
 .bottom button:hover{
-    color: white;
+    color: rgb(5, 5, 5);
     transition: 1s;
-    background-color: #1A161A;
+    background-color: #dbd5db;
 }
 
 @media screen and (max-width: 620px) {

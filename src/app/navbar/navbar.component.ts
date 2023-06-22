@@ -10,6 +10,29 @@ import { StoreService } from 'src/app/services/store.service';
 
 export class NavbarComponent implements OnInit{
 
+  menuAbierto: boolean = false; 
+  SearchAbierto: boolean = false;  
+  otraFuncionAbierta: boolean = false;  
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+    this.SearchAbierto = false; 
+    this.otraFuncionAbierta = false;  
+  }
+
+  toggleSearch() {
+    this.SearchAbierto = !this.SearchAbierto;
+    this.menuAbierto = false;  
+    this.otraFuncionAbierta = false;  
+  }
+
+  toggleOtraFuncion() {
+    this.otraFuncionAbierta = !this.otraFuncionAbierta;
+    this.menuAbierto = false;  
+    this.SearchAbierto = false;  
+  }
+
+
   isCartOpen:boolean = false;
   menu:boolean = false;
   search:boolean = false;
@@ -26,5 +49,6 @@ export class NavbarComponent implements OnInit{
   
   closeCart() {
     this.isCartOpen = false;
+    
   }
 }

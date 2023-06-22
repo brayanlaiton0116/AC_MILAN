@@ -1,15 +1,17 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, HostListener, ElementRef } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
+
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
+
 export class CartComponent {
   minimoPermitido: number = 0
   maximoPermitido: number = 10;
-
+  
   @Output() closeCartEvent: EventEmitter<void> = new EventEmitter<void>();
   
   closeCart() {
@@ -18,7 +20,7 @@ export class CartComponent {
 
   myCart$ = this.storeService.myCart$
   
-  constructor(private storeService: StoreService) {}    
+  constructor(private storeService: StoreService, private elementRef: ElementRef) {}    
   
   
   totalProduct(price: number, units: number){
@@ -50,4 +52,4 @@ export class CartComponent {
     const result = this.storeService.totalCart()
     return result
   }
-}    
+}

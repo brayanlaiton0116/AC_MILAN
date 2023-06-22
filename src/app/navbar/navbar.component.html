@@ -3,7 +3,7 @@
   <div class="menu_izquierda">
         
     <div class="menu_d">
-          <a (click) ="menu=!menu"><img src="assets/img/menu.png" ></a>
+          <a (click) ="menu=!menu" (click)=" toggleMenu()" ><img  src="assets/img/menu.png" ></a>
     </div>       
       
       <li>   
@@ -27,7 +27,7 @@
 
     <div class="menu_derecha">
       <li>
-        <a (click) ="search=!search"> <img src="./assets/img/Vector.png" alt="Buscador"></a>
+        <a (click) ="search=!search" (click)=" toggleSearch()">  <img src="./assets/img/Vector.png" alt="Buscador"></a>
       </li>
       <ul>
       <li>
@@ -44,7 +44,7 @@
       <div class="marcador">
         <p class="cero">{{(myCart$ | async)?.length }}</p>
       </div>
-      <i (click)="onToggleCard()" class="fa-solid fa-cart-arrow-down position-absolute mb-0" style="color: #c2c9d6;" [ngClass]="{show:isCartOpen}"  ></i>
+      <i (click)="onToggleCard()" (click)="toggleOtraFuncion()" class="fa-solid fa-cart-arrow-down position-absolute mb-0" style="color: #c2c9d6;"   ></i>
       </div>
   </div>
 </nav>              
@@ -53,31 +53,35 @@
 <app-cart (closeCartEvent)="closeCart()"></app-cart>
 </div>
 
-<div class="search" *ngIf="search" >
-<input type="text" placeholder="Search">
+<div>
+    <div class="search" *ngIf="SearchAbierto" >
+    <input type="text" placeholder="Search">
+    </div>
 </div>
 
-<div >
-<div class="menu" *ngIf="menu" >
-  <ul>
-    <li>
-      <a [routerLink]="['/error']">FANS</a>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a [routerLink]="['/error']">ACADEMY</a>
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a [routerLink]="['/login']">LOGIN</a> 
-    </li>
-  </ul>
-  <ul>
-    <li>
-      <a [routerLink]="['/registro']">REGISTER</a> 
-    </li>
-  </ul>
+<div>
+        <div>
+      <div class="menu" *ngIf="menuAbierto">
+        <ul>
+          <li>
+            <a [routerLink]="['/error']">FANS</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a [routerLink]="['/error']">ACADEMY</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a [routerLink]="['/login']">LOGIN</a> 
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <a [routerLink]="['/registro']">REGISTER</a> 
+          </li>
+        </ul>
+      </div>
 </div>
 </div>
