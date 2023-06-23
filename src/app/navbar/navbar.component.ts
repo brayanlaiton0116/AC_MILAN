@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
-import { Input } from 'hammerjs';
 import { StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -13,6 +12,7 @@ export class NavbarComponent implements OnInit{
   menuAbierto: boolean = false; 
   SearchAbierto: boolean = false;  
   otraFuncionAbierta: boolean = false;  
+
 
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;

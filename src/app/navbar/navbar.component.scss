@@ -108,7 +108,7 @@ a{
         .marcador{
             position: relative;
             left: 9.1px ;
-            top:-0.3rem;
+            top:-0.5rem;
             color: white;
             border: 1px solid rgba(254, 181, 12, 0.1);
             border-radius: 50%;
@@ -124,13 +124,14 @@ a{
         }
     }
 
-.fa-solid {
-    position: absolute;
-    width: 115px ;
-    height: 35px;
-    top: 0.4rem;
-    
-}
+    .fi{
+        color: white;
+        position: absolute;
+        width: 35px ;
+        height: 45px;
+        top: -0.0rem;
+        font-size: 22px;
+    }
 .carrito{
     display: none;
 }

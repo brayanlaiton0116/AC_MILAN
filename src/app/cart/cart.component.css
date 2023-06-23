@@ -7,6 +7,8 @@ section{
     gap: 20px;
     background-color: #2a242a;
     margin: 10px;
+    max-height: 800px;
+    overflow-y: auto;
 }
 
 
@@ -124,7 +126,8 @@ section{
 }
 .bottom {
     color: white;
-    background-color: #AE0000(224, 61, 61);
+    background-color: #640a0a(224, 61, 61);
+    margin: 17px;
 }
 
 .bottom div {
