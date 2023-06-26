@@ -24,7 +24,7 @@ export class LoginComponent {
     this.formatoLogin = new FormGroup(
       {
         email: new FormControl('', [Validators.required, Validators.pattern("^[^ ]+@[^ ]+\.[a-z]{2,6}$")]),
-        password: new FormControl('', [Validators.required, Validators.minLength(6),Validators.maxLength(20)])
+        password: new FormControl('', [Validators.required, Validators.minLength(8),Validators.maxLength(20)])
       }
     )
   }
