@@ -1,38 +1,35 @@
-
-.footer{
-height: 20%;
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-background-color: #1A161A;
-justify-content: center;
-text-align: center;
+.footer {
+  height: 20%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #1a161a;
+  justify-content: center;
+  text-align: center;
 }
-.redes img{
-width: 90px;
-height: auto;
-margin: 0;
-justify-content: right;
-background-color: #1A161A;
-color: #F6F6F6;
-text-decoration: none;
-padding: 30px;
-
+.redes img {
+  width: 90px;
+  height: auto;
+  margin: 0;
+  justify-content: right;
+  background-color: #1a161a;
+  color: #f6f6f6;
+  text-decoration: none;
+  padding: 30px;
 }
 
-.letras a{
-    height: auto;
-    color: #F6F6F6; 
-    background-color: #1A161A;
-    padding: 22px;
-    text-decoration: none;
+.letras a {
+  height: auto;
+  color: #f6f6f6;
+  background-color: #1a161a;
+  padding: 22px;
+  text-decoration: none;
 }
 
-.texto{
-    height: auto;
-    color: #F6F6F6; 
-    background-color: #1A161A;
-    padding: 15px;
-    text-decoration: none;
-    
+.texto {
+  height: auto;
+  color: #f6f6f6;
+  background-color: #1a161a;
+  padding: 15px;
+  text-decoration: none;
 }

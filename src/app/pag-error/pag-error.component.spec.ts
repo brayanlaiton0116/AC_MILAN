@@ -8,9 +8,8 @@ describe('PagErrorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PagErrorComponent ]
-    })
-    .compileComponents();
+      declarations: [PagErrorComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PagErrorComponent);
     component = fixture.componentInstance;

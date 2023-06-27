@@ -1,109 +1,104 @@
 .gradient-custom-2 {
-    background: #161615; 
-    background: -webkit-linear-gradient(to right ,  #1A161A, #1A161A, );
-    background: linear-gradient(to right, #AE0000,#AE0000);
-    
-}
-    
-.form div{
-    width: 290px;
+  background: #161615;
+  background: -webkit-linear-gradient(to right, #1a161a, #1a161a);
+  background: linear-gradient(to right, #ae0000, #ae0000);
 }
 
-.boton{
+.form div {
+  width: 290px;
+}
+
+.boton {
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+.comunicado {
+  display: flex;
+  width: 100%;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 25px;
+  font-size: center;
+  top: 2px;
+}
+.comunicado p {
+  text-align: center;
+  justify-content: center;
+}
+.boton button {
+  color: white;
+  background-color: #1a161a;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton :hover {
+  background-color: #ae0000;
+  transition: 0.5s;
+}
+.comunicado button {
+  color: white;
+  background-color: #1a161a;
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+}
+.comunicado button:hover {
+  background-color: #ae0000;
+  transition: 0.5s;
+}
+
+.alert {
+  padding: 8px;
+  font-weight: 500;
+}
+.form-control {
+  padding: 9px;
+  border: 1px solid var(--black);
+  margin-bottom: 20px;
+}
+.form-label {
+  font-weight: 700;
+}
+.btn {
+  width: 100%;
+  height: 3rem;
+  background: var(--black);
+  opacity: inherit;
+  color: var(--white);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 925px) {
+  .description,
+  .form {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-img {
+    display: block;
+  }
+  .description,
+  .form {
+    width: 40%;
+  }
+  .container-login {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+  }
+  .container-img img {
+    object-fit: cover;
     width: 100%;
-    height: 80px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
-    margin-top: 20px;
-    
+    height: 100vh;
+  }
 }
-.comunicado{
-    display: flex;
-    width: 100%;
-    height: 100px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 25px;
-    font-size: center;
-    top: 2px;
-}
-.comunicado p{
-
-    text-align: center;
-    justify-content: center;
-    
-    
-}
-.boton button{
-    color: white; 
-    background-color: #1A161A;
-    border-radius: 10px; 
-    align-items: center;
-    justify-content: center;
-}
-
-.boton :hover{
-    background-color:#AE0000 ;
-    transition: .5s; 
-}
-.comunicado button{
-    color: white;
-    background-color: #1A161A;
-    width: 90px;
-    height: 50px;
-    border-radius: 5px;
-
-}
-.comunicado button:hover{
-    background-color: #AE0000;
-    transition: .5s; 
-}
-
-    .alert{
-        padding: 8px;
-        font-weight: 500;
-    }
-    .form-control{
-        padding: 9px;
-        border: 1px solid var(--black);
-        margin-bottom: 20px;
-    }
-    .form-label{
-        font-weight: 700;
-    }
-    .btn{
-        width: 100%;
-        height: 3rem;
-        background: var(--black);
-        opacity: inherit;
-        color: var(--white);
-        font-weight: bold;
-    } 
-    
-    @media screen and (min-width: 925px){
-        .description, .form{
-            width: 70%;
-        }
-        
-    }
-    @media screen and (min-width: 768px){
-        .container-img {
-            display: block;
-        }
-        .description, .form{
-            width: 40%;
-        }
-        .container-login{
-            display: grid;
-            grid-template-columns: 3fr 4fr;
-        }
-        .container-img img{
-            object-fit: cover;
-            width: 100%;
-            height: 100vh
-        }
-    }

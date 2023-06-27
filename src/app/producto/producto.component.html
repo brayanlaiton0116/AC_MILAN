@@ -1,74 +1,88 @@
-<section *ngIf="!product">  
-    <div class="d-flex align-items-center justify-content-center vh-100">
-        <div class="text-center row">
-            <div class="imagen1" [routerLink] = "['/shop']">
-                <img class="img-fluid" src="./assets/img/Logo.png" alt="logo"
-                    >
-            </div>
-            <div class=" escrito">
-                <p class="fs-3"> <span class="error" [routerLink] = "['/shop']" >Opps!</span> Page not found.</p>
-                <p class="lead">
-                    The page you’re looking for doesn’t exist.
-                </p>
-                <button [routerLink] = "['/shop']" class="primary" [routerLink] = "['/shop']" >Refresh Page</button>
-            </div>
-
-        </div>
+<section *ngIf="!product">
+  <div class="d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center row">
+      <div class="imagen1" [routerLink]="['/shop']">
+        <img class="img-fluid" src="./assets/img/Logo.png" alt="logo" />
+      </div>
+      <div class="escrito">
+        <p class="fs-3">
+          <span class="error" [routerLink]="['/shop']">Opps!</span> Page not
+          found.
+        </p>
+        <p class="lead">The page you’re looking for doesn’t exist.</p>
+        <button
+          [routerLink]="['/shop']"
+          class="primary"
+          [routerLink]="['/shop']"
+        >
+          Refresh Page
+        </button>
+      </div>
     </div>
+  </div>
 </section>
 
 <section *ngIf="product">
-    <div class="volver">
-        <img src="assets/img/volver.png" [routerLink] = "['/shop']" alt="volver" >
+  <div class="volver">
+    <img src="assets/img/volver.png" [routerLink]="['/shop']" alt="volver" />
+  </div>
+  <div class="fotos">
+    <div
+      *ngFor="let imagen of product.imagenes"
+      (click)="changeMainImage(imagen)"
+    >
+      <img [src]="imagen" alt="primera" />
     </div>
-<div class="fotos">
-    <div *ngFor="let imagen of product.imagenes" (click)="changeMainImage(imagen)"><img [src]="imagen" alt="primera"></div>
-</div>
+  </div>
 
-    <div class="producto-foto" >
-        <img [src]="mainImage">
+  <div class="producto-foto">
+    <img [src]="mainImage" />
+  </div>
+
+  <div class="container">
+    <h4 class="nombre">{{ product.nombre }}</h4>
+
+    <h3 class="producto"></h3>
+
+    <div class="descripcion">
+      <div class="acordion">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#panelsStayOpen-collapseOne"
+          aria-expanded="false"
+          aria-controls="panelsStayOpen-collapseOne"
+        >
+          DESCRIPTION
+        </button>
+
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="acordion2-collapse collapse"
+        >
+          <div class="accordion-body">
+            <p>{{ product.descripcion }}</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="container">
-        <h4 class="nombre">{{product.nombre}}</h4>
-            
-        <h3 class="producto"></h3>
-        
-        <div class="descripcion">
-            
-            <div class="acordion">
-                
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
-                    DESCRIPTION
-                </button>
-            
-                <div id="panelsStayOpen-collapseOne" class="acordion2-collapse collapse">
-                <div class="accordion-body">
-                    <p>{{product.descripcion}}</p>
-                </div>
-            </div>
-        </div>
-    </div>   
-
-        <h5>CHOOSE YOUR SIZE</h5>
-        <div class="tallas">
-            
-            <div class="cuadrado1">S</div>
-            <div class="cuadrado2">M</div>
-            <div class="cuadrado3">L</div>
-            <div class="cuadrado4">XL</div>
-        </div>
-
-        <h5>PRICE</h5>
-        <div class="precio">${{product.precio}}</div>   
-        
-        <div class="d-grid gap-2 col-6 mx-auto mt-5">
-            <button  class="boton" (click)="addProduct(product)" type="button">
-                ADD TO CARD</button>
-            
-        </div>
+    <h5>CHOOSE YOUR SIZE</h5>
+    <div class="tallas">
+      <div class="cuadrado1">S</div>
+      <div class="cuadrado2">M</div>
+      <div class="cuadrado3">L</div>
+      <div class="cuadrado4">XL</div>
     </div>
-        
-        
-    
+
+    <h5>PRICE</h5>
+    <div class="precio">${{ product.precio }}</div>
+
+    <div class="d-grid gap-2 col-6 mx-auto mt-5">
+      <button class="boton" (click)="addProduct(product)" type="button">
+        ADD TO CARD
+      </button>
+    </div>
+  </div>
 </section>

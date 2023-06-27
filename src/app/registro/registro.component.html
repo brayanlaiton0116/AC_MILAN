@@ -1,4 +1,4 @@
-<section class="h-100 gradient-form" style="background-color: #eee;">
+<section class="h-100 gradient-form" style="background-color: #eee">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-xl-10">
@@ -6,78 +6,159 @@
           <div class="row g-0">
             <div class="col-lg-6">
               <div class="card-body p-md-5 mx-md-4">
-                
                 <div class="text-center">
-                  <img src="./assets/img/Logo.png"
-                    style="width: 45px; margin: 16px"  alt="logo">
-                  <h4 class="mt-2 mb-5 pb-1">CREATE AN ACCOUNT </h4>
+                  <img
+                    src="./assets/img/Logo.png"
+                    style="width: 45px; margin: 16px"
+                    alt="logo"
+                  />
+                  <h4 class="mt-2 mb-5 pb-1">CREATE AN ACCOUNT</h4>
                 </div>
 
-
-                <form [formGroup]="formRegistro" (ngSubmit)="submitForm()"  class="form">
-                
+                <form
+                  [formGroup]="formRegistro"
+                  (ngSubmit)="submitForm()"
+                  class="form"
+                >
                   <div class="name">
                     <label class="form-label" for="form2Example22">Name</label>
-                    <input type="name" id="name" class="form-control" formControlName="name" placeholder="Enter your Name"/>
-                      <div class="alert alert-danger mb-2" [hidden]="name.valid || name.pristine">This field is required.</div> 
-                    </div>                 
-                    
-                    
-                    <div class="lastname">
-                      <label class="form-label" for="form2Example22">Lastname</label>
-                      <input type="lastname" id="lastname" class="form-control" formControlName="lastname" placeholder="Enter your Lastame"/>
-                        <div class="alert alert-danger mb-2" [hidden]="lastname.valid || lastname.pristine">This field is required.</div> 
-                      </div>    
+                    <input
+                      type="name"
+                      id="name"
+                      class="form-control"
+                      formControlName="name"
+                      placeholder="Enter your Name"
+                    />
+                    <div
+                      class="alert alert-danger mb-2"
+                      [hidden]="name.valid || name.pristine"
+                    >
+                      This field is required.
+                    </div>
+                  </div>
 
-                      <div class="email">
-                        <label class="form-label" for="form2Example22">Email</label>
-                        <input type="email" id="email" class="form-control" formControlName="email" placeholder="Enter your email"/>
-                          <div class="alert alert-danger mb-2" [hidden]="email.valid || email.pristine">
-                            <span *ngIf="email.errors?.['pattern']">My email is not valid.</span>
-                            <span *ngIf="email.errors?.['required']">This field is required.</span>
-                          </div>
-                        </div>
-                            
+                  <div class="lastname">
+                    <label class="form-label" for="form2Example22"
+                      >Lastname</label
+                    >
+                    <input
+                      type="lastname"
+                      id="lastname"
+                      class="form-control"
+                      formControlName="lastname"
+                      placeholder="Enter your Lastame"
+                    />
+                    <div
+                      class="alert alert-danger mb-2"
+                      [hidden]="lastname.valid || lastname.pristine"
+                    >
+                      This field is required.
+                    </div>
+                  </div>
+
+                  <div class="email">
+                    <label class="form-label" for="form2Example22">Email</label>
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      formControlName="email"
+                      placeholder="Enter your email"
+                    />
+                    <div
+                      class="alert alert-danger mb-2"
+                      [hidden]="email.valid || email.pristine"
+                    >
+                      <span *ngIf="email.errors?.['pattern']"
+                        >My email is not valid.</span
+                      >
+                      <span *ngIf="email.errors?.['required']"
+                        >This field is required.</span
+                      >
+                    </div>
+                  </div>
+
                   <div class="password">
-                  <label class="form-label" for="form2Example22">Password</label>
-                  <input type="password" id="password" class="form-control" formControlName="password" placeholder="Enter your password"/>
-                    <div class="alert alert-danger mb-2" [hidden]="password.valid || password.pristine">This field is required.</div> 
-                  </div>                 
+                    <label class="form-label" for="form2Example22"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      id="password"
+                      class="form-control"
+                      formControlName="password"
+                      placeholder="Enter your password"
+                    />
+                    <div
+                      class="alert alert-danger mb-2"
+                      [hidden]="password.valid || password.pristine"
+                    >
+                      This field is required.
+                    </div>
+                  </div>
 
                   <div class="confirmPassword">
-                    <label class="form-label" for="form2Example22">confirmPassword</label>
-                    <input type="password" id="confirmPassword" class="form-control" formControlName="confirmPassword" placeholder="Enter your password"/>
-                      <div class="alert alert-danger mb-2" [hidden]="confirmPassword.valid || confirmPassword.pristine">This field is required.</div> 
-                    </div>                 
-                  
-                  <div class="boton">
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit" [disabled]="formRegistro.invalid">Register</button>
+                    <label class="form-label" for="form2Example22"
+                      >confirmPassword</label
+                    >
+                    <input
+                      type="password"
+                      id="confirmPassword"
+                      class="form-control"
+                      formControlName="confirmPassword"
+                      placeholder="Enter your password"
+                    />
+                    <div
+                      class="alert alert-danger mb-2"
+                      [hidden]="
+                        confirmPassword.valid || confirmPassword.pristine
+                      "
+                    >
+                      This field is required.
+                    </div>
                   </div>
-                  
+
+                  <div class="boton">
+                    <button
+                      class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                      type="submit"
+                      [disabled]="formRegistro.invalid"
+                    >
+                      Register
+                    </button>
+                  </div>
+
                   <div class="comunicado">
                     <p class="texto">Have already an account?</p>
-                    <button class="btn btn-outline-danger" type="button" [routerLink]="['/login']">Login here</button>
+                    <button
+                      class="btn btn-outline-danger"
+                      type="button"
+                      [routerLink]="['/login']"
+                    >
+                      Login here
+                    </button>
                   </div>
-                  </form>
+                </form>
               </div>
-              
             </div>
             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                 <h3 class="mb-4">FORCE MILAN</h3>
-                <p class="small mb-0"> Milanita, joina unique experiencia with new 
-                  and collectible items, as well as the latest 
-                  generation kits of the player you want. <br><br>
-                  
-                  did you know that? <br><br>
-                  milan is the second team with the most champions cups 
-                  in the world and currently has 38 trophies won in all 
-                  competitions. <br><br> </p>
+                <p class="small mb-0">
+                  Milanita, joina unique experiencia with new and collectible
+                  items, as well as the latest generation kits of the player you
+                  want. <br /><br />
+
+                  did you know that? <br /><br />
+                  milan is the second team with the most champions cups in the
+                  world and currently has 38 trophies won in all competitions.
+                  <br /><br />
+                </p>
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
     </div>
   </div>
-</section> 
+</section>

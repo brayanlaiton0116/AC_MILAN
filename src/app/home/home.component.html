@@ -1,16 +1,21 @@
-<br><br><br>
+<br /><br /><br />
 <app-carusel></app-carusel>
-<section style="background-color: #eee;">
+<section style="background-color: #eee">
   <div class="container py-5">
     <div class="row">
       <h3>Offers of the day</h3>
-      <br><br><br>
+      <br /><br /><br />
       <div class="col-md-1 col-lg-4 mb-4 mb-lg-0">
         <div class="card">
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
-          <img  (click)="redirectToDetalleProducto('prod1')" src="assets/imgP/primera.webp"class="card-img-top" alt="camisa1"/>
+          <img
+            (click)="redirectToDetalleProducto('prod1')"
+            src="assets/imgP/primera.webp"
+            class="card-img-top"
+            alt="camisa1"
+          />
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -23,22 +28,28 @@
             </div>
 
             <div class="d-flex justify-content-between mb-2">
-              <p class="text-muted mb-0">Product<span class="fw-bold"> 1</span></p>
+              <p class="text-muted mb-0">
+                Product<span class="fw-bold"> 1</span>
+              </p>
               <div class="ms-auto text-warning">
-                <i class="a">Now  $999</i>
+                <i class="a">Now $999</i>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
+
       <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
         <div class="card">
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
-          <img class="card-img-top"src="assets/imgP/segunda.webp"
-            alt="camisa2" (click)="redirectToDetalleProducto('prod2')" />
+          <img
+            class="card-img-top"
+            src="assets/imgP/segunda.webp"
+            alt="camisa2"
+            (click)="redirectToDetalleProducto('prod2')"
+          />
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -51,9 +62,11 @@
             </div>
 
             <div class="d-flex justify-content-between mb-2">
-              <p class="text-muted mb-0">Product <span class="fw-bold"> 2</span></p>
+              <p class="text-muted mb-0">
+                Product <span class="fw-bold"> 2</span>
+              </p>
               <div class="ms-auto text-warning">
-                <i class="a">Now  $1399</i>
+                <i class="a">Now $1399</i>
               </div>
             </div>
           </div>
@@ -64,8 +77,13 @@
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
-          <img src="assets/imgP/tercera.webp" class="card-img-top" alt="camisa3" (click)="redirectToDetalleProducto('prod3')" />
-          
+          <img
+            src="assets/imgP/tercera.webp"
+            class="card-img-top"
+            alt="camisa3"
+            (click)="redirectToDetalleProducto('prod3')"
+          />
+
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -78,18 +96,19 @@
             </div>
 
             <div class="d-flex justify-content-between mb-2">
-              <p class="text-muted mb-0">Product <span class="fw-bold"> 3</span></p>
+              <p class="text-muted mb-0">
+                Product <span class="fw-bold"> 3</span>
+              </p>
               <div class="ms-auto text-warning">
-                <i class="a">Now  $1150</i>
+                <i class="a">Now $1150</i>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
       </div>
       <div class="mas">
         <button [routerLink]="'/shop'">See more Products</button>
       </div>
-      
     </div>
   </div>
 </section>
@@ -97,36 +116,37 @@
 <div class="noticias"></div>
 <h3>News</h3>
 
-
 <div class="contar">
-    <div class=" card1">
-      <figure>
-      <img class="aimagen" src="assets/img/F1.png" alt="">
-          <div class="titulo"><h4>AC MILAN VS INTER</h4>
-          <p>This match will be played at the San Siro stadium.</p>
-        </div>
-      </figure>
-        
-        </div>
-        
-        <div class=" card1">
-          <figure>
-          <img class="aimagen" src="assets/img/F2.png" alt="">
-          <div class="titulo"><h4>AC MILAN VS NAPOLE</h4>
-          <p>This match will be played at the San Siro stadium.</p>
-        </div>
-          </figure>
-        </div>
+  <div class="card1">
+    <figure>
+      <img class="aimagen" src="assets/img/F1.png" alt="" />
+      <div class="titulo">
+        <h4>AC MILAN VS INTER</h4>
+        <p>This match will be played at the San Siro stadium.</p>
+      </div>
+    </figure>
+  </div>
 
-        <div class=" card1">
-          <figure>
-          <img class="aimagen" src="assets/img/F3.png" alt="">
-          <div class="titulo"><h4>AC MILAN VS REAL MADRID</h4>
-          <p>This match will be played at the Bernabeú stadium.</p>
-          </div>
-        </figure>
-        </div>
-      </div>  
+  <div class="card1">
+    <figure>
+      <img class="aimagen" src="assets/img/F2.png" alt="" />
+      <div class="titulo">
+        <h4>AC MILAN VS NAPOLE</h4>
+        <p>This match will be played at the San Siro stadium.</p>
+      </div>
+    </figure>
+  </div>
+
+  <div class="card1">
+    <figure>
+      <img class="aimagen" src="assets/img/F3.png" alt="" />
+      <div class="titulo">
+        <h4>AC MILAN VS REAL MADRID</h4>
+        <p>This match will be played at the Bernabeú stadium.</p>
+      </div>
+    </figure>
+  </div>
+</div>
 
 <div class="mas">
   <button [routerLink]="'/registro'">See more news</button>
@@ -134,24 +154,28 @@
 
 <div class="marcas">
   <h3>Sponsoring Brands</h3>
-<div class="logos">
-  <a class="logo1" href="https://pumaco.com.co/" target= "_blank">
-      <img  src="./assets/img2/logos/puma.png"  alt="marca1">
-  </a>
-  <a class="logo2" href="https://www.bmw.com.co/es/index.html" target= "_blank">
-      <img  src="./assets/img2/logos/bmw.png" alt="marca2">
-  </a>
-  <a class="logo3" href="https://co.ebay.com/" target= "_blank">
-      <img class="logo3" src="./assets/img2/logos/ebay.png" alt="marca3">
-  </a>
-  <a class="logo4" href="https://gatorade.lat/" target= "_blank">
-      <img src="./assets/img2/logos/gatorade.png" alt="marca4">
-  </a>
-  <a class="logo5"href="https://www.off---white.com/" target= "_blank">
-      <img src="./assets/img2/logos/off-white.png"  alt="marca5">
-  </a>
-  <a class="logo6"href="https://www.bitmex.com/" target= "_blank">
-      <img  src="./assets/img2/logos/bitmex.png" alt="marca6">
-  </a>
-    </div>
+  <div class="logos">
+    <a class="logo1" href="https://pumaco.com.co/" target="_blank">
+      <img src="./assets/img2/logos/puma.png" alt="marca1" />
+    </a>
+    <a
+      class="logo2"
+      href="https://www.bmw.com.co/es/index.html"
+      target="_blank"
+    >
+      <img src="./assets/img2/logos/bmw.png" alt="marca2" />
+    </a>
+    <a class="logo3" href="https://co.ebay.com/" target="_blank">
+      <img class="logo3" src="./assets/img2/logos/ebay.png" alt="marca3" />
+    </a>
+    <a class="logo4" href="https://gatorade.lat/" target="_blank">
+      <img src="./assets/img2/logos/gatorade.png" alt="marca4" />
+    </a>
+    <a class="logo5" href="https://www.off---white.com/" target="_blank">
+      <img src="./assets/img2/logos/off-white.png" alt="marca5" />
+    </a>
+    <a class="logo6" href="https://www.bitmex.com/" target="_blank">
+      <img src="./assets/img2/logos/bitmex.png" alt="marca6" />
+    </a>
+  </div>
 </div>

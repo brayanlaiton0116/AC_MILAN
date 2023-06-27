@@ -1,87 +1,93 @@
 <nav class="navbar">
-    
   <div class="menu_izquierda">
-        
     <div class="menu_d">
-          <a (click) ="menu=!menu" (click)=" toggleMenu()" ><img  src="assets/img/menu.png" ></a>
-    </div>       
-      
-      <li>   
-        <a [routerLink]="['/home']"> HOME </a>
-      </li>
-      <li>
-        <a [routerLink] = "['/shop']">SHOP</a>
-      </li>
-      <li>
-        <a [routerLink] = "['/error']">THE CLUB</a>
-      </li>
-      
+      <a (click)="menu = !menu" (click)="toggleMenu()"
+        ><img src="assets/img/menu.png"
+      /></a>
     </div>
 
-    <div class="menu_centro">
-      <li>
-        <a href="http://localhost:50395/home"><img src="./assets/img/Logo.png" alt="Logo"></a>
-      </li> 
-    </div>
-    
+    <li>
+      <a [routerLink]="['/home']"> HOME </a>
+    </li>
+    <li>
+      <a [routerLink]="['/shop']">SHOP</a>
+    </li>
+    <li>
+      <a [routerLink]="['/error']">THE CLUB</a>
+    </li>
+  </div>
 
-    <div class="menu_derecha">
+  <div class="menu_centro">
+    <li>
+      <a href="http://localhost:50395/home"
+        ><img src="./assets/img/Logo.png" alt="Logo"
+      /></a>
+    </li>
+  </div>
+
+  <div class="menu_derecha">
+    <li>
+      <a (click)="search = !search" (click)="toggleSearch()">
+        <img src="./assets/img/Vector.png" alt="Buscador"
+      /></a>
+    </li>
+    <ul>
       <li>
-        <a (click) ="search=!search" (click)=" toggleSearch()">  <img src="./assets/img/Vector.png" alt="Buscador"></a>
-      </li>
-      <ul>
-      <li>
-        <a [routerLink] = "['/login']" > Login </a>
+        <a [routerLink]="['/login']"> Login </a>
       </li>
     </ul>
     <ul>
       <li>
-        <a [routerLink]="['/registro']" >Register</a>
+        <a [routerLink]="['/registro']">Register</a>
       </li>
     </ul>
 
-      <div class="cart ">
+    <div class="cart">
       <div class="marcador">
-        <p class="cero">{{(myCart$ | async)?.length }}</p>
+        <p class="cero">{{ (myCart$ | async)?.length }}</p>
       </div>
-     <i (click)="onToggleCard()" (click)="toggleOtraFuncion()" class="fi fi-rs-shopping-bag"></i>
-      </div>
-  </div>
-</nav>              
-
-<div class="carrito" [ngClass]="{show:isCartOpen}">
-<app-cart (closeCartEvent)="closeCart()"></app-cart>
-</div>
-
-<div>
-    <div class="search" *ngIf="SearchAbierto" >
-    <input type="text" placeholder="Search">
+      <i
+        (click)="onToggleCard()"
+        (click)="toggleOtraFuncion()"
+        class="fi fi-rs-shopping-bag"
+      ></i>
     </div>
+  </div>
+</nav>
+
+<div class="carrito" [ngClass]="{ show: isCartOpen }">
+  <app-cart (closeCartEvent)="closeCart()"></app-cart>
 </div>
 
 <div>
-        <div>
-      <div class="menu" *ngIf="menuAbierto">
-        <ul>
-          <li>
-            <a [routerLink]="['/error']">FANS</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a [routerLink]="['/error']">ACADEMY</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a [routerLink]="['/login']">LOGIN</a> 
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a [routerLink]="['/registro']">REGISTER</a> 
-          </li>
-        </ul>
-      </div>
+  <div class="search" *ngIf="SearchAbierto">
+    <input type="text" placeholder="Search" />
+  </div>
 </div>
+
+<div>
+  <div>
+    <div class="menu" *ngIf="menuAbierto">
+      <ul>
+        <li>
+          <a [routerLink]="['/error']">FANS</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a [routerLink]="['/error']">ACADEMY</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a [routerLink]="['/login']">LOGIN</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a [routerLink]="['/registro']">REGISTER</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>

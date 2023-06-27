@@ -1,183 +1,176 @@
-
-.contar{
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-.card-img-top:hover{
-    transform: scale(0.9);
-    transition: transform 1s;
-}
-h3{
-    text-align: center;
-    margin-top: 25px;
-    margin: 15px;
-}
-.card1{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    border-style: solid;
-    justify-content: center;
-    align-items: center;
-
-}
-.card1 figure{
-    position: relative;
-    width: 390px;
-    overflow: hidden;
-    cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 0px 15px 25px rgba(246, 243, 243, 0.5);
+.contar {
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card1 figure img{
-    max-width: 100%;
-    height: 100%;
-    transition: all 500ms ease-out;
-    object-fit: contain;
+.card-img-top:hover {
+  transform: scale(0.9);
+  transition: transform 1s;
+}
+h3 {
+  text-align: center;
+  margin-top: 25px;
+  margin: 15px;
+}
+.card1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-style: solid;
+  justify-content: center;
+  align-items: center;
+}
+.card1 figure {
+  position: relative;
+  width: 390px;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 15px 25px rgba(246, 243, 243, 0.5);
 }
 
-.card1 figure .titulo{
-position: absolute;
-top: 0;
-width: 100%;
-height: 100%;
-background: rgba(202, 16, 16, 0.6);
-transition: all 500ms ease-out;
-opacity: 0;
-visibility: hidden;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
+.card1 figure img {
+  max-width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+  object-fit: contain;
 }
 
-.card1 figure:hover > .titulo{
-    opacity: 1;
-    visibility: visible;
-
-}
-.card1 figure .titulo h4{
-    color: white;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.card1 figure .titulo p{
-    color: white;
-    font-size: 15px;
-    line-height: 1.5;
-    width: 100%;
-    max-width: 220px;
-    margin-top: 4px;
-    margin-bottom: 0;
+.card1 figure .titulo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(202, 16, 16, 0.6);
+  transition: all 500ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.mas{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 38px;
-    margin-top: 20px;
-    
+.card1 figure:hover > .titulo {
+  opacity: 1;
+  visibility: visible;
 }
-.mas button{
-border-radius: px;
-background-color: #1A161A ;
-color: rgb(247, 244, 244);
-width: 200px;
-height: 38px;
-margin-top: 8px;
+.card1 figure .titulo h4 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-.mas button:hover{
-    background-color: #AE0000;
-    transition: .5s ;
+.card1 figure .titulo p {
+  color: white;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
-div .andres{ 
-display: flex;
-border-radius: 10px;
-background-color: #1A161A ;
-color: rgb(247, 244, 244);
-width: 100px;
-height: 38px;
-margin: auto;
-text-align: center;
-justify-content: center;
-align-items: center;
+.mas {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 38px;
+  margin-top: 20px;
+}
+.mas button {
+  border-radius: px;
+  background-color: #1a161a;
+  color: rgb(247, 244, 244);
+  width: 200px;
+  height: 38px;
+  margin-top: 8px;
+}
+.mas button:hover {
+  background-color: #ae0000;
+  transition: 0.5s;
 }
 
-div .andres:hover{
-    background-color: #AE0000;
-    transition: .5s;
-}
-div a img{
-    position: relative;
-    width: 145px;
-    height: 40;
-    display: inline-block;
-    border-radius: 18px;
-    padding: 12px 20px;
-    margin: 0px 25px;
-    justify-content: center;
-    
+div .andres {
+  display: flex;
+  border-radius: 10px;
+  background-color: #1a161a;
+  color: rgb(247, 244, 244);
+  width: 100px;
+  height: 38px;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.noticias{
-    display: flex;
-    margin-top: 8px;
-    padding: 10px;
-    top: 1px;
-    width: 100%;
-    height: 100%;
-    border-radius: 2px;
+div .andres:hover {
+  background-color: #ae0000;
+  transition: 0.5s;
+}
+div a img {
+  position: relative;
+  width: 145px;
+  height: 40;
+  display: inline-block;
+  border-radius: 18px;
+  padding: 12px 20px;
+  margin: 0px 25px;
+  justify-content: center;
 }
 
-.marcas{
-    margin-top: 50px;
-    width: 100%;
-    height: 100%;
-    padding: 16px;
-    background-color: #ebdddd;
-    padding: 15px 0px;
+.noticias {
+  display: flex;
+  margin-top: 8px;
+  padding: 10px;
+  top: 1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+.marcas {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background-color: #ebdddd;
+  padding: 15px 0px;
 }
 
 .aimagen {
-    animation: scale 3s infinite;
-    
+  animation: scale 3s infinite;
 }
 
 .aimagen:hover {
-    transform: scale(1.1);
-    transition: 3s;
+  transform: scale(1.1);
+  transition: 3s;
 }
 
-@media screen and (max-width: 850px){  
-    
-    .col{
-        width: 100%;
-        justify-content: center;
-        gap: 20;
-        display: block;
-    }
-    .marcas{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .logos{
-        width: 100%;
-        height: 40px;
-        gap: 20px;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .card1{
+@media screen and (max-width: 850px) {
+  .col {
+    width: 100%;
+    justify-content: center;
+    gap: 20;
+    display: block;
+  }
+  .marcas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .logos {
+    width: 100%;
+    height: 40px;
+    gap: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card1 {
     width: 100%;
     height: 100%;
     display: block;
@@ -185,46 +178,43 @@ div a img{
     align-items: center;
     gap: 20px;
     margin: 15px;
-}
+  }
 
-
-        .contar{
-            width: 30%;
-            justify-content: center;
-            gap: 20;
-            display: block;
-            grid-template-columns: 3fr 4fr;
-            align-items: center;
-            
-        }
-        .logos{
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            gap: 20;
-            margin: 0px 85px;
-        }
+  .contar {
+    width: 30%;
+    justify-content: center;
+    gap: 20;
+    display: block;
+    grid-template-columns: 3fr 4fr;
+    align-items: center;
+  }
+  .logos {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 20;
+    margin: 0px 85px;
+  }
 }
-@media screen and (max-width: 550px){  
-    
-    .col{
-        width: 100%;
-        justify-content: center;
-        gap: 20;
-        display: block;
-    }
-    .marcas{
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .logos{
-        width: 145px;
-        height: 40px;
-        gap: 20px;
-        display: block;
-    }
-    .card1{
+@media screen and (max-width: 550px) {
+  .col {
+    width: 100%;
+    justify-content: center;
+    gap: 20;
+    display: block;
+  }
+  .marcas {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .logos {
+    width: 145px;
+    height: 40px;
+    gap: 20px;
+    display: block;
+  }
+  .card1 {
     width: 100%;
     height: 100%;
     border-style: solid;
@@ -232,21 +222,20 @@ div a img{
     justify-content: center;
     align-items: center;
     gap: 20px;
+  }
+  .contar {
+    width: 30%;
+    justify-content: center;
+    gap: 20;
+    display: block;
+    grid-template-columns: 3fr 4fr;
+    align-items: center;
+  }
+  .logos {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    gap: 20;
+    margin: 0px 40px;
+  }
 }
-        .contar{
-            width: 30%;
-            justify-content: center;
-            gap: 20;
-            display: block;
-            grid-template-columns: 3fr 4fr;
-            align-items: center;
-            
-        }
-        .logos{
-            width: 100%;
-            height: 100%;
-            justify-content: center;
-            gap: 20;
-            margin: 0px 40px;
-        }
-    }
