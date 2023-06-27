@@ -14,3 +14,6 @@
     background-color: black;
     border-radius: 5px;
 }
+.carousel-indicators{
+    z-index: 1;
+}

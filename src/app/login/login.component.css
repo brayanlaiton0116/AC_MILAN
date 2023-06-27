@@ -39,7 +39,8 @@
     
 }
 .boton button{
-    color: white; background-color: #1A161A;
+    color: white; 
+    background-color: #1A161A;
     border-radius: 10px; 
     align-items: center;
     justify-content: center;

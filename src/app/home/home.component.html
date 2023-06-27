@@ -5,7 +5,7 @@
     <div class="row">
       <h3>Offers of the day</h3>
       <br><br><br>
-      <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
+      <div class="col-md-1 col-lg-4 mb-4 mb-lg-0">
         <div class="card">
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
@@ -59,13 +59,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+      <div class="col-md-1 col-lg-4 mb-4 mb-md-0">
         <div class="card">
           <div class="d-flex justify-content-between p-3">
             <p class="lead mb-0">Today's Combo Offer</p>
           </div>
-          <img src="assets/imgP/tercera.webp"
-            class="card-img-top" alt="camisa3" (click)="redirectToDetalleProducto('prod3')" />
+          <img src="assets/imgP/tercera.webp" class="card-img-top" alt="camisa3" (click)="redirectToDetalleProducto('prod3')" />
+          
           <div class="card-body">
             <div class="d-flex justify-content-between">
               <p class="small"><a class="text-muted">Before</a></p>
@@ -97,40 +97,36 @@
 <div class="noticias"></div>
 <h3>News</h3>
 
+
 <div class="contar">
-    <div class=" card12">
-      <img class="a" src="assets/img/Frame1.jpg" alt="">
-          <h5 class="titulo">AC MILAN VS INTER</h5>
-          <p class="descripcion">
-            This match will be played at the San Siro stadium.
-          </p>
-          <div class="camilo">
-            <button class="andres" type="button" >See more</button>
-            </div><br>
+    <div class=" card1">
+      <figure>
+      <img class="aimagen" src="assets/img/F1.png" alt="">
+          <div class="titulo"><h4>AC MILAN VS INTER</h4>
+          <p>This match will be played at the San Siro stadium.</p>
+        </div>
+      </figure>
+        
         </div>
         
-        <div class=" card13">
-          <img class="a" src="assets/img/Frame3.jpg" alt="">
-          <h5 class="titulo">AC MILAN VS NAPOLE</h5>
-          <p class="descripcion">
-            This match will be played at the San Siro stadium.</p>
-
-          <div class="camilo">
-            <button class="andres" type="button" >See more</button>
-            </div><br>
+        <div class=" card1">
+          <figure>
+          <img class="aimagen" src="assets/img/F2.png" alt="">
+          <div class="titulo"><h4>AC MILAN VS NAPOLE</h4>
+          <p>This match will be played at the San Siro stadium.</p>
+        </div>
+          </figure>
         </div>
 
-        <div class=" card14">
-          <img class="a" src="assets/img/Frame2.jpg" alt="">
-          <h5 class="titulo">AC MILAN VS REAL MADRID</h5>
-          <p class="descripcion">This match will be played at the Bernabeú stadium.</p>
-
-          <div class="camilo">
-            <button class="andres" type="button" >See more</button>
-          </div><br>
+        <div class=" card1">
+          <figure>
+          <img class="aimagen" src="assets/img/F3.png" alt="">
+          <div class="titulo"><h4>AC MILAN VS REAL MADRID</h4>
+          <p>This match will be played at the Bernabeú stadium.</p>
+          </div>
+        </figure>
         </div>
       </div>  
-
 
 <div class="mas">
   <button [routerLink]="'/registro'">See more news</button>
