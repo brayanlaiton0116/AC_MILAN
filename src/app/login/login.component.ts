@@ -1,44 +1,37 @@
 import { Component } from '@angular/core';
-import {
-  FormControl,
-  Validators,
-  FormBuilder,
-  FormGroup,
-} from '@angular/forms';
+import { FormControl, Validators, FormBuilder, FormGroup} from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private fb: FormBuilder) {}
 
-  get email() {
-    return this.formatoLogin.get('email') as FormControl;
-  }
-  get password() {
-    return this.formatoLogin.get('password') as FormControl;
+  constructor(private fb: FormBuilder){
   }
 
+  get email(){
+    return this.formatoLogin.get('email') as FormControl
+  };
+  get password(){
+    return this.formatoLogin.get('password') as FormControl
+  };
+  
+  
   formatoLogin: FormGroup = new FormGroup({});
 
   ngOnInit(): void {
-    this.formatoLogin = new FormGroup({
-      email: new FormControl('', [
-        Validators.required,
-        Validators.pattern('^[^ ]+@[^ ]+.[a-z]{2,6}$'),
-      ]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(20),
-      ]),
-    });
+    this.formatoLogin = new FormGroup(
+      {
+        email: new FormControl('', [Validators.required, Validators.pattern("^[^ ]+@[^ ]+\.[a-z]{2,6}$")]),
+        password: new FormControl('', [Validators.required, Validators.minLength(8),Validators.maxLength(20)])
+      }
+    )
   }
-
+  
   submitForm() {
     const body = this.formatoLogin.value;
-
+    
     if (this.formatoLogin.valid) {
       const email = this.formatoLogin.value.email;
       const password = this.formatoLogin.value.password;
@@ -50,9 +43,10 @@ export class LoginComponent {
       } else {
         // Credenciales incorrectas
         alert('Correo electrónico o contraseña incorrectos');
+        
       }
     }
-    console.log(body);
+    console.log (body);
   }
 
   authenticate(email: string, password: string): boolean {
@@ -67,4 +61,4 @@ export class LoginComponent {
       console.log('El formulario no es válido');
     }
   }
-}
+}        

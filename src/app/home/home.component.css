@@ -18,6 +18,7 @@ h3 {
   width: 100%;
   height: 100%;
   display: flex;
+  border-radius: 6px;
   border-style: solid;
   justify-content: center;
   align-items: center;
@@ -30,7 +31,10 @@ h3 {
   border-radius: 5px;
   box-shadow: 0px 15px 25px rgba(246, 243, 243, 0.5);
 }
-
+.card1 figure:hover{
+  box-shadow: 7px 7px 20px red;
+  transform: translateY(-7%);
+}
 .card1 figure img {
   max-width: 100%;
   height: 100%;
@@ -43,7 +47,7 @@ h3 {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(202, 16, 16, 0.6);
+  background: #1a161a;
   transition: all 500ms ease-out;
   opacity: 0;
   visibility: hidden;
@@ -64,7 +68,6 @@ h3 {
   margin-bottom: 0;
 }
 .card1 figure .titulo p {
-  color: white;
   font-size: 15px;
   line-height: 1.5;
   width: 100%;
@@ -181,7 +184,8 @@ div a img {
   }
 
   .contar {
-    width: 30%;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     gap: 20;
     display: block;
@@ -197,6 +201,9 @@ div a img {
   }
 }
 @media screen and (max-width: 550px) {
+  *{
+    margin-top: 0;
+  }
   .col {
     width: 100%;
     justify-content: center;
@@ -224,12 +231,13 @@ div a img {
     gap: 20px;
   }
   .contar {
-    width: 30%;
+    width: 92%;
+    height: 100%; 
     justify-content: center;
-    gap: 20;
     display: block;
-    grid-template-columns: 3fr 4fr;
     align-items: center;
+    margin: 0;
+    margin-top: 0;
   }
   .logos {
     width: 100%;
