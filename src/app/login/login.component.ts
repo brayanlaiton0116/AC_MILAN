@@ -43,6 +43,7 @@ export class LoginComponent {
       if (this.email === 'brayan@gmail.com' && this.password === '123456789') {
         
         this.errorMensaje = 'Inicio de sesion exitoso'; // Limpiar el mensaje de error
+        
       } else {
         // Los datos son inválidos, mostrar mensaje de error
         this.errorMensaje = 'Email o contraseña incorrectos';
