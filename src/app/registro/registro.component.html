@@ -14,7 +14,6 @@
                   />
                   <h4 class="mt-2 mb-5 pb-1">CREATE AN ACCOUNT</h4>
                 </div>
-
                 <form
                   [formGroup]="formRegistro"
                   (ngSubmit)="submitForm()"
@@ -31,9 +30,18 @@
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      [hidden]="name.valid || name.pristine"
+                      *ngIf="
+                        name.invalid &&
+                        formSubmitted &&
+                        (name.dirty || name.touched)
+                      "
                     >
-                      This field is required.
+                      <span *ngIf="name.errors?.['required']"
+                        >This field is required.</span
+                      >
+                      <span *ngIf="name.errors?.['pattern']"
+                        >This field is required.</span
+                      >
                     </div>
                   </div>
 
@@ -50,12 +58,20 @@
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      [hidden]="lastname.valid || lastname.pristine"
+                      *ngIf="
+                        lastname.invalid &&
+                        formSubmitted &&
+                        (lastname.dirty || lastname.touched)
+                      "
                     >
-                      This field is required.
+                      <span *ngIf="lastname.errors?.['required']"
+                        >This field is required.</span
+                      >
+                      <span *ngIf="lastname.errors?.['pattern']"
+                        >This field is required.</span
+                      >
                     </div>
                   </div>
-
                   <div class="email">
                     <label class="form-label" for="form2Example22">Email</label>
                     <input
@@ -67,56 +83,96 @@
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      [hidden]="email.valid || email.pristine"
+                      *ngIf="
+                        email.invalid &&
+                        formSubmitted &&
+                        (email.dirty || email.touched)
+                      "
                     >
-                      <span *ngIf="email.errors?.['pattern']"
-                        >My email is not valid.</span
-                      >
                       <span *ngIf="email.errors?.['required']"
                         >This field is required.</span
                       >
+                      <span *ngIf="email.errors?.['email']"
+                        >This email is not valid.</span
+                      >
                     </div>
                   </div>
-
-                  <div class="password">
+                  <div class="form-group">
                     <label class="form-label" for="form2Example22"
                       >Password</label
                     >
                     <input
-                      type="password"
+                      [type]="changetype ? 'password' : 'text'"
                       id="password"
                       class="form-control"
                       formControlName="password"
-                      minlength="8" maxlength="20"
+                      minlength="8"
+                      maxlength="21"
                       placeholder="Enter your password"
                     />
+                    <span class="eyeicon" (click)="viewpass()">
+                      <i
+                        [ngClass]="visible ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                      ></i
+                    ></span>
+
                     <div
                       class="alert alert-danger mb-2"
-                      [hidden]="password.valid || password.pristine"
+                      *ngIf="
+                        password.invalid &&
+                        formSubmitted &&
+                        (password.dirty || password.touched)
+                      "
                     >
-                      This field is required.
+                      <span *ngIf="password.errors?.['required']"
+                        >This field is required.</span
+                      >
+                      <span *ngIf="password.errors?.['minlength']"
+                        >minimum 8 characters.</span
+                      >
+                      <span *ngIf="password.errors?.['maxlength']"
+                        >maximum 20 characters.</span
+                      >
                     </div>
                   </div>
 
-                  <div class="confirmPassword">
+                  <div class="form-group">
                     <label class="form-label" for="form2Example22"
-                      >confirmPassword</label
+                      >Confirm Password</label
                     >
+
                     <input
-                      type="password"
+                      [type]="changetype ? 'password' : 'text'"
                       id="confirmPassword"
                       class="form-control"
                       formControlName="confirmPassword"
-                      minlength="8" maxlength="20"
+                      minlength="8"
+                      maxlength="21"
                       placeholder="Enter your password"
                     />
+                    <span class="eyeicon" (click)="viewpass()">
+                      <i
+                        [ngClass]="visible ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                      ></i
+                    ></span>
+
                     <div
                       class="alert alert-danger mb-2"
-                      [hidden]="
-                        confirmPassword.valid || confirmPassword.pristine
+                      *ngIf="
+                        confirmPassword.invalid &&
+                        formSubmitted &&
+                        (confirmPassword.dirty || confirmPassword.touched)
                       "
                     >
-                      This field is required.
+                      <span *ngIf="confirmPassword.errors?.['required']"
+                        >This field is required.</span
+                      >
+                      <span *ngIf="confirmPassword.errors?.['minlength']"
+                        >minimum 8 characters.</span
+                      >
+                      <span *ngIf="confirmPassword.errors?.['maxlength']"
+                        >maximum 20 characters.</span
+                      >
                     </div>
                   </div>
 
@@ -124,7 +180,6 @@
                     <button
                       class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                       type="submit"
-                      [disabled]="formRegistro.invalid"
                     >
                       Register
                     </button>

@@ -77,6 +77,41 @@
   color: var(--white);
   font-weight: bold;
 }
+.form-control {
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 100%;
+}
+.form-group {
+  position: relative;
+  width: 250px;
+}
+.alert {
+  background-color: #eb0e0e;
+  color: #f9f6f9;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-group input {
+  border: 1px solid #ddd;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.eyeicon {
+  position: absolute;
+  right: 15px;
+  top: 40px;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 925px) {
   .description,

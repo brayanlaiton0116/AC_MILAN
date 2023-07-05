@@ -16,7 +16,18 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './cart/cart.component';
 import { PagErrorComponent } from './pag-error/pag-error.component';
-import { PerfilComponent } from './perfil/perfil.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,7 +52,8 @@ const routes: Routes = [
     ProductoComponent,
     CartComponent,
     PagErrorComponent,
-    PerfilComponent,
+    MenuPerfilComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -50,7 +62,19 @@ const routes: Routes = [
     ReactiveFormsModule,
     NgxSliderModule,
     HttpClientModule,
-    [RouterModule.forRoot(routes)],
+    BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    [RouterModule.forRoot(routes)
+    
+  ],
   ],
 
   providers: [],

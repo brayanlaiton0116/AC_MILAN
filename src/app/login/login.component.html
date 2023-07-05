@@ -27,20 +27,44 @@
                       id="email"
                       class="form-control"
                       formControlName="email"
+                      [(ngModel)]="email"
                       placeholder="Enter your email"
                     />
                   </div>
 
-                  <div class="password">
-                    <label class="form-label" for="form2Example22">Password</label>
-                    <input type="password" id="password" class="form-control" formControlName="password" minlength="8" maxlength="20"  placeholder="Enter your password" />
+                  <div class="form-group">
+                    <label class="form-label" for="form2Example22"
+                      >Password</label
+                    >
+                    <input
+                      [type]="changetype ? 'password' : 'text'"
+                      id="password"
+                      class="form-control"
+                      formControlName="password"
+                      minlength="8"
+                      maxlength="21"
+                      [(ngModel)]="password"
+                      placeholder="Enter your password"
+                    />
+                    <span class="eyeicon" (click)="viewpass()"
+                      ><i
+                        [ngClass]="visible ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                      ></i
+                    ></span>
+
+                    <div>
+                      <span
+                        class="alert alert-danger mb-2"
+                        *ngIf="errorMensaje"
+                        >{{ errorMensaje }}</span
+                      >
+                    </div>
                   </div>
 
                   <div class="boton">
                     <button
                       class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
                       type="submit"
-                      [disabled]="formatoLogin.invalid"
                     >
                       Log in
                     </button>

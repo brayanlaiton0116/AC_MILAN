@@ -1,0 +1,98 @@
+.sidenav-container {
+  height: 100%;
+  background-color: rgb(21, 21, 21);
+}
+
+.sidenav .mat-toolbar {
+  background-color: rgb(16, 224, 124);
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(253, 10, 168);
+}
+.container{
+  height: 100%;
+  width: 200px;
+  background-color: rgb(21, 21, 21);
+}
+.menu {
+  position: absolute;
+  width: 85%;
+  height: 13%;
+  margin: 0;
+  left: 10px;
+  font-size: 30px;
+  background-color: rgb(244, 238, 238);
+  top: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+}
+.menu:hover{
+  background-color: red;
+  color: white;
+}
+
+.menu-list {
+  position: absolute;
+  left: 0;
+  color: #f1f1f1;
+  background-color: rgb(21, 21, 21);
+  list-style: none;
+  padding: 0;
+  top: 95px;
+  margin: 100px 0;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+.menu-list li {
+  padding: 10px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: white;
+}
+.menu-list li:hover{
+  background-color: red;
+
+}
+
+.menu-list2{
+  position: absolute;
+  left: 0;
+  color: #f1f1f1;
+  background-color: rgb(21, 21, 21);
+  padding: 0;
+  top: 355px;
+  margin: 100px 10px;
+  justify-content: left;
+  align-items: center;
+  text-decoration: none;
+
+}
+.menu-list2 li {
+  padding: 10px;
+}
+.menu-list2 li a {
+  text-decoration: none;
+  color: white;
+}
+.menu-list2 li:hover{
+  background-color: red;
+
+}
+
+
+
+
+
+
+
