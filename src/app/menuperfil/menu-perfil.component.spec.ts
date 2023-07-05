@@ -24,7 +24,7 @@ describe('MenuPerfilComponent', () => {
         MatListModule,
         MatSidenavModule,
         MatToolbarModule,
-      ]
+      ],
     }).compileComponents();
   }));
 

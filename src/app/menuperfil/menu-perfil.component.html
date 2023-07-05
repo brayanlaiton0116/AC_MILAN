@@ -1,29 +1,29 @@
 <mat-sidenav-container class="sidenav-container">
-  
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
-<div class="container">
-      <button mat-button  class="menu" >Menu</button>
-      
-      
-        <div class="link" >
-          <ul class="menu-list">
-            <li><a [routerLink]="['/shop']">Seguridad</a></li>
-            <li><a [routerLink]="['/shop']">Carrito de compras</a></li>
-            <li><a [routerLink]="['/shop']">Pedidos</a></li>
-            <li><a [routerLink]="['/shop']">Favoritos</a></li>
-          </ul>
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <div class="container">
+      <button mat-button class="menu">Menu</button>
 
-          <ul class="menu-list2">
-            <li><a [routerLink]="['/shop']">Ayuda</a></li>
-            <li><a [routerLink]="['/shop']">Cerrar sesion</a></li>
-          </ul>
+      <div class="link">
+        <ul class="menu-list">
+          <li><a [routerLink]="['/shop']">Seguridad</a></li>
+          <li><a [routerLink]="['/shop']">Carrito de compras</a></li>
+          <li><a [routerLink]="['/shop']">Pedidos</a></li>
+          <li><a [routerLink]="['/shop']">Favoritos</a></li>
+        </ul>
+
+        <ul class="menu-list2">
+          <li><a [routerLink]="['/shop']">Ayuda</a></li>
+          <li><a [routerLink]="['/shop']">Cerrar sesion</a></li>
+        </ul>
       </div>
-      
-    
-</div>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
@@ -32,8 +32,8 @@
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        
+        *ngIf="isHandset$ | async"
+      >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>MY DATA</span>

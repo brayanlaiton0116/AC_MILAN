@@ -28,7 +28,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -53,7 +52,6 @@ const routes: Routes = [
     CartComponent,
     PagErrorComponent,
     MenuPerfilComponent,
-   
   ],
   imports: [
     BrowserModule,
@@ -72,9 +70,7 @@ const routes: Routes = [
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    [RouterModule.forRoot(routes)
-    
-  ],
+    [RouterModule.forRoot(routes)],
   ],
 
   providers: [],

@@ -6,20 +6,19 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-menu-perfil',
   templateUrl: './menu-perfil.component.html',
-  styleUrls: ['./menu-perfil.component.css']
+  styleUrls: ['./menu-perfil.component.css'],
 })
 export class MenuPerfilComponent {
-
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.Handset)
     .pipe(
-      map(result => result.matches),
+      map((result) => result.matches),
       shareReplay()
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-  
-  menu: boolean = false;
-  
-  ngOnInit(): void {}
 
+  menu: boolean = false;
+
+  ngOnInit(): void {}
 }

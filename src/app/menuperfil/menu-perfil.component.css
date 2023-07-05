@@ -13,7 +13,7 @@
   z-index: 1;
   background-color: rgb(253, 10, 168);
 }
-.container{
+.container {
   height: 100%;
   width: 200px;
   background-color: rgb(21, 21, 21);
@@ -33,7 +33,7 @@
   text-align: center;
   list-style: none;
 }
-.menu:hover{
+.menu:hover {
   background-color: red;
   color: white;
 }
@@ -60,12 +60,11 @@
   text-decoration: none;
   color: white;
 }
-.menu-list li:hover{
+.menu-list li:hover {
   background-color: red;
-
 }
 
-.menu-list2{
+.menu-list2 {
   position: absolute;
   left: 0;
   color: #f1f1f1;
@@ -76,7 +75,6 @@
   justify-content: left;
   align-items: center;
   text-decoration: none;
-
 }
 .menu-list2 li {
   padding: 10px;
@@ -85,14 +83,6 @@
   text-decoration: none;
   color: white;
 }
-.menu-list2 li:hover{
+.menu-list2 li:hover {
   background-color: red;
-
 }
-
-
-
-
-
-
-
