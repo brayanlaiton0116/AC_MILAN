@@ -102,7 +102,7 @@
                       >Password</label
                     >
                     <input
-                      [type]="changetype ? 'password' : 'text'"
+                      [type]="changetypePassword ? 'password' : 'text'"
                       id="password"
                       class="form-control"
                       formControlName="password"
@@ -110,9 +110,9 @@
                       maxlength="21"
                       placeholder="Enter your password"
                     />
-                    <span class="eyeicon" (click)="viewpass()">
+                    <span class="eyeicon" (click)="viewpass('password')">
                       <i
-                        [ngClass]="visible ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                        [ngClass]="visiblePassword ? 'fa fa-eye-slash' : 'fa fa-eye'"
                       ></i
                     ></span>
 
@@ -130,9 +130,6 @@
                       <span *ngIf="password.errors?.['minlength']"
                         >minimum 8 characters.</span
                       >
-                      <span *ngIf="password.errors?.['maxlength']"
-                        >maximum 20 characters.</span
-                      >
                     </div>
                   </div>
 
@@ -142,7 +139,7 @@
                     >
 
                     <input
-                      [type]="changetype ? 'password' : 'text'"
+                      [type]=" changetypeConfirm ? 'password' : 'text'"
                       id="confirmPassword"
                       class="form-control"
                       formControlName="confirmPassword"
@@ -150,9 +147,9 @@
                       maxlength="21"
                       placeholder="Enter your password"
                     />
-                    <span class="eyeicon" (click)="viewpass()">
+                    <span class="eyeicon" (click)="viewpass('confirmPassword')">
                       <i
-                        [ngClass]="visible ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                      [ngClass]="visibleConfirm ? 'fa fa-eye-slash' : 'fa fa-eye'"
                       ></i
                     ></span>
 
@@ -170,9 +167,9 @@
                       <span *ngIf="confirmPassword.errors?.['minlength']"
                         >minimum 8 characters.</span
                       >
-                      <span *ngIf="confirmPassword.errors?.['maxlength']"
-                        >maximum 20 characters.</span
-                      >
+                       <span class="infor" *ngIf="password !== confirmPassword">Passwords don't match</span>
+                      
+                      
                     </div>
                   </div>
 

@@ -1,39 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
+
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent implements OnInit{
-  
-  myForm: FormGroup;
+export class PerfilComponent {
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  constructor(private formBuilder: FormBuilder) {}
+  isHandset$: Observable<boolean> = this.breakpointObserver
+  .observe(Breakpoints.Handset)
+  .pipe(
+    map((result) => result.matches),
+    shareReplay()
+  );
+  ngOnInit(): void {}
 
-  ngOnInit() {
-    this.myForm = this.formBuilder.group({
-      edad: ['', [Validators.required, Validators.min(18), Validators.max(99)]],
-      // Agrega más campos aquí
-    });
-  }
-
-  submitForm() {
-    if (this.myForm.invalid) {
-      // El formulario no es válido
-      return;
-    }
-
-    // Aquí puedes realizar el envío del formulario o cualquier otra acción necesaria
-  }
-  
-
-  
-  
-  
-  
-  
-
-
-  
 }

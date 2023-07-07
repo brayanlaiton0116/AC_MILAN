@@ -8,7 +8,9 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './menu-perfil.component.html',
   styleUrls: ['./menu-perfil.component.css'],
 })
+
 export class MenuPerfilComponent {
+  
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(

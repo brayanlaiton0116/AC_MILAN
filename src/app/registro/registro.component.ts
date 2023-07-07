@@ -14,7 +14,9 @@ import {
 export class RegistroComponent implements OnInit {
   myForm: FormGroup;
   formSubmitted = false;
-
+  errorMensaje: string;
+  error = false;
+  
   constructor(private fb: FormBuilder) {}
 
   get email() {
@@ -37,7 +39,7 @@ export class RegistroComponent implements OnInit {
 
   ngOnInit(): void {
     this.formRegistro = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
+      
       name: new FormControl('', [
         Validators.required,
         Validators.pattern('^[a-zA-Z\\s]+$'),
@@ -46,6 +48,7 @@ export class RegistroComponent implements OnInit {
         Validators.required,
         Validators.pattern('^[a-zA-Z\\s]+$'),
       ]),
+      email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(8),
@@ -59,50 +62,38 @@ export class RegistroComponent implements OnInit {
     });
   }
   submitForm() {
-    const body = this.formRegistro.value;
+    this.formRegistro.value;
     this.formSubmitted = true;
     if (this.formRegistro.valid) {
-      const name = this.formRegistro.value.name;
-      const lastname = this.formRegistro.value.lastname;
-      const email = this.formRegistro.value.email;
-      const password = this.formRegistro.value.password;
-      const confirmPassword = this.formRegistro.value.confirmPassword;
-      console.log(body);
-      // Lógica de autenticación
-      if (this.authenticate(name, lastname, email, password, confirmPassword)) {
-        // Autenticación exitosa
-        alert('Inicio de sesión exitoso');
+
+      if (this.formRegistro.valid) {
+      if (this.formRegistro.value.password === this.formRegistro.value.confirmPassword) {
+        // Las contraseñas coinciden, puedes realizar el envío del formulario
+        console.log('Formulario enviado correctamente');
       } else {
-        // Credenciales incorrectas
-        alert('Correo electrónico o contraseña incorrectos');
+        // Las contraseñas no coinciden, muestra un mensaje de error
+        console.log('Passwords dont match');
       }
+    } 
     }
   }
 
-  authenticate(
-    name: string,
-    lastname: string,
-    email: string,
-    password: string,
-    confirmPassword: string
-  ): boolean {
-    return (
-      name === 'brayan' &&
-      lastname === 'laiton' &&
-      email === 'brayan@gmail.com' &&
-      password === '123456789' &&
-      confirmPassword === '123456789'
-    );
-  }
-
-  visible: boolean = true;
-  changetype: boolean = true;
+  
   showPassword: boolean = false;
+  visiblePassword: boolean = true;
+  changetypePassword: boolean = true;
+  visibleConfirm: boolean = true;
+  changetypeConfirm: boolean = true;
 
-  viewpass() {
-    this.visible = !this.visible;
-    this.changetype = !this.changetype;
+viewpass(field: string) {
+  if (field === 'password') {
+    this.visiblePassword = !this.visiblePassword;
+    this.changetypePassword = !this.changetypePassword;
+  } else if (field === 'confirmPassword') {
+    this.visibleConfirm = !this.visibleConfirm;
+    this.changetypeConfirm = !this.changetypeConfirm;
   }
+}
 
   togglePasswordVisibility(): void {
     this.showPassword = !this.showPassword;

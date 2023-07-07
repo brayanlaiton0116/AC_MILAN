@@ -111,6 +111,10 @@
   align-items: center;
   text-align: center;
 }
+.infor{
+
+  color: #f9f6f9;
+}
 @media screen and (min-width: 925px) {
   .description,
   .form {

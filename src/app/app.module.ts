@@ -27,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'error', component: PagErrorComponent },
   { path: 'producto', component: ProductoComponent },
+  { path: 'perfil', component: PerfilComponent },
   { path: 'productos/:id', component: ProductoComponent },
 ];
 @NgModule({
@@ -52,6 +54,7 @@ const routes: Routes = [
     CartComponent,
     PagErrorComponent,
     MenuPerfilComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
