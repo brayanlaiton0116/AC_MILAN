@@ -30,7 +30,7 @@ import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
@@ -39,6 +39,7 @@ const routes: Routes = [
   { path: 'producto', component: ProductoComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'productos/:id', component: ProductoComponent },
+  
 ];
 @NgModule({
   declarations: [
