@@ -1,35 +1,54 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 import {
-  FormControl,
-  Validators,
   FormBuilder,
   FormGroup,
+  Validators,
+  FormControl,
 } from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   formSubmitted = false;
   email: string;
   password: string;
   errorMensaje: string;
   error = false;
+  rememberMe: boolean = false;
+  
+  formatoLogin: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,private router: Router,private location: Location) {}
 
-  formatoLogin: FormGroup = new FormGroup({});
+
 
   ngOnInit(): void {
-    this.formatoLogin = new FormGroup({
-      email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(20),
-      ]),
+    this.formatoLogin = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(1),
+          
+        ],
+      ],
+      rememberMe: new FormControl(false),
     });
+
+    const rememberedData = JSON.parse(
+      localStorage.getItem('rememberedData') || '{}'
+    );
+    if (rememberedData && rememberedData.rememberMe !== null) {
+      this.formatoLogin.patchValue({
+        rememberMe: true,
+      });
+    }
   }
 
   submitForm() {
@@ -40,19 +59,32 @@ export class LoginComponent {
       const email = this.formatoLogin.value.email;
       const password = this.formatoLogin.value.password;
 
-      if (this.email === 'brayan@gmail.com' && this.password === '123456789') {
-        
-        this.errorMensaje = 'Inicio de sesion exitoso'; // Limpiar el mensaje de error
-        
+      if (this.formatoLogin.value.rememberMe) {
+        localStorage.setItem(
+          'rememberedData',
+          JSON.stringify({ rememberMe: true })
+        );
       } else {
-        // Los datos son inválidos, mostrar mensaje de error
-        this.errorMensaje = 'Email o contraseña incorrectos';
+        localStorage.removeItem('rememberedData');
+      }
+
+      if (email === 'brayan@gmail.com' && password === '123456789') {
+        this.location.back();
+        this.router.navigate(['/perfil']);
+        this.errorMensaje = 'Successful login';
+        alert('Successful login');
+      } else {
+        this.errorMensaje = 'Incorrect email or password';
+      
       }
 
       console.log(body);
     }
   }
-
+  
+      
+     
+   
   visible: boolean = true;
   changetype: boolean = true;
 
@@ -61,3 +93,4 @@ export class LoginComponent {
     this.changetype = !this.changetype;
   }
 }
+

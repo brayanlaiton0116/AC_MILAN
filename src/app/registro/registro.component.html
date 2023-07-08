@@ -40,7 +40,7 @@
                         >This field is required.</span
                       >
                       <span *ngIf="name.errors?.['pattern']"
-                        >This field is required.</span
+                        >Must be letters from A-Z.</span
                       >
                     </div>
                   </div>
@@ -68,7 +68,7 @@
                         >This field is required.</span
                       >
                       <span *ngIf="lastname.errors?.['pattern']"
-                        >This field is required.</span
+                        >Must be letters from A-Z.</span
                       >
                     </div>
                   </div>
@@ -107,12 +107,14 @@
                       class="form-control"
                       formControlName="password"
                       minlength="8"
-                      maxlength="21"
+                      maxlength="20"
                       placeholder="Enter your password"
                     />
                     <span class="eyeicon" (click)="viewpass('password')">
                       <i
-                        [ngClass]="visiblePassword ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                        [ngClass]="
+                          visiblePassword ? 'fa fa-eye-slash' : 'fa fa-eye'
+                        "
                       ></i
                     ></span>
 
@@ -139,17 +141,19 @@
                     >
 
                     <input
-                      [type]=" changetypeConfirm ? 'password' : 'text'"
+                      [type]="changetypeConfirm ? 'password' : 'text'"
                       id="confirmPassword"
                       class="form-control"
                       formControlName="confirmPassword"
                       minlength="8"
-                      maxlength="21"
+                      maxlength="20"
                       placeholder="Enter your password"
                     />
                     <span class="eyeicon" (click)="viewpass('confirmPassword')">
                       <i
-                      [ngClass]="visibleConfirm ? 'fa fa-eye-slash' : 'fa fa-eye'"
+                        [ngClass]="
+                          visibleConfirm ? 'fa fa-eye-slash' : 'fa fa-eye'
+                        "
                       ></i
                     ></span>
 
@@ -164,12 +168,31 @@
                       <span *ngIf="confirmPassword.errors?.['required']"
                         >This field is required.</span
                       >
-                      <span *ngIf="confirmPassword.errors?.['minlength']"
-                        >minimum 8 characters.</span
+                      <span
+                        class="infor"
+                        *ngIf="password.value !== confirmPassword.value"
+                        >Passwords don't match.</span
                       >
-                       <span class="infor" *ngIf="password !== confirmPassword">Passwords don't match</span>
-                      
-                      
+                    </div>
+                    <div class="form-group">
+                      <input
+                        class="cuadro"
+                        type="checkbox"
+                        id="termsAndConditions"
+                        formControlName="termsAndConditions"
+                        (change)="termsAccepted = !termsAccepted"
+                      />
+                      <label class="form-label" for="form2Example22"
+                        >terminos y conditions
+                      </label>
+                      <div
+                        class="alert alert-danger mb-2"
+                        *ngIf="!termsAccepted && formSubmitted"
+                      >
+                        <span class="infor">
+                          You must accept the terms and conditions.
+                        </span>
+                      </div>
                     </div>
                   </div>
 

@@ -31,17 +31,19 @@
         <img src="./assets/img/Vector.png" alt="Buscador"
       /></a>
     </li>
-    <ul>
-      <li>
-        <a [routerLink]="['/login']"> Login </a>
+    <div class="iconos">
+      <ul>
+        <li>
+          <a [routerLink]="['/registro']"><i  class="fi fi-rs-heart"></i></a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+        <a  (click)="iconos = !iconos" (click)="toggleOtraFuncion2()"><i class="fi fi-sr-user" style="color: #d5dae2;"></i> </a>
       </li>
     </ul>
-    <ul>
-      <li>
-        <a [routerLink]="['/registro']">Register</a>
-      </li>
-    </ul>
-
+    
+    </div>
     <div class="cart">
       <div class="marcador">
         <p class="cero">{{ (myCart$ | async)?.length }}</p>
@@ -56,7 +58,7 @@
 </nav>
 
 <div class="carrito" [ngClass]="{ show: isCartOpen }">
-  <app-cart (closeCartEvent)="closeCart()"></app-cart>
+  <app-cart  (click)="toggleOtraFuncion()" (closeCartEvent)="closeCart()"></app-cart>
 </div>
 
 <div>
@@ -70,7 +72,7 @@
     <div class="menu" *ngIf="menuAbierto">
       <ul>
         <li>
-          <a [routerLink]="['/error']">FANS</a>
+          <a [routerLink]="['/perfil']">PROFILE</a>
         </li>
       </ul>
       <ul>
@@ -89,5 +91,19 @@
         </li>
       </ul>
     </div>
+  </div>
+
+  <div class="menu2" *ngIf="iconos">
+ 
+    <ul>
+      <li>
+        <a [routerLink]="['/login']">LOGIN</a>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <a [routerLink]="['/registro']">REGISTER</a>
+      </li>
+    </ul>
   </div>
 </div>

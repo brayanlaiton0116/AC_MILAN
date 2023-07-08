@@ -1,4 +1,42 @@
 <app-menu-perfil></app-menu-perfil>
-<div>
+<div class="container">
+  <h1 class="menu">My profile</h1>
 
+  <div class="titulo">
+    <p>Personal information</p>
 </div>
+
+    
+        <form class="form"  *ngIf="isEditing" (ngSubmit)="saveChanges()">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" id="name" [(ngModel)]="formData.name" name="name" required>
+            </div>
+            <div>
+              <label for="lastname">Lastname:</label>
+              <input type="text" id="lastname" [(ngModel)]="formData.lastname" name="lastname" required>
+            </div>
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" id="email" [(ngModel)]="formData.email" name="email" required>
+            </div>
+            <div>
+              <label for="phone">Phone:</label>
+              <input type="tel" id="phone" [(ngModel)]="formData.phone" name="phone" required>
+            </div>
+            <button class="editor1" type="submit">Save</button>
+          </form>
+          
+          <div class="form1" *ngIf="!isEditing">
+
+            <p>Name: {{ formData.name }}</p>
+            <p>Lastname:  {{ formData.lastname }}</p>
+            <p>Email:  {{ formData.email }}</p>
+            <p>Phone:  {{ formData.phone }}</p>
+        
+            <button class="editor" (click)="editForm()"><p>Editar</p></button>
+            
+          </div>
+        </div>
+        
+

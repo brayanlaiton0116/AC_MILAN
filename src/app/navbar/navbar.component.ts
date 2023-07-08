@@ -10,25 +10,35 @@ export class NavbarComponent implements OnInit {
   menuAbierto: boolean = false;
   SearchAbierto: boolean = false;
   otraFuncionAbierta: boolean = false;
-
+  otraFuncionAbierta2: boolean = false;
+  iconos:boolean = false
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;
     this.SearchAbierto = false;
     this.otraFuncionAbierta = false;
+    this.otraFuncionAbierta2 = false;
+    
   }
 
   toggleSearch() {
     this.SearchAbierto = !this.SearchAbierto;
     this.menuAbierto = false;
     this.otraFuncionAbierta = false;
+    this.otraFuncionAbierta2 = false;
   }
 
   toggleOtraFuncion() {
     this.otraFuncionAbierta = !this.otraFuncionAbierta;
     this.menuAbierto = false;
     this.SearchAbierto = false;
+    this.otraFuncionAbierta2 = false;
   }
-
+  toggleOtraFuncion2() {
+    this.otraFuncionAbierta2 = !this.otraFuncionAbierta2;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.otraFuncionAbierta = false;
+  }
   isCartOpen: boolean = false;
   menu: boolean = false;
   search: boolean = false;

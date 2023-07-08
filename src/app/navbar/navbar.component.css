@@ -86,7 +86,6 @@ ul {
 }
 
 .menu_derecha a:hover {
-  background-color: rgb(255, 0, 0);
   transition: 0.5s;
 }
 
@@ -185,6 +184,33 @@ a {
   padding: 7px 13px;
 }
 
+.menu2 {
+  background-color: #221f1f;
+  padding: 15px;
+  width: 10%;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  gap: 10px;
+  position: fixed;
+  top: 15%;
+  right: 22px;
+  z-index: 2;
+}
+
+.menu2 a:hover {
+  background-color: rgb(255, 0, 0);
+  transition: 0.5s;
+}
+
+.menu2 ul li a {
+  border-radius: 3px;
+  line-height: 20px;
+  margin-right: 40px;
+  font-size: 17px;
+  padding: 7px 13px;
+}
+
 .search {
   background-color: #221f1f;
   padding: 15px;
@@ -207,6 +233,18 @@ a {
   height: 30px;
   margin: 0 10px;
   border-radius: 5px;
+}
+
+.iconos {
+  display: flex;
+  margin: 0px 15px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 1.1px;
+  top: 0.5rem;
+  color: white;
 }
 
 @media only screen and (max-width: 368px) {

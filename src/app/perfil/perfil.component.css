@@ -1,89 +1,231 @@
-.sidenav-container {
-    height: 100%;
-    background-color: rgb(21, 21, 21);
-  }
-  
-  .sidenav .mat-toolbar {
-    background-color: rgb(16, 224, 124);
-  }
-  
-  .mat-toolbar.mat-primary {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: rgb(253, 10, 168);
-  }
+.container {
+  height: 100%;
+  width: 85%;
+  background-color: rgb(21, 21, 21);
+  position: absolute;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 13%;
+  margin: 0;
+  padding: 0px 30px;
+  left: 190px;
+  font-size: 30px;
+  background-color: rgb(231, 33, 33);
+  top: 92px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  list-style: none;
+  color: rgb(248, 247, 247);
+}
+
+.menu:hover {
+  background-color: rgb(228, 227, 227);
+  color: rgb(7, 7, 7);
+}
+
+.titulo {
+  position: absolute;
+  width: 100%;
+  height:73%;
+  margin: 0;
+  padding: 0px 30px;
+  left: 190px;
+  background-color: rgb(26, 26, 26);
+  top: 160px;
+  display: flex;
+  justify-content: left;
+  list-style: none;
+  color: rgb(255, 255, 255);
+}
+
+.titulo p {
+  font-size: 28px;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+.form {
+  position: absolute;
+  left: 320px;
+  font-size: 20px;
+  background-color: rgb(26, 26, 26);
+  top: 230px;
+  display: grid;
+  grid-template-columns: 103px 103px;
+  grid-template-rows: 20px;
+  gap: 80px 320px;
+  justify-content: left;
+  list-style: none;
+  color: rgb(255, 255, 255);
+}
+
+.form1 {
+  position: absolute;
+  left: 320px;
+  top: 250px;
+  display: grid;
+  grid-template-columns: 103px 103px;
+  grid-template-rows: 20px;
+  gap: 60px 320px;
+  justify-content: left;
+  list-style: none;
+  color: rgb(255, 255, 255);
+}
+
+.form1 p {
+  font-size: 22px;
+  margin: 0px 20px;
+}
+
+.editor {
+  width: 100px;
+  height: 50px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(231, 33, 33);
+  list-style: none;
+  border: none;
+}
+
+.editor p {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.editor:hover {
+  background-color: rgb(228, 227, 227);
+  color: black;
+}
+.editor1 {
+  width: 100px;
+  height: 50px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(231, 33, 33);
+  list-style: none;
+  border: none;
+}
+
+.editor1 p {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.editor1:hover {
+  background-color: rgb(228, 227, 227);
+  color: black;
+}
+.desc {
+  margin: 10px 0px;
+  display: block;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
   .container {
+    width: 100%;
     height: 100%;
-    width: 200px;
-    background-color: rgb(21, 21, 21);
   }
+
   .menu {
+    font-size: 20px;
     position: absolute;
-    width: 85%;
-    height: 13%;
+  width: 100%;
+  height: 13%;
+  margin: 0;
+  left: 0;
+  padding: 0px 30px;
+  background-color: rgb(231, 33, 33);
+  top: 92px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  list-style: none;
+  color: rgb(248, 247, 247);
+  }
+
+  .titulo {
+    width: 100%;
+    height:120%;
+    left: 0;
     margin: 0;
-    left: 10px;
-    font-size: 30px;
-    background-color: rgb(244, 238, 238);
-    top: 105px;
+    padding: 0px 30px;
+    background-color: rgb(26, 26, 26);
+    top: 160px;
     display: flex;
+    justify-content: left;
+    list-style: none;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+  }
+
+  .form {
+    height: 100%;
+    height: 100%;
+    left: 40px;
+    display: grid;
+    grid-template-columns: 103px ;
+    grid-template-rows: 40px;
+    font-size: 20px;
+    gap: 70px 10px;
+  }
+
+  .form1 {
+    height: 100%;
+    left: 40px;
+    display: grid;
+    grid-template-columns: 103px ;
+    grid-template-rows: 40px;
+    font-size: 20px;
+    gap: 50px 10px;
+  }
+
+  .editor {
+    width: 100px;
+    height: 40px;
+    margin: 12px 20px;
+    font-size: 14px;
+    
+  }
+  .editor p {
+    display: inline;
+    left: 0;
     justify-content: center;
     align-items: center;
     text-align: center;
-    list-style: none;
   }
-  .menu:hover {
-    background-color: red;
-    color: white;
+  .editor1 {
+    width: 100px;
+    height: 40px;
+    margin: 1px 5px;
+    font-size: 20px;
+    
   }
-  
-  .menu-list {
-    position: absolute;
-    left: 0;
-    color: #f1f1f1;
-    background-color: rgb(21, 21, 21);
-    list-style: none;
-    padding: 0;
-    top: 95px;
-    margin: 100px 0;
-    justify-content: left;
+  .editor1 p {
+    display: inline;
+    justify-content: center;
     align-items: center;
-    text-align: left;
+    text-align: center;
   }
-  
-  .menu-list li {
-    padding: 10px;
+  .desc {
+    margin: 5px 0px;
   }
-  
-  .menu-list li a {
-    text-decoration: none;
-    color: white;
-  }
-  .menu-list li:hover {
-    background-color: red;
-  }
-  
-  .menu-list2 {
-    position: absolute;
-    left: 0;
-    color: #f1f1f1;
-    background-color: rgb(21, 21, 21);
-    padding: 0;
-    top: 355px;
-    margin: 100px 10px;
-    justify-content: left;
-    align-items: center;
-    text-decoration: none;
-  }
-  .menu-list2 li {
-    padding: 10px;
-  }
-  .menu-list2 li a {
-    text-decoration: none;
-    color: white;
-  }
-  .menu-list2 li:hover {
-    background-color: red;
-  }
-  
+}

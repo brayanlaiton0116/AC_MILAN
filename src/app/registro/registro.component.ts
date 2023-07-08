@@ -16,7 +16,7 @@ export class RegistroComponent implements OnInit {
   formSubmitted = false;
   errorMensaje: string;
   error = false;
-  
+  termsAccepted: boolean = false;
   constructor(private fb: FormBuilder) {}
 
   get email() {
@@ -51,22 +51,22 @@ export class RegistroComponent implements OnInit {
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [
         Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(20),
+        Validators.minLength(1),
+        
       ]),
       confirmPassword: new FormControl('', [
         Validators.required,
-        Validators.minLength(8),
-        Validators.maxLength(20),
+        Validators.minLength(1),
+        
       ]),
     });
   }
   submitForm() {
     this.formRegistro.value;
     this.formSubmitted = true;
-    if (this.formRegistro.valid) {
 
-      if (this.formRegistro.valid) {
+        if (this.formRegistro.valid && this.termsAccepted) {
+        
       if (this.formRegistro.value.password === this.formRegistro.value.confirmPassword) {
         // Las contraseñas coinciden, puedes realizar el envío del formulario
         console.log('Formulario enviado correctamente');
@@ -74,12 +74,15 @@ export class RegistroComponent implements OnInit {
         // Las contraseñas no coinciden, muestra un mensaje de error
         console.log('Passwords dont match');
       }
+      if (this.formRegistro.valid && this.termsAccepted) {
+    // Resto del código para el registro
+  }
     } 
     }
-  }
+  
 
   
-  showPassword: boolean = false;
+  showPassword: boolean = true;
   visiblePassword: boolean = true;
   changetypePassword: boolean = true;
   visibleConfirm: boolean = true;
@@ -93,6 +96,7 @@ viewpass(field: string) {
     this.visibleConfirm = !this.visibleConfirm;
     this.changetypeConfirm = !this.changetypeConfirm;
   }
+  
 }
 
   togglePasswordVisibility(): void {

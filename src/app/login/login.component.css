@@ -115,6 +115,21 @@
   cursor: pointer;
 }
 
+.infor{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #eb0e0e;
+  color: #f9f6f9;
+}
+.alert-success {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 @media screen and (min-width: 925px) {
   .description,
   .form {
