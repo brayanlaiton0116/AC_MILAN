@@ -34,15 +34,16 @@
     <div class="iconos">
       <ul>
         <li>
-          <a [routerLink]="['/registro']"><i  class="fi fi-rs-heart"></i></a>
+          <a [routerLink]="['/error']"><i class="fi fi-rs-heart"></i></a>
         </li>
       </ul>
       <ul>
         <li>
-        <a  (click)="iconos = !iconos" (click)="toggleOtraFuncion2()"><i class="fi fi-sr-user" style="color: #d5dae2;"></i> </a>
-      </li>
-    </ul>
-    
+          <a  (click)="togglePerfil()" (click)="iconosAbierto = !iconosAbierto" 
+            ><i class="fi fi-sr-user" style="color: #d5dae2"></i>
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="cart">
       <div class="marcador">
@@ -50,7 +51,7 @@
       </div>
       <i
         (click)="onToggleCard()"
-        (click)="toggleOtraFuncion()"
+        (click)="toggleCart()"
         class="fi fi-rs-shopping-bag"
       ></i>
     </div>
@@ -58,7 +59,7 @@
 </nav>
 
 <div class="carrito" [ngClass]="{ show: isCartOpen }">
-  <app-cart  (click)="toggleOtraFuncion()" (closeCartEvent)="closeCart()"></app-cart>
+  <app-cart (click)="toggleCart()" (closeCartEvent)="closeCart()"></app-cart>
 </div>
 
 <div>
@@ -93,8 +94,7 @@
     </div>
   </div>
 
-  <div class="menu2" *ngIf="iconos">
- 
+  <div class="menu2" *ngIf="iconosAbierto">
     <ul>
       <li>
         <a [routerLink]="['/login']">LOGIN</a>

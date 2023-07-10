@@ -69,15 +69,13 @@ export class LoginComponent implements OnInit {
       }
 
       if (email === 'brayan@gmail.com' && password === '123456789') {
-        this.location.back();
+        
         this.router.navigate(['/perfil']);
         this.errorMensaje = 'Successful login';
         alert('Successful login');
       } else {
         this.errorMensaje = 'Incorrect email or password';
-      
       }
-
       console.log(body);
     }
   }

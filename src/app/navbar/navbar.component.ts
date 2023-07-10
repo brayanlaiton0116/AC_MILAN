@@ -9,36 +9,10 @@ import { StoreService } from 'src/app/services/store.service';
 export class NavbarComponent implements OnInit {
   menuAbierto: boolean = false;
   SearchAbierto: boolean = false;
-  otraFuncionAbierta: boolean = false;
-  otraFuncionAbierta2: boolean = false;
-  iconos:boolean = false
-  toggleMenu() {
-    this.menuAbierto = !this.menuAbierto;
-    this.SearchAbierto = false;
-    this.otraFuncionAbierta = false;
-    this.otraFuncionAbierta2 = false;
-    
-  }
-
-  toggleSearch() {
-    this.SearchAbierto = !this.SearchAbierto;
-    this.menuAbierto = false;
-    this.otraFuncionAbierta = false;
-    this.otraFuncionAbierta2 = false;
-  }
-
-  toggleOtraFuncion() {
-    this.otraFuncionAbierta = !this.otraFuncionAbierta;
-    this.menuAbierto = false;
-    this.SearchAbierto = false;
-    this.otraFuncionAbierta2 = false;
-  }
-  toggleOtraFuncion2() {
-    this.otraFuncionAbierta2 = !this.otraFuncionAbierta2;
-    this.menuAbierto = false;
-    this.SearchAbierto = false;
-    this.otraFuncionAbierta = false;
-  }
+  Cart: boolean = false;
+  Perfil: boolean = false;
+  iconosAbierto: boolean = false;
+  tiempoCierre = 8000;
   isCartOpen: boolean = false;
   menu: boolean = false;
   search: boolean = false;
@@ -46,8 +20,52 @@ export class NavbarComponent implements OnInit {
   myCart$ = this.storeService.myCart$;
 
   constructor(private storeService: StoreService) {}
-
   ngOnInit(): void {}
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
+    this.iconosAbierto = false;
+    this.iniciarTemporizador();
+  }
+
+  toggleSearch() {
+    this.SearchAbierto = !this.SearchAbierto;
+    this.menuAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
+    this.iniciarTemporizador();
+  }
+
+  toggleCart() {
+    this.Cart = !this.Cart;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Perfil = false;
+    this.iniciarTemporizador();
+  }
+
+  togglePerfil() {
+    this.Perfil = !this.Perfil;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.iniciarTemporizador();
+  }
+
+  iniciarTemporizador() {
+    setTimeout(() => {
+      this.cerrarMenu();
+    }, this.tiempoCierre);
+  }
+
+  cerrarMenu() {
+    this.menuAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
+  }
 
   onToggleCard() {
     this.isCartOpen = !this.isCartOpen;
@@ -56,4 +74,7 @@ export class NavbarComponent implements OnInit {
   closeCart() {
     this.isCartOpen = false;
   }
+  searchTerm: string = '';
+  searchResults: any[] = [];
+
 }

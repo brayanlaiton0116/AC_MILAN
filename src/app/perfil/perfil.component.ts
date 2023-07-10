@@ -6,14 +6,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent {
-
+  isEditing = false;
   formData = {
     name:  'Brayhan',
     lastname:  'Laiton',
     email:  'brayan@gmail.com',
     phone:  '3215536775'
   };
-  isEditing = false;
+  
 
   editForm() {
     this.isEditing = true;

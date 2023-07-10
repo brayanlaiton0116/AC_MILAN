@@ -52,12 +52,12 @@ export class RegistroComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(1),
-        
+        Validators.maxLength(20),
       ]),
       confirmPassword: new FormControl('', [
         Validators.required,
         Validators.minLength(1),
-        
+        Validators.maxLength(1),
       ]),
     });
   }
