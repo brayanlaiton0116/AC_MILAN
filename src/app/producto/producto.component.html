@@ -70,10 +70,34 @@
 
     <h5>CHOOSE YOUR SIZE</h5>
     <div class="tallas">
-      <div class="cuadrado1">S</div>
-      <div class="cuadrado2">M</div>
-      <div class="cuadrado3">L</div>
-      <div class="cuadrado4">XL</div>
+      <div
+        class="cuadrado1"
+        (click)="selectSize('S')"
+        [ngClass]="{ selected: selectedSize === 'S' }"
+      >
+        S
+      </div>
+      <div
+        class="cuadrado2"
+        (click)="selectSize('M')"
+        [ngClass]="{ selected: selectedSize === 'M' }"
+      >
+        M
+      </div>
+      <div
+        class="cuadrado3"
+        (click)="selectSize('L')"
+        [ngClass]="{ selected: selectedSize === 'L' }"
+      >
+        L
+      </div>
+      <div
+        class="cuadrado4"
+        (click)="selectSize('XL')"
+        [ngClass]="{ selected: selectedSize === 'XL' }"
+      >
+        XL
+      </div>
     </div>
 
     <h5>PRICE</h5>

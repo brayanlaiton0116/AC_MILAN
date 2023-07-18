@@ -1,9 +1,9 @@
+import { IProduct } from './../interface/product.interface';
 import { StoreService } from 'src/app/services/store.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import * as dataProducts from '../../assets/productos.json';
-import { IProduct } from '../interface/product.interface';
-
+import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-producto',
   templateUrl: './producto.component.html',
@@ -11,14 +11,14 @@ import { IProduct } from '../interface/product.interface';
 })
 export class ProductoComponent implements OnInit {
   mainImage: string = 'assets/imgP/primera.webp';
-
   productoId: string;
-
+  selectedSize: string | null = null;
   product: IProduct | undefined;
 
   constructor(
     private route: ActivatedRoute,
-    private storeService: StoreService
+    private storeService: StoreService,
+    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -41,5 +41,17 @@ export class ProductoComponent implements OnInit {
 
   addProduct(product: IProduct) {
     this.storeService.addProduct(product);
+  }
+
+  selectSize(size: string) {
+    this.selectedSize = size;
+  }
+
+  addProductToCart(product: IProduct) {
+    if (this.selectedSize) {
+      const IProduct = { ...product, size: this.selectedSize };
+      this.cartService.addToCart(IProduct);
+    } else {
+    }
   }
 }

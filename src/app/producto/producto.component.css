@@ -147,51 +147,29 @@ h5 {
 }
 .tallas {
   display: flex;
-  gap: 10px;
-  margin: 10px 0;
-  text-align: center;
-  color: white;
-  padding: 0 18px;
-  cursor: pointer;
+  justify-content: center;
+  align-items: center;
 }
-.cuadrado1 {
-  width: 40px;
-  height: 28px;
-  background: #101010;
-  margin: 2px;
-}
-.cuadrado1:hover {
-  background-color: rgb(255, 0, 0);
-  transition: 0.5s;
-}
-.cuadrado2 {
-  width: 40px;
-  height: 28px;
-  background: #101010;
-  margin: 2px;
-}
-.cuadrado2:hover {
-  background-color: rgb(255, 0, 0);
-  transition: 0.5s;
-}
-.cuadrado3 {
-  width: 40px;
-  height: 28px;
-  background: #101010;
-  margin: 2px;
-}
-.cuadrado3:hover {
-  background-color: rgb(255, 0, 0);
-  transition: 0.5s;
-}
+.cuadrado1,
+.cuadrado2,
+.cuadrado3,
 .cuadrado4 {
   width: 40px;
-  height: 28px;
-  background: #101010;
-  margin: 2px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+  background-color: #101010;
+  color: #ffffff;
 }
-.cuadrado4:hover {
+
+.selected {
   background-color: rgb(255, 0, 0);
+  border-color: #000;
+  color: #ffffff;
   transition: 0.5s;
 }
 
