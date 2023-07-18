@@ -80,7 +80,6 @@ ul {
 }
 
 .menu_derecha a:hover {
-  
   transition: 0.5s;
 }
 
@@ -220,23 +219,27 @@ a {
 .search input {
   width: 100%;
 }
+.fi-rr-search {
+  padding: 9px;
+  margin-top: 5px;
+  margin: 0 -10px;
+}
 .cart {
   width: 30px;
   height: 30px;
   margin: 0 10px;
   border-radius: 5px;
 }
-.iconos{
+.iconos {
   display: flex;
-  margin: 0px 15px;
-  gap: 20px;
+  padding: 1px;
+  gap: 18px;
   justify-content: center;
   align-items: center;
   position: relative;
-  left: 1.1px;
   top: 0.5rem;
   color: white;
-  
+  margin: 0 15px;
 }
 
 @media only screen and (max-width: 368px) {
