@@ -147,7 +147,7 @@ h5 {
 }
 .tallas {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
 }
 .cuadrado1,
