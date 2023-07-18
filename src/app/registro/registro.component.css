@@ -1,4 +1,4 @@
-*{
+* {
   border: none;
 }
 .gradient-custom-2 {
@@ -67,8 +67,17 @@
   border: 1px solid var(--black);
   margin-bottom: 20px;
 }
+
 .form-label {
   font-weight: 700;
+}
+.form-label a {
+  color: rgb(16, 16, 16);
+  text-decoration: none;
+}
+
+.form-label a:hover {
+  color: red;
 }
 .btn {
   width: 100%;
@@ -115,16 +124,15 @@
   text-align: center;
 }
 
-.infor{
+.infor {
   display: block;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #eb0e0e;
   color: #f9f6f9;
-  
 }
-.form-group .cuadro{
+.form-group .cuadro {
   width: 15px;
   height: 15px;
   display: inline-flex;
@@ -132,7 +140,6 @@
   align-items: center;
   text-align: center;
   margin: 0px 5px;
-  
 }
 @media screen and (min-width: 925px) {
   .description,

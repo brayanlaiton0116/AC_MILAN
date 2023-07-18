@@ -1,6 +1,11 @@
+.header{
+  display: flex;
+  margin-top: 60px;
+}
 .carousel slide {
   position: relative;
   justify-content: center;
+  
 }
 .carousel-control-prev-icon {
   color: black;

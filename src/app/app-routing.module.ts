@@ -7,6 +7,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { ShopComponent } from './shop/shop.component';
 import { ProductoComponent } from './producto/producto.component';
 import { PagErrorComponent } from './pag-error/pag-error.component';
+import { TerminosCondicionesComponent } from './terminos/terminos-condiciones/terminos-condiciones.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'shop', component: ShopComponent },
   { path: 'error', component: PagErrorComponent },
   { path: 'producto', component: ProductoComponent },
+  { path: 'terminos', component: TerminosCondicionesComponent },
   { path: 'productos/:id', component: ProductoComponent },
 ];
 

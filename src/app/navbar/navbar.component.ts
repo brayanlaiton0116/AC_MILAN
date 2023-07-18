@@ -76,5 +76,4 @@ export class NavbarComponent implements OnInit {
   }
   searchTerm: string = '';
   searchResults: any[] = [];
-
 }

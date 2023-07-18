@@ -11,6 +11,7 @@
   background: #3a3737;
   align-items: center;
   margin: 0 410px;
+  right: 10%;
   border-radius: 5px;
 }
 .X:hover {
@@ -256,7 +257,7 @@ nav {
 }
 .imagen:hover {
   transform: scale(1.1);
-  transition: transform 1s;
+  
 }
 .fi {
   width: 9%;

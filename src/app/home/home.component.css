@@ -1,3 +1,7 @@
+* {
+  border: none;
+}
+
 .contar {
   color: rgb(255, 255, 255);
   display: flex;
@@ -31,7 +35,7 @@ h3 {
   border-radius: 5px;
   box-shadow: 0px 15px 25px rgba(246, 243, 243, 0.5);
 }
-.card1 figure:hover{
+.card1 figure:hover {
   box-shadow: 7px 7px 20px red;
   transform: translateY(-7%);
 }
@@ -84,7 +88,7 @@ h3 {
   margin-top: 20px;
 }
 .mas button {
-  border-radius: px;
+  border-radius: 5px;
   background-color: #1a161a;
   color: rgb(247, 244, 244);
   width: 200px;
@@ -152,7 +156,6 @@ div a img {
   transition: 3s;
 }
 
-
 @media screen and (max-width: 850px) {
   .col {
     width: 100%;
@@ -184,7 +187,6 @@ div a img {
     margin: 15px;
   }
 
-  
   .contar {
     width: 100%;
     height: 100%;
@@ -233,7 +235,6 @@ div a img {
     margin: 15px;
   }
 
-  
   .contar {
     width: 100%;
     height: 100%;
@@ -252,7 +253,7 @@ div a img {
   }
 }
 @media screen and (max-width: 550px) {
-  *{
+  * {
     margin-top: 0;
   }
   .col {
@@ -283,7 +284,7 @@ div a img {
   }
   .contar {
     width: 92%;
-    height: 100%; 
+    height: 100%;
     justify-content: center;
     display: block;
     align-items: center;

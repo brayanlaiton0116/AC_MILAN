@@ -7,7 +7,7 @@
             "nombre": "AUTHENTIC AC MILAN 1ST SHIRT",
             "descripcion": "It is the first kit of the ac milan for the matches",
             "precio": 900,
-            "categoria": "Camisa1",
+            "categoria": "camisa",
             "tallas": [
             {
                 "talla": "S",
@@ -43,7 +43,7 @@
         "nombre": "AUTHENTIC AC MILAN 2ST SHIRT ",
         "descripcion": "It is the second kit of the ac milan for the matches",
         "precio": 800,
-        "categoria": "Camisa2",
+        "categoria": "camisa",
         "tallas": [
     {
         "talla": "S",
@@ -76,7 +76,7 @@
         "nombre": "AUTHENTIC AC MILAN 3ST SHIRT",
         "descripcion": "It is the third kit of the ac milan for the matches",
         "precio": 700,
-        "categoria": "Camisa3",
+        "categoria": "camisa",
         "tallas": [
     {
         "talla": "S",
@@ -110,7 +110,7 @@
             "nombre": "MILAN HERITAGE SWEATSHIRT 1",
             "descripcion": "Is a 100% cotton jacket illustrated with the primary colors of our team.",
             "precio": 940,
-            "categoria": "Camisa4",
+            "categoria": "chaqueta",
             "tallas": [
         {
             "talla": "S",
@@ -143,7 +143,7 @@
                 "nombre": "MILAN HERITAGE SWEATSHIRT 2",
                 "descripcion": "Is a 100% cotton jacket illustrated with the secondary colors of our team.",
                 "precio": 940,
-                "categoria": "Camisa5",
+                "categoria": "chaqueta",
                 "tallas": [
             {
                 "talla": "S",
@@ -177,7 +177,7 @@
                     "nombre": "MILAN HERITAGE TROUSERS",
                     "descripcion": "Is a 100% cotton pant illustrated with the primary colors of our team.",
                     "precio": 750,
-                    "categoria": "Camisa6",
+                    "categoria": "pants",
                     "tallas": [
                 {
                     "talla": "S",
@@ -210,7 +210,7 @@
             "nombre": "SUDADERA MILAN HERITAGE",
             "descripcion": "Is a windbreaker jacket illustrated with the primary colors of our team.",
             "precio": 400,
-            "categoria": "Camisa7",
+            "categoria": "chaqueta",
             "tallas": [
         {
             "talla": "S",
@@ -244,7 +244,7 @@
                 "nombre": "SUDADERA MILAN HERITAGE",
                 "descripcion": "Is a windbreaker jacket illustrated with the secondary colors of our team.",
                 "precio": 800,
-                "categoria": "Camisa8",
+                "categoria": "chaqueta",
                 "tallas": [
             {
                 "talla": "S",
@@ -278,7 +278,7 @@
                     "descripcion": "Is a windbreaker jacket with hood in our team's primary colors."
                     ,
                     "precio": 800,
-                    "categoria": "Camisa9",
+                    "categoria": "chaqueta",
                     "tallas": [
                 {
                     "talla": "S",
