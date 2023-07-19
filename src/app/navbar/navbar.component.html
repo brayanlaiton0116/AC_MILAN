@@ -73,7 +73,7 @@
     <div class="menu" *ngIf="menuAbierto">
       <ul>
         <li>
-          <a [routerLink]="['/perfil']">PROFILE</a>
+          <a [routerLink]="['/perfil']">HOME</a>
         </li>
       </ul>
       <ul>
@@ -102,7 +102,7 @@
       <ul>
         <li>
           <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']"
-            >THE CLUB</a
+            >PROFILE</a
           >
         </li>
       </ul>
