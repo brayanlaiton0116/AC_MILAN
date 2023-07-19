@@ -24,10 +24,7 @@ export class MenuPerfilComponent {
 
   ngOnInit(): void {}
   logout() {
-    // Realizar acciones para cerrar sesión, como eliminar tokens o limpiar datos de sesión
-    // ...
-
-    // Redireccionar al componente de inicio de sesión
+    localStorage.removeItem('rememberedData');
     this.router.navigate(['/login']);
   }
 }

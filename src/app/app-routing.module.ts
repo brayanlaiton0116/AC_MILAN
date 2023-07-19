@@ -8,6 +8,8 @@ import { ShopComponent } from './shop/shop.component';
 import { ProductoComponent } from './producto/producto.component';
 import { PagErrorComponent } from './pag-error/pag-error.component';
 import { TerminosCondicionesComponent } from './terminos/terminos-condiciones/terminos-condiciones.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,11 +20,13 @@ const routes: Routes = [
   { path: 'error', component: PagErrorComponent },
   { path: 'producto', component: ProductoComponent },
   { path: 'terminos', component: TerminosCondicionesComponent },
+  { path: 'perfil', component: PerfilComponent, canActivate: [LoginGuard] },
   { path: 'productos/:id', component: ProductoComponent },
 ];
 
 @NgModule({
   imports: [NgxSliderModule, [RouterModule.forRoot(routes)]],
   exports: [RouterModule],
+  providers: [],
 })
 export class AppRoutingModule {}

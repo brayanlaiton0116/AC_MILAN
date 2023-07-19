@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { AuthService } from './../services/auth.service';
+import { Component, OnInit, EventEmitter, inject } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -18,6 +19,8 @@ export class NavbarComponent implements OnInit {
   search: boolean = false;
 
   myCart$ = this.storeService.myCart$;
+
+  AuthService = inject(AuthService);
 
   constructor(private storeService: StoreService) {}
   ngOnInit(): void {}

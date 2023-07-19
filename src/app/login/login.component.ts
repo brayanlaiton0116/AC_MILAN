@@ -7,6 +7,7 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,24 +21,20 @@ export class LoginComponent implements OnInit {
   errorMensaje: string;
   error = false;
   rememberMe: boolean = false;
-  
+
   formatoLogin: FormGroup;
 
-  constructor(private fb: FormBuilder,private router: Router,private location: Location) {}
-
-
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private location: Location,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     this.formatoLogin = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(1),
-          
-        ],
-      ],
+      password: ['', [Validators.required, Validators.minLength(1)]],
       rememberMe: new FormControl(false),
     });
 
@@ -66,10 +63,10 @@ export class LoginComponent implements OnInit {
         );
       } else {
         localStorage.removeItem('rememberedData');
-      }
+        this.router.navigate(['/login'])
+      };
 
       if (email === 'brayan@gmail.com' && password === '123456789') {
-        
         this.router.navigate(['/perfil']);
         this.errorMensaje = 'Successful login';
         alert('Successful login');
@@ -79,10 +76,7 @@ export class LoginComponent implements OnInit {
       console.log(body);
     }
   }
-  
-      
-     
-   
+
   visible: boolean = true;
   changetype: boolean = true;
 
@@ -91,4 +85,3 @@ export class LoginComponent implements OnInit {
     this.changetype = !this.changetype;
   }
 }
-

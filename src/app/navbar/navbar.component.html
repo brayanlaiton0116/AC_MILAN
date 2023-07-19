@@ -81,14 +81,29 @@
           <a [routerLink]="['/error']">ACADEMY</a>
         </li>
       </ul>
+
       <ul>
         <li>
-          <a [routerLink]="['/login']">LOGIN</a>
+          <a *ngIf="!AuthService.isLogged()" [routerLink]="['/login']">LOGIN</a>
         </li>
       </ul>
       <ul>
         <li>
-          <a [routerLink]="['/registro']">REGISTER</a>
+          <a *ngIf="!AuthService.isLogged()" [routerLink]="['/registro']"
+            >REGISTER</a
+          >
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']">FANS</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']"
+            >THE CLUB</a
+          >
         </li>
       </ul>
     </div>
