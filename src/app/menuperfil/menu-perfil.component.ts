@@ -8,9 +8,7 @@ import { Router } from '@angular/router';
   templateUrl: './menu-perfil.component.html',
   styleUrls: ['./menu-perfil.component.css'],
 })
-
 export class MenuPerfilComponent {
-  
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(
@@ -18,7 +16,10 @@ export class MenuPerfilComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver,private router: Router) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private router: Router
+  ) {}
 
   menu: boolean = false;
 

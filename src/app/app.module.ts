@@ -30,6 +30,7 @@ import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { TerminosCondicionesComponent } from './terminos/terminos-condiciones/terminos-condiciones.component';
 import { LoginGuard } from './guards/login.guard';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -59,6 +60,7 @@ const routes: Routes = [
     MenuPerfilComponent,
     PerfilComponent,
     TerminosCondicionesComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
