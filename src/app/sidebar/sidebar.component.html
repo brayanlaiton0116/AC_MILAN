@@ -1,0 +1,48 @@
+<body>
+  <div class="sidebar">
+    <header>AC MILAN</header>
+    <ul>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/home']"
+          ><i class="fas fa-shop"></i>HOME</a
+        >
+      </li>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/shop']"
+          ><i class="fi fi-rs-shopping-bag-add"></i>SHOP</a
+        >
+      </li>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/login']"
+          ><i class="fas fa-stream"></i>LOGIN</a
+        >
+      </li>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/registro']"
+          ><i class="fi fi-ss-user-add"></i>REGISTER</a
+        >
+      </li>
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/home']"
+          ><i class="fas fa-shop"></i>HOME</a
+        >
+      </li>
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/shop']"
+          ><i class="fi fi-rs-shopping-bag-add"></i>SHOP</a
+        >
+      </li>
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']"
+          ><i class="fi fi-sr-tennis"></i>THE CLUB</a
+        >
+      </li>
+
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/perfil']"
+          ><i class="fi fi-sr-user"></i>PROFILE</a
+        >
+      </li>
+    </ul>
+  </div>
+</body>

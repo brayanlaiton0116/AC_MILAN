@@ -1,7 +1,8 @@
 import { AuthService } from './../services/auth.service';
-import { Component, OnInit, EventEmitter, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { StoreService } from 'src/app/services/store.service';
-
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,7 +14,7 @@ export class NavbarComponent implements OnInit {
   Cart: boolean = false;
   Perfil: boolean = false;
   iconosAbierto: boolean = false;
-  tiempoCierre = 8000;
+
   isCartOpen: boolean = false;
   menu: boolean = false;
   search: boolean = false;
@@ -22,7 +23,11 @@ export class NavbarComponent implements OnInit {
 
   AuthService = inject(AuthService);
 
-  constructor(private storeService: StoreService) {}
+  constructor(
+    private storeService: StoreService,
+    private breakpointObserver: BreakpointObserver,
+    private router: Router
+  ) {}
   ngOnInit(): void {}
 
   toggleMenu() {
@@ -31,7 +36,6 @@ export class NavbarComponent implements OnInit {
     this.Cart = false;
     this.Perfil = false;
     this.iconosAbierto = false;
-    this.iniciarTemporizador();
   }
 
   toggleSearch() {
@@ -39,7 +43,6 @@ export class NavbarComponent implements OnInit {
     this.menuAbierto = false;
     this.Cart = false;
     this.Perfil = false;
-    this.iniciarTemporizador();
   }
 
   toggleCart() {
@@ -47,7 +50,6 @@ export class NavbarComponent implements OnInit {
     this.menuAbierto = false;
     this.SearchAbierto = false;
     this.Perfil = false;
-    this.iniciarTemporizador();
   }
 
   togglePerfil() {
@@ -55,13 +57,6 @@ export class NavbarComponent implements OnInit {
     this.menuAbierto = false;
     this.SearchAbierto = false;
     this.Cart = false;
-    this.iniciarTemporizador();
-  }
-
-  iniciarTemporizador() {
-    setTimeout(() => {
-      this.cerrarMenu();
-    }, this.tiempoCierre);
   }
 
   cerrarMenu() {
@@ -79,4 +74,9 @@ export class NavbarComponent implements OnInit {
   }
   searchTerm: string = '';
   searchResults: any[] = [];
+
+  logout() {
+    localStorage.removeItem('rememberedData');
+    this.router.navigate(['/login']);
+  }
 }

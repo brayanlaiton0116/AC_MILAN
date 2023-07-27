@@ -39,7 +39,10 @@
       </ul>
       <ul>
         <li>
-          <a (click)="togglePerfil()" (click)="iconosAbierto = !iconosAbierto"
+          <a
+            [routerLink]="['/perfil']"
+            (click)="togglePerfil()"
+            (click)="iconosAbierto = !iconosAbierto"
             ><i class="fi fi-sr-user" style="color: #d5dae2"></i>
           </a>
         </li>
@@ -68,57 +71,4 @@
   </div>
 </div>
 
-<div>
-  <div>
-    <div class="menu" *ngIf="menuAbierto">
-      <ul>
-        <li>
-          <a [routerLink]="['/home']">HOME</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a [routerLink]="['/error']">ACADEMY</a>
-        </li>
-      </ul>
-
-      <ul>
-        <li>
-          <a *ngIf="!AuthService.isLogged()" [routerLink]="['/login']">LOGIN</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a *ngIf="!AuthService.isLogged()" [routerLink]="['/registro']"
-            >REGISTER</a
-          >
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']">FANS</a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <a *ngIf="AuthService.isLogged()" [routerLink]="['/perfil']"
-            >PROFILE</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="menu2" *ngIf="iconosAbierto">
-    <ul>
-      <li>
-        <a [routerLink]="['/login']">LOGIN</a>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <a [routerLink]="['/registro']">REGISTER</a>
-      </li>
-    </ul>
-  </div>
-</div>
+<app-sidebar *ngIf="menuAbierto"></app-sidebar>

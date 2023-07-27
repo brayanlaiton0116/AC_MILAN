@@ -242,12 +242,7 @@ a {
   margin: 0 15px;
 }
 
-@media only screen and (max-width: 368px) {
-  nav {
-    width: 100%;
-    height: 2%;
-  }
-
+@media only screen and (max-width: 968px) {
   .menu_izquierda li a {
     display: none;
   }
@@ -255,7 +250,7 @@ a {
     display: none;
   }
   .menu_centro {
-    width: 10px;
+    width: 15px;
     place-items: center;
     display: none;
   }
@@ -272,7 +267,12 @@ a {
   }
 }
 
-@media only screen and (max-width: 968px) {
+@media only screen and (max-width: 390px) {
+  .navbar {
+    width: 100%;
+    height: 12%;
+  }
+
   .menu_izquierda li a {
     display: none;
   }
@@ -280,7 +280,7 @@ a {
     display: none;
   }
   .menu_centro {
-    width: 15px;
+    width: 10px;
     place-items: center;
     display: none;
   }
