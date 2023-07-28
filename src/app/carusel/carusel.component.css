@@ -1,17 +1,16 @@
-.header{
+.header {
   display: flex;
   margin-top: 60px;
 }
 .carousel slide {
   position: relative;
   justify-content: center;
-  
 }
 .carousel-control-prev-icon {
   color: black;
   background-color: black;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 1111;
 }
 .carousel-control-next-icon {
   color: black;
@@ -20,5 +19,5 @@
   z-index: 1;
 }
 .carousel-indicators {
-  z-index: 4;
+  z-index: 41111;
 }
