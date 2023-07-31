@@ -6,6 +6,7 @@
   background: rgb(17, 17, 17);
   transition: all 0.5s ease;
   top: 12%;
+  z-index: 2;
 }
 
 .sidebar header {
