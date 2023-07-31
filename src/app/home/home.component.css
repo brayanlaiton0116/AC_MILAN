@@ -208,9 +208,6 @@ div a img {
 }
 
 @media screen and (max-width: 590px) {
-  * {
-    margin-top: 0;
-  }
   .col {
     width: 100%;
     justify-content: center;
