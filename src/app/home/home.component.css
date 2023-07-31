@@ -1,7 +1,3 @@
-* {
-  border: none;
-}
-
 .contar {
   color: rgb(255, 255, 255);
   display: flex;
@@ -142,20 +138,19 @@ div a img {
   margin-top: 50px;
   width: 100%;
   height: 100%;
-  padding: 16px;
+  padding: 15px 15px;
   background-color: #ebdddd;
 }
 .logos {
   display: flex;
   justify-content: space-between;
-  /* Estilos para el contenedor de los logos */
 }
 .logo {
-  width: 180px; /* Tamaño inicial para pantallas de escritorio */
+  width: 180px;
   height: auto;
   display: flex;
   justify-content: center;
-  align-items: center; /* Para mantener la proporción del logo */
+  align-items: center;
 }
 .aimagen {
   animation: scale 3s infinite;
