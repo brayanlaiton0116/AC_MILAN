@@ -5,7 +5,7 @@
 
 .container {
   height: 100%;
-  width: 210px;
+  width: 200px;
   background-color: rgb(21, 21, 21);
 }
 .menu img {
@@ -64,7 +64,7 @@
   color: #f1f1f1;
   background-color: rgb(21, 21, 21);
   padding: 0;
-  top: 400px;
+  top: 385px;
   margin: 100px 0px;
   justify-content: left;
   align-items: center;
