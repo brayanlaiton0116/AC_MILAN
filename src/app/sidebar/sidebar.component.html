@@ -3,10 +3,12 @@
     <header>AC MILAN</header>
     <ul>
       <li>
-        <a [routerLink]="['/home']"><i class="fas fa-shop"></i>HOME</a>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/home']"
+          ><i class="fas fa-shop"></i>HOME</a
+        >
       </li>
       <li>
-        <a [routerLink]="['/shop']"
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/shop']"
           ><i class="fi fi-rs-shopping-bag-add"></i>SHOP</a
         >
       </li>
@@ -20,7 +22,16 @@
           ><i class="fi fi-ss-user-add"></i>REGISTER</a
         >
       </li>
-
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/home']"
+          ><i class="fas fa-shop"></i>HOME</a
+        >
+      </li>
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/shop']"
+          ><i class="fi fi-rs-shopping-bag-add"></i>SHOP</a
+        >
+      </li>
       <li>
         <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']"
           ><i class="fi fi-sr-tennis"></i>THE CLUB</a

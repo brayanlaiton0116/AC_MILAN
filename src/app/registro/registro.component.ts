@@ -39,6 +39,7 @@ export class RegistroComponent implements OnInit {
 
   ngOnInit(): void {
     this.formRegistro = new FormGroup({
+      
       name: new FormControl('', [
         Validators.required,
         Validators.pattern('^[a-zA-Z\\s]+$'),
@@ -64,37 +65,39 @@ export class RegistroComponent implements OnInit {
     this.formRegistro.value;
     this.formSubmitted = true;
 
-    if (this.formRegistro.valid && this.termsAccepted) {
-      if (
-        this.formRegistro.value.password ===
-        this.formRegistro.value.confirmPassword
-      ) {
-        console.log('Form sent correctly');
+        if (this.formRegistro.valid && this.termsAccepted) {
+        
+      if (this.formRegistro.value.password === this.formRegistro.value.confirmPassword) {
+        // Las contraseñas coinciden, puedes realizar el envío del formulario
+        console.log('Formulario enviado correctamente');
       } else {
         // Las contraseñas no coinciden, muestra un mensaje de error
         console.log('Passwords dont match');
       }
       if (this.formRegistro.valid && this.termsAccepted) {
-        // Resto del código para el registro
-      }
-    }
+    // Resto del código para el registro
   }
+    } 
+    }
+  
 
+  
   showPassword: boolean = true;
   visiblePassword: boolean = true;
   changetypePassword: boolean = true;
   visibleConfirm: boolean = true;
   changetypeConfirm: boolean = true;
 
-  viewpass(field: string) {
-    if (field === 'password') {
-      this.visiblePassword = !this.visiblePassword;
-      this.changetypePassword = !this.changetypePassword;
-    } else if (field === 'confirmPassword') {
-      this.visibleConfirm = !this.visibleConfirm;
-      this.changetypeConfirm = !this.changetypeConfirm;
-    }
+viewpass(field: string) {
+  if (field === 'password') {
+    this.visiblePassword = !this.visiblePassword;
+    this.changetypePassword = !this.changetypePassword;
+  } else if (field === 'confirmPassword') {
+    this.visibleConfirm = !this.visibleConfirm;
+    this.changetypeConfirm = !this.changetypeConfirm;
   }
+  
+}
 
   togglePasswordVisibility(): void {
     this.showPassword = !this.showPassword;
