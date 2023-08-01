@@ -10,7 +10,7 @@ import { StoreService } from 'src/app/services/store.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css'],
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent {
   minimoPermitido: number = 0;
