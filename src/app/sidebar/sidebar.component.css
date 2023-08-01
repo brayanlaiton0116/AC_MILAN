@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  z-index: 9;
+}
+
 .sidebar {
   position: fixed;
   left: 0;
@@ -6,7 +14,6 @@
   background: rgb(17, 17, 17);
   transition: all 0.5s ease;
   top: 12%;
-  z-index: 2;
 }
 
 .sidebar header {

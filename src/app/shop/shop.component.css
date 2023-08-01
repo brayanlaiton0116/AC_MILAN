@@ -24,7 +24,7 @@ nav {
   display: flex;
   list-style-type: none;
   position: relative;
-  top: 80px;
+  top: 90px;
   width: 100%;
   height: 10%;
   color: white;
@@ -83,7 +83,7 @@ nav {
   height: 100%;
   position: relative;
   margin: auto 0;
-  top: 35px;
+  top: 60px;
 }
 
 .container {
@@ -152,7 +152,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.bolsa:hover {
+.bolsa:hover{
   color: black;
 }
 
@@ -257,6 +257,7 @@ nav {
 }
 .imagen:hover {
   transform: scale(1.1);
+  
 }
 .fi {
   width: 9%;
@@ -272,7 +273,7 @@ nav {
   background-color: white;
 }
 
-.fi:hover {
+.fi:hover{
   background-color: rgb(5, 5, 5);
   color: rgb(255, 253, 253);
   transition: 0.5s;
@@ -298,25 +299,26 @@ nav {
     top: 120px;
     left: 0;
     margin: 0;
-  }
-  .X {
-    width: 10%;
-    justify-content: center;
-    margin: 0 490px;
-  }
 
-  .tres {
-    width: 100%;
-  }
-  .apply button {
-    width: 60%;
-    height: 40px;
-    background: #1d1c1c;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto 95px;
-    border-radius: 5px;
+    .X {
+      width: 10%;
+      justify-content: center;
+      margin: 0 490px;
+    }
+
+    .tres {
+      width: 100%;
+    }
+    .apply button {
+      width: 60%;
+      height: 40px;
+      background: #1d1c1c;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto 95px;
+      border-radius: 5px;
+    }
   }
 }
