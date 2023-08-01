@@ -1,6 +1,6 @@
 .container {
   height: 94.5%;
-  width: 84.5%;
+  width: 85%;
   background-color: rgb(21, 21, 21);
   position: absolute;
 }
@@ -45,7 +45,7 @@
 
 .form {
   position: absolute;
-  left: 315px;
+  left: 300px;
   font-size: 20px;
   background-color: rgb(26, 26, 26);
   top: 200px;
