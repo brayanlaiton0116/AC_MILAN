@@ -1,62 +1,60 @@
-<div class="form-container">
-  <app-menu-perfil></app-menu-perfil>
-  <div class="container">
-    <h1 class="menu">My profile</h1>
-    <div class="titulo">
-      <p>Personal information</p>
+<app-menu-perfil></app-menu-perfil>
+<div class="container">
+  <div class="menu"><p>My profile</p></div>
+  <div class="titulo">
+    <p>Personal Information</p>
+  </div>
+
+  <form class="form" *ngIf="isEditing" (ngSubmit)="saveChanges()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="formData.name"
+        name="name"
+        required
+      />
     </div>
-
-    <form class="form" *ngIf="isEditing" (ngSubmit)="saveChanges()">
-      <div>
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          [(ngModel)]="formData.name"
-          name="name"
-          required
-        />
-      </div>
-      <div>
-        <label for="lastname">Lastname:</label>
-        <input
-          type="text"
-          id="lastname"
-          [(ngModel)]="formData.lastname"
-          name="lastname"
-          required
-        />
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          [(ngModel)]="formData.email"
-          name="email"
-          required
-        />
-      </div>
-      <div>
-        <label for="phone">Phone:</label>
-        <input
-          type="tel"
-          id="phone"
-          [(ngModel)]="formData.phone"
-          name="phone"
-          required
-        />
-      </div>
-      <button class="editor1" type="submit">Save</button>
-    </form>
-
-    <div class="form1" *ngIf="!isEditing">
-      <p>Name: {{ formData.name }}</p>
-      <p>Lastname: {{ formData.lastname }}</p>
-      <p>Email: {{ formData.email }}</p>
-      <p>Phone: {{ formData.phone }}</p>
-
-      <button class="editor" (click)="editForm()"><p>Editar</p></button>
+    <div class="form-group">
+      <label for="lastname">Lastname:</label>
+      <input
+        type="text"
+        id="lastname"
+        [(ngModel)]="formData.lastname"
+        name="lastname"
+        required
+      />
     </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="formData.email"
+        name="email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input
+        type="tel"
+        id="phone"
+        [(ngModel)]="formData.phone"
+        name="phone"
+        required
+      />
+    </div>
+    <button class="editor1" type="submit">Save</button>
+  </form>
+
+  <div class="form1" *ngIf="!isEditing">
+    <p><strong>Name:</strong> {{ formData.name }}</p>
+    <p><strong>Lastname:</strong> {{ formData.lastname }}</p>
+    <p><strong>Email:</strong> {{ formData.email }}</p>
+    <p><strong>Phone:</strong> {{ formData.phone }}</p>
+
+    <button class="editor" (click)="editForm()">Edit</button>
   </div>
 </div>

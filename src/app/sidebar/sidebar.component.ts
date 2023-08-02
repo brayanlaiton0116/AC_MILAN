@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from './../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -7,4 +8,10 @@ import { AuthService } from './../services/auth.service';
 })
 export class SidebarComponent {
   AuthService = inject(AuthService);
+  constructor(private router: Router) {}
+
+  logout() {
+    localStorage.removeItem('rememberedData');
+    this.router.navigate(['/login']);
+  }
 }

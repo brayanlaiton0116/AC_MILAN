@@ -269,10 +269,13 @@ a {
 
 @media only screen and (max-width: 390px) {
   .navbar {
-    width: 100%;
-    height: 12%;
+    width: 81.7%;
+    height: 8%;
   }
-
+  .search {
+    width: 25%;
+    margin-top: -275px;
+  }
   .menu_izquierda li a {
     display: none;
   }

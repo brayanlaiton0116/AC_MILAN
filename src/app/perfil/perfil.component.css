@@ -1,238 +1,154 @@
 .container {
-  height: 94.5%;
-  width: 84.5%;
-  background-color: rgb(21, 21, 21);
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  margin-top: 70px;
 }
 
 .menu {
-  position: absolute;
-  width: 100%;
-  height: 18%;
-  margin: 0;
-  padding: 0px 30px;
-  left: 190px;
-  font-size: 30px;
-  background-color: rgb(228, 227, 227);
-  color: rgb(7, 7, 7);
-  top: 55px;
+  width: 1066px;
   display: flex;
   justify-content: left;
   align-items: center;
-  list-style: none;
+  background-color: #f1f1f1;
+  color: #000000;
+  text-align: center;
+  margin-left: 185px;
 }
-
+.menu p {
+  font-size: 30px;
+  padding: 5px;
+  margin-left: 50px;
+}
 .titulo {
-  position: absolute;
-  width: 100%;
-  height: 80%;
-  margin: 0;
-  padding: 0px 30px;
-  left: 190px;
-  background-color: rgb(26, 26, 26);
-  top: 147px;
+  width: 1066px;
   display: flex;
   justify-content: left;
-  list-style: none;
-  color: rgb(255, 255, 255);
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  margin-left: 185px;
 }
-
 .titulo p {
-  font-size: 28px;
-  margin: 10px 0px;
-  padding: 0;
+  font-size: 30px;
+  padding: 5px;
+  margin-left: 50px;
 }
-
 .form {
-  position: absolute;
-  left: 300px;
-  font-size: 20px;
-  background-color: rgb(26, 26, 26);
-  top: 200px;
+  width: 1064px;
+  padding: 15px;
+  color: white;
+  border: 1px solid #ccc;
+  background-color: #333;
+  margin-left: 187px;
+}
+.form1 {
+  width: 1064px;
+  padding: 50px 130px;
+  color: white;
+  border: 1px solid #ccc;
+  background-color: #333;
+  margin-left: 187px;
   display: grid;
-  grid-template-columns: 103px 103px;
-  grid-template-rows: 20px;
-  gap: 80px 320px;
-  justify-content: left;
-  list-style: none;
-  color: rgb(255, 255, 255);
+  grid-template-columns: 105px 105px;
+  gap: 60px 150px;
 }
 
-.form1 {
-  position: absolute;
-  left: 319px;
-  top: 250px;
-  display: grid;
-  grid-template-columns: 103px 103px;
-  grid-template-rows: 20px;
-  gap: 60px 320px;
-  justify-content: left;
-  list-style: none;
-  color: rgb(255, 255, 255);
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.editor,
+.editor1 {
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f44336;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editor1 {
+  margin-top: 15px;
+  background-color: #e53935;
+}
+
+.editor:hover,
+.editor1:hover {
+  background-color: #4caf50;
 }
 
 .form1 p {
-  font-size: 22px;
-  margin: 0px 20px;
+  margin: 5px 0;
 }
 
-.editor {
-  width: 100px;
-  height: 50px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 5px;
-  background-color: rgb(228, 227, 227);
-  color: black;
-  list-style: none;
-  border: none;
+.form1 strong {
+  margin-right: 10px;
 }
-
-.editor p {
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.editor:hover {
-  color: white;
-  background-color: rgb(231, 33, 33);
-}
-.editor1 {
-  width: 100px;
-  height: 50px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 5px;
-  background-color: rgb(228, 227, 227);
-  color: black;
-  list-style: none;
-  border: none;
-}
-
-.editor1 p {
-  display: inline;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.editor1:hover {
-  color: white;
-  background-color: rgb(231, 33, 33);
-}
-.desc {
-  margin: 10px 0px;
-  display: block;
-  justify-content: left;
-  align-items: center;
-  text-align: left;
-}
-#check {
-  display: none;
-}
-.container .btn_one i {
-  color: white;
-  font-size: 30px;
-  font-weight: 700px;
-  position: absolute;
-  left: 16px;
-  line-height: 60px;
-  cursor: pointer;
-  opacity: 1;
-  transition: all 0.3s linear;
-}
-
-@media screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    height: 100%;
-  }
-
+@media screen and (max-width: 770px) {
   .menu {
-    font-size: 20px;
-    position: absolute;
-    width: 100%;
+    width: 105%;
     height: 13%;
-    margin: 0;
-    left: 0;
-    padding: 0px 30px;
+    margin-left: -12px;
     background-color: rgb(231, 33, 33);
-    top: 92px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    list-style: none;
+    margin-top: -18px;
     color: rgb(248, 247, 247);
   }
-
+  .menu p {
+    display: block;
+    margin: 25px 13px;
+    text-align: center;
+  }
   .titulo {
-    width: 100%;
-    height: 120%;
-    left: 0;
-    margin: 0;
-    padding: 0px 30px;
+    width: 105%;
+    height: 13%;
+    margin-left: -12px;
     background-color: rgb(26, 26, 26);
-    top: 160px;
-    display: flex;
-    justify-content: left;
-    list-style: none;
-    color: rgb(255, 255, 255);
-    font-size: 24px;
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
   }
 
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
   .form {
-    height: 100%;
-    height: 100%;
-    left: 40px;
-    display: grid;
-    grid-template-columns: 103px;
-    grid-template-rows: 40px;
-    font-size: 20px;
-    gap: 70px 10px;
+    display: block;
+    width: 105.8%;
+    padding: 15px;
+    color: white;
+    border: 1px solid #ccc;
+    background-color: #333;
+    margin-left: -15px;
   }
-
   .form1 {
-    height: 100%;
-    left: 40px;
-    display: grid;
-    grid-template-columns: 103px;
-    grid-template-rows: 40px;
-    font-size: 20px;
-    gap: 50px 10px;
-  }
-
-  .editor {
-    width: 100px;
-    height: 40px;
-    margin: 12px 20px;
-    font-size: 14px;
-  }
-  .editor p {
-    display: inline;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .editor1 {
-    width: 100px;
-    height: 40px;
-    margin: 1px 5px;
-    font-size: 20px;
-  }
-  .editor1 p {
-    display: inline;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .desc {
-    margin: 5px 0px;
+    display: block;
+    width: 105.5%;
+    color: white;
+    border: 1px solid #ccc;
+    background-color: #333;
+    margin-left: 0;
+    padding: 25px 50px;
+    margin-left: -15px;
   }
 }

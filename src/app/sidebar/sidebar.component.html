@@ -43,6 +43,15 @@
           ><i class="fi fi-sr-user"></i>PROFILE</a
         >
       </li>
+      <li>
+        <a
+          (click)="logout()"
+          *ngIf="AuthService.isLogged()"
+          [routerLink]="['/login']"
+          ><i class="fa-solid fa-power-off" style="color: #d5dae2"></i>LOG OUT
+        </a>
+        >
+      </li>
     </ul>
   </div>
 </body>
