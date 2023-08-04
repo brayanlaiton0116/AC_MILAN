@@ -5,7 +5,7 @@
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css");
 @import url("https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css");
 
-body {
+* {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;

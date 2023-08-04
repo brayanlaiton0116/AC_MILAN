@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
   isCartOpen: boolean = false;
   menu: boolean = false;
   search: boolean = false;
+  selectedOption: string;
 
   myCart$ = this.storeService.myCart$;
 
@@ -31,28 +32,63 @@ export class NavbarComponent implements OnInit {
   ) {}
   ngOnInit(): void {}
 
+  navigateToOption() {
+    if (this.selectedOption === 'login') {
+      this.router.navigate(['/login']);
+    } else if (this.selectedOption === 'register') {
+      this.router.navigate(['/register']);
+    }
+  }
+
   toggleMenu() {
     this.menuAbierto = !this.menuAbierto;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
+    this.iconosAbierto = false;
+    this.isCartOpen = false;
   }
 
   toggleSearch() {
     this.SearchAbierto = !this.SearchAbierto;
+    this.menuAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
+    this.iconosAbierto = false;
+    this.isCartOpen = false;
   }
 
   toggleCart() {
     this.Cart = !this.Cart;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Perfil = false;
+    this.iconosAbierto = false;
   }
 
   togglePerfil() {
     this.Perfil = !this.Perfil;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.iconosAbierto = false;
+    this.isCartOpen = false;
   }
 
   cerrarMenu() {
+    this.isCartOpen = !this.isCartOpen;
     this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
   }
 
   onToggleCard() {
     this.isCartOpen = !this.isCartOpen;
+    this.menuAbierto = false;
+    this.SearchAbierto = false;
+    this.Cart = false;
+    this.Perfil = false;
   }
 
   closeCart() {

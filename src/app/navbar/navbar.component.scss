@@ -99,7 +99,7 @@ a {
 .cart {
   position: relative;
   margin: right 5px;
-
+  top: 3px;
   .marcador {
     position: relative;
     left: 9.1px;
@@ -206,7 +206,7 @@ a {
 }
 .search {
   background-color: #221f1f;
-  padding: 15px;
+  padding: 10px;
   width: 100%;
   display: grid;
   place-items: center;
@@ -240,31 +240,26 @@ a {
   top: 0.5rem;
   color: white;
   margin: 0 15px;
+  right: -10px;
 }
 
-@media only screen and (max-width: 968px) {
-  .menu_izquierda li a {
-    display: none;
-  }
-  .menu_derecha ul li a {
-    display: none;
-  }
-  .menu_centro {
-    width: 15px;
-    place-items: center;
-    display: none;
-  }
+.user {
+  background-color: rgb(55, 55, 55);
+  color: #ffffff;
+  position: absolute;
+  border-radius: 5px;
+  top: 37px;
+  left: 30px;
+  padding: 10px;
+  margin: 5px;
+}
 
-  .menu_d {
-    display: block;
-    border-radius: 5px;
-  }
-  .cart {
-    width: 30px;
-    height: 30px;
-    margin: 0 10px;
-    border-radius: 5px;
-  }
+.user option {
+  margin: 5px 0;
+}
+.user option:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ccc;
 }
 
 @media only screen and (max-width: 390px) {

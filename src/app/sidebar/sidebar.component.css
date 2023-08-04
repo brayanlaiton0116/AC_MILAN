@@ -24,7 +24,7 @@
   width: 100%;
   color: rgb(246, 246, 246);
   background: rgb(21, 21, 21);
-  line-height: 65px;
+  line-height: 59px;
   font-size: 20px;
   padding-left: 10px;
   box-sizing: border-box;
@@ -45,7 +45,7 @@ ul li:hover a {
 }
 
 .sidebar ul a:hover {
-  color: rgb(46, 46, 46);
+  color: rgb(0, 0, 0);
   background: white;
 }
 @media screen and (max-width: 390px) {

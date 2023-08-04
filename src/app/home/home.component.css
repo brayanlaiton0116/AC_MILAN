@@ -84,6 +84,7 @@ h3 {
   margin-top: 20px;
 }
 .mas button {
+  border: none;
   border-radius: 5px;
   background-color: #1a161a;
   color: rgb(247, 244, 244);

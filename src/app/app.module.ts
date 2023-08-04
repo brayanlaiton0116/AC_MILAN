@@ -26,7 +26,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuPerfilComponent } from './menuperfil/menu-perfil.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { TerminosCondicionesComponent } from './terminos/terminos-condiciones/terminos-condiciones.component';
 import { LoginGuard } from './guards/login.guard';
@@ -57,7 +56,6 @@ const routes: Routes = [
     ProductoComponent,
     CartComponent,
     PagErrorComponent,
-    MenuPerfilComponent,
     PerfilComponent,
     TerminosCondicionesComponent,
     SidebarComponent,

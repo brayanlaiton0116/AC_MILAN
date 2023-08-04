@@ -50,7 +50,9 @@
   <div class="container">
     <div class="card" *ngFor="let product of allProducts">
       <div class="imagen" (click)="redirectToDetalleProducto(product.id)">
-        <img [src]="product.imagen" class="w-100" /><i class="fi fi-rs-heart"></i>
+        <img [src]="product.imagen" class="w-100" /><i
+          class="fi fi-rs-heart"
+        ></i>
       </div>
       <div class="card-body">
         <a class="producto">
@@ -82,3 +84,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

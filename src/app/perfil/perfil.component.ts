@@ -4,7 +4,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
-import { Router } from '@angular/router';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -42,10 +42,6 @@ export class PerfilComponent {
   isLoggedIn: boolean = false;
 
   login(email: string, password: string): boolean {
-    // Aquí puedes implementar la lógica de verificación de credenciales.
-    // Si las credenciales son válidas, establece isLoggedIn en true y retorna true.
-    // De lo contrario, retorna false.
-
     if (email === 'brayan@gmail.com' && password === '123456') {
       this.isLoggedIn = true;
       return true;
