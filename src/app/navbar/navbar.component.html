@@ -1,10 +1,7 @@
 <nav class="navbar">
   <div class="menu_izquierda">
     <div class="menu_d">
-      <a
-        *ngIf="AuthService.isLogged()"
-        (click)="menu = !menu"
-        (click)="toggleMenu()"
+      <a (click)="menu = !menu" (click)="toggleMenu()"
         ><img src="assets/img/menu.png"
       /></a>
     </div>
@@ -37,12 +34,15 @@
     <div class="iconos">
       <ul>
         <li>
-          <a [routerLink]="['/error']"><i class="fi fi-rs-heart"></i></a>
+          <a><i class="fi fi-rs-heart"></i></a>
         </li>
       </ul>
       <ul>
         <li>
-          <a (click)="togglePerfil()" (click)="iconosAbierto = !iconosAbierto"
+          <a
+            [routerLink]="['/perfil']"
+            (click)="togglePerfil()"
+            (click)="iconosAbierto = !iconosAbierto"
             ><i class="fi fi-sr-user" style="color: #d5dae2"></i>
           </a>
         </li>

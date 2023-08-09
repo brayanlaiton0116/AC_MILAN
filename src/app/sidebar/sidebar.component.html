@@ -1,13 +1,20 @@
 <body>
   <div class="sidebar">
-    <header>AC MILAN</header>
     <ul>
       <li>
-        <a [routerLink]="['/perfil']"><i class="fi fi-sr-user"></i> Profile</a>
+        <a [routerLink]="['/home']"> <i class="fi fi-rs-home"></i> Home </a>
+      </li>
+      <li>
+        <a [routerLink]="['/shop']"
+          ><i class="fi fi-rs-shopping-bag"></i> Shop</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['/perfil']"><i class="fi fi-rs-user"></i> Profile</a>
       </li>
 
       <li>
-        <a [routerLink]="['/error']"><i class="fi fi-rr-ticket"></i> Coupons</a>
+        <a [routerLink]="['/error']"><i class="fi fi-rs-ticket"></i> Coupons</a>
       </li>
 
       <li>
@@ -26,11 +33,11 @@
 
       <li>
         <a [routerLink]="['/shop']"
-          ><i class="fa-sharp fa-solid fa-circle-info"></i>Help</a
+          ><i class="fi fi-rs-interrogation"></i>Help</a
         >
       </li>
       <li>
-        <a (click)="logout()"> <i class="fa-solid fa-power-off"></i>Log out</a>
+        <a (click)="logout()"><i class="fi fi-rr-power"></i>Log out</a>
       </li>
     </ul>
   </div>

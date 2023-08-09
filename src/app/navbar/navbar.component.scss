@@ -33,6 +33,9 @@ ul {
   border-radius: 2px;
   padding: 4px 3px;
 }
+.menu_d a {
+  display: none;
+}
 .menu_d:hover {
   background-color: rgb(255, 0, 0);
   transition: 0.5s;
@@ -74,9 +77,8 @@ ul {
   display: flex;
   margin: 15px;
   position: absolute;
-  right: 10px;
+  right: -5px;
   font-size: 18px;
-  padding: 3px;
 }
 
 .menu_derecha a:hover {
@@ -87,7 +89,7 @@ ul {
   position: relative;
   border-radius: 5px;
   line-height: 10px;
-  margin-right: 10px;
+  margin-right: 25px;
   font-size: 17px;
   padding: 7px;
 }
@@ -211,7 +213,7 @@ a {
   display: grid;
   place-items: center;
   font-size: 20px;
-  gap: 10px;
+  gap: 8px;
   position: fixed;
   top: 12%;
   z-index: 4;
@@ -240,7 +242,7 @@ a {
   top: 0.5rem;
   color: white;
   margin: 0 15px;
-  right: -10px;
+  right: -3px;
 }
 
 .user {
@@ -271,6 +273,9 @@ a {
     width: 25%;
     margin-top: -275px;
   }
+  .menu_d a {
+    display: flex;
+  }
   .menu_izquierda li a {
     display: none;
   }
@@ -279,6 +284,42 @@ a {
   }
   .menu_centro {
     width: 10px;
+    place-items: center;
+    display: none;
+  }
+
+  .menu_d {
+    display: block;
+    border-radius: 5px;
+  }
+  .cart {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+  }
+}
+@media only screen and (max-width: 968px) {
+  .menu_d a {
+    display: flex;
+  }
+  .menu_izquierda li a {
+    display: none;
+  }
+  .menu_derecha li a {
+    position: relative;
+    border-radius: 5px;
+    line-height: 10px;
+    margin-right: -15px;
+    font-size: 17px;
+    padding: 7px;
+  }
+  .menu_derecha ul li a {
+    display: none;
+  }
+
+  .menu_centro {
+    width: 15px;
     place-items: center;
     display: none;
   }
