@@ -1,7 +1,10 @@
 <nav class="navbar">
   <div class="menu_izquierda">
     <div class="menu_d">
-      <a (click)="menu = !menu" (click)="toggleMenu()"
+      <a
+        *ngIf="AuthService.isLogged()"
+        (click)="menu = !menu"
+        (click)="toggleMenu()"
         ><img src="assets/img/menu.png"
       /></a>
     </div>

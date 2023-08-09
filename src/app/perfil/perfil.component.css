@@ -158,9 +158,21 @@
     color: white;
     border: 1px solid #ccc;
     background-color: #333;
-    margin-left: 0;
     padding: 25px 50px;
     margin-left: -15px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
   }
 }
 @media screen and (max-width: 968px) {
