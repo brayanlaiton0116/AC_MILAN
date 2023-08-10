@@ -82,10 +82,13 @@
   <app-cart (click)="toggleCart()" (closeCartEvent)="closeCart()"></app-cart>
 </div>
 
-<div>
-  <div class="search" *ngIf="SearchAbierto">
-    <input type="text" placeholder="Search" />
-  </div>
+<div class="search" *ngIf="SearchAbierto">
+  <input
+    type="text"
+    placeholder="Search"
+    [(ngModel)]="searchTerm"
+    (input)="performSearch()"
+  />
 </div>
 
 <app-sidebar *ngIf="menuAbierto"></app-sidebar>

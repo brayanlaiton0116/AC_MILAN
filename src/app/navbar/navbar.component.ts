@@ -23,7 +23,21 @@ export class NavbarComponent implements OnInit {
   myCart$ = this.storeService.myCart$;
 
   AuthService = inject(AuthService);
+  filteredProducts: any[] = [];
+  products: any;
 
+
+  performSearch() {
+    if (this.searchTerm.trim() === '') {
+      this.filteredProducts = []; // Si el término de búsqueda está vacío, no mostrar ningún producto
+    } else {
+      // Filtrar productos según el término de búsqueda
+      this.filteredProducts = this.products.filter((product: { name: string; }) =>
+        product.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+  }
+  
   constructor(
     private storeService: StoreService,
     private breakpointObserver: BreakpointObserver,
