@@ -63,8 +63,8 @@ export class LoginComponent implements OnInit {
         );
       } else {
         localStorage.removeItem('rememberedData');
-        this.router.navigate(['/login'])
-      };
+        this.router.navigate(['/login']);
+      }
 
       if (email === 'brayan@gmail.com' && password === '123456789') {
         this.router.navigate(['/perfil']);
