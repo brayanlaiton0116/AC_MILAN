@@ -10,34 +10,59 @@
         >
       </li>
       <li>
-        <a [routerLink]="['/perfil']"><i class="fi fi-rs-user"></i> Profile</a>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/error']"
+          ><i class="fi fi-rs-globe"></i> The Club</a
+        >
+      </li>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/login']"
+          ><i class="fi fi-rs-user"></i> Login</a
+        >
+      </li>
+      <li>
+        <a *ngIf="!AuthService.isLogged()" [routerLink]="['/registro']"
+          ><i class="fi fi-rs-users-alt"></i> Register</a
+        >
+      </li>
+      <li>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/perfil']"
+          ><i class="fi fi-rs-user"></i> Profile</a
+        >
       </li>
 
       <li>
-        <a [routerLink]="['/error']"><i class="fi fi-rs-ticket"></i> Coupons</a>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/error']"
+          ><i class="fi fi-rs-ticket"></i> Coupons</a
+        >
       </li>
 
       <li>
-        <a [routerLink]="['/perfil']"><i class="fi fi-rs-lock"></i>Security</a>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/perfil']"
+          ><i class="fi fi-rs-lock"></i>Security</a
+        >
       </li>
 
       <li>
-        <a [routerLink]="['/shop']">
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/shop']">
           <i class="fi fi-rs-bags-shopping"></i>Orders</a
         >
       </li>
 
       <li>
-        <a [routerLink]="['/shop']"><i class="fi fi-rs-heart"></i>Favorites</a>
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/shop']"
+          ><i class="fi fi-rs-heart"></i>Favorites</a
+        >
       </li>
 
       <li>
-        <a [routerLink]="['/shop']"
+        <a *ngIf="AuthService.isLogged()" [routerLink]="['/shop']"
           ><i class="fi fi-rs-interrogation"></i>Help</a
         >
       </li>
       <li>
-        <a (click)="logout()"><i class="fi fi-rr-power"></i>Log out</a>
+        <a *ngIf="AuthService.isLogged()" (click)="logout()"
+          ><i class="fi fi-rr-power"></i>Log out</a
+        >
       </li>
     </ul>
   </div>

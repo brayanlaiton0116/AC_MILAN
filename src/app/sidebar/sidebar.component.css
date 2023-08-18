@@ -56,7 +56,12 @@ ul li:hover a {
     height: 100%;
     background: rgb(17, 17, 17);
     transition: all 0.5s ease;
-    top: 2%;
+    top: 6.7%;
     z-index: 9;
+  }
+}
+@media screen and (max-width: 820px) {
+  .sidebar {
+    top: 7%;
   }
 }
