@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  margin-top: 58px;
+  margin-top: 48px;
 }
 .carousel slide {
   position: relative;
@@ -20,4 +20,10 @@
 }
 .carousel-indicators {
   z-index: 4;
+}
+@media screen and (max-width: 375px) {
+  .header {
+    display: flex;
+    margin-top: 20px;
+  }
 }
