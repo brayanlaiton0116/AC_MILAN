@@ -1,12 +1,11 @@
 .container {
-  width: 110.8%;
+  width: 100%;
   height: 119vh;
   margin: 0;
   padding: 65px 0;
 }
-
 .menu {
-  width: 116.8%;
+  width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -20,7 +19,7 @@
   margin-left: 15px;
 }
 .titulo {
-  width: 116.8%;
+  width: 100%;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -35,14 +34,14 @@
   margin-left: 15px;
 }
 .form {
-  width: 116.8%;
+  width: 100%;
   padding: 30px;
   color: white;
   background-color: #333;
-  height: 80vh;
+  height: 82vh;
 }
 .form1 {
-  width: 116.8%;
+  width: 100%;
   height: 82vh;
   font-size: 30px;
   padding: 40px 60px;
@@ -52,17 +51,14 @@
   grid-template-columns: 105px 105px;
   gap: 0px 300px;
 }
-
 .form-group {
   margin-bottom: 15px;
 }
-
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-
 .form-group input {
   width: 100%;
   padding: 10px;
@@ -116,81 +112,24 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 968px) {
-  .container {
-    width: 93%;
-    height: 119vh;
-    margin: 0;
-    padding: 70px 0;
-  }
-  .menu {
-    width: 111.5%;
-    height: 13%;
-    margin-left: -12px;
-    background-color: rgb(231, 33, 33);
-    margin-top: -1px;
-    color: rgb(248, 247, 247);
-  }
-  .menu p {
-    margin-left: 25px;
-    margin-top: 1px;
-  }
-  .titulo {
-    width: 111.5%;
-    height: 13%;
-    margin-left: -12px;
-    background-color: rgb(26, 26, 26);
-    color: rgb(248, 247, 247);
-    font-size: 15px;
-  }
-
-  .titulo p {
-    margin-left: 25px;
-    margin-top: 1px;
-  }
-  .form {
-    display: block;
-    width: 111.5%;
-    height: 100vh;
-    padding: 25px;
-    color: white;
-    border: 1px solid #ccc;
-    background-color: #333;
-    margin-left: -15px;
-  }
-  .form1 {
-    display: block;
-    width: 111.5%;
-    height: 100vh;
-    color: white;
-    border: 1px solid #ccc;
-    background-color: #333;
-    padding: 25px 50px;
-    margin-left: -15px;
-  }
-  .form1 p {
-    margin: 50px 0;
-  }
-}
-
 @media screen and (max-width: 390px) {
   .menu {
-    width: 105%;
+    width: 102.5%;
     height: 13%;
-    margin-left: -12px;
+    margin-left: -10px;
     background-color: rgb(231, 33, 33);
-    margin-top: -18px;
+    margin-top: -10px;
     color: rgb(248, 247, 247);
   }
   .menu p {
     display: block;
-    margin: 25px 13px;
+    margin: 20px 10px;
     text-align: center;
   }
   .titulo {
-    width: 105%;
+    width: 102.5%;
     height: 13%;
-    margin-left: -12px;
+    margin-left: -10px;
     background-color: rgb(26, 26, 26);
     margin-top: -15px;
     color: rgb(248, 247, 247);
@@ -203,73 +142,333 @@
   }
   .form {
     display: block;
-    width: 105.8%;
-    padding: 15px;
-    color: white;
-    border: 1px solid #ccc;
-    background-color: #333;
-    margin-left: -15px;
+    width: 99.6%;
+    height: 88vh;
   }
   .form1 {
     display: block;
-    width: 105.5%;
-    color: white;
-    border: 1px solid #ccc;
-    background-color: #333;
-    padding: 25px 50px;
-    margin-left: -15px;
+    width: 99.6%;
+    height: 88vh;
   }
   .form1 p {
     margin: 50px 0;
   }
-  @media screen and (max-width: 375px) {
-    .menu {
-      width: 60%;
-      height: 13%;
-      margin-left: -12px;
-      background-color: rgb(231, 33, 33);
-      margin-top: -18px;
-      color: rgb(248, 247, 247);
-    }
-    .menu p {
-      display: block;
-      margin: 25px 13px;
-      text-align: center;
-    }
-    .titulo {
-      width: 60%;
-      height: 13%;
-      margin-left: -12px;
-      background-color: rgb(26, 26, 26);
-      margin-top: -15px;
-      color: rgb(248, 247, 247);
-      font-size: 15px;
-    }
+  .form .form-group {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 393px) {
+  .menu {
+    width: 102.5%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: -10px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 102.5%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
 
-    .titulo p {
-      margin-left: 12px;
-      margin-top: 15px;
-    }
-    .form {
-      display: block;
-      width: 60%;
-      padding: 15px;
-      color: white;
-      border: 1px solid #ccc;
-      background-color: #333;
-      margin-left: -15px;
-    }
-    .form1 {
-      display: block;
-      width: 60%;
-      color: white;
-      border: 1px solid #ccc;
-      background-color: #333;
-      padding: 25px 50px;
-      margin-left: -15px;
-    }
-    .form1 p {
-      margin: 50px 0;
-    }
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 99.6%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 99.6%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 50px 0;
+  }
+  .form .form-group {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 414px) {
+  .menu {
+    width: 102.5%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: -10px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 102.5%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 100%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 100%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 50px 0;
+  }
+  .form .form-group {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 720px) {
+  .menu {
+    width: 134%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: -10px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 134%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 133%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 133%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 50px 0;
+  }
+  .form .form-group {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 108%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: -10px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 108%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 106.7%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 106.7%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 50px 0;
+  }
+  .form .form-group {
+    margin: 50px 0;
+  }
+}
+@media screen and (min-width: 820px) {
+  .menu {
+    width: 115.2%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: -10px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 115.2%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 113.8%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 113.8%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 100px 0;
+  }
+  .form .form-group {
+    margin: 100px 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 107%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: 5px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 107%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 106.1%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 106.1%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 50px 0;
+  }
+  .form .form-group {
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu {
+    width: 113.3%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(231, 33, 33);
+    margin-top: 25px;
+    color: rgb(248, 247, 247);
+  }
+  .menu p {
+    display: block;
+    margin: 20px 10px;
+    text-align: center;
+  }
+  .titulo {
+    width: 113.3%;
+    height: 13%;
+    margin-left: -10px;
+    background-color: rgb(26, 26, 26);
+    margin-top: -15px;
+    color: rgb(248, 247, 247);
+    font-size: 15px;
+  }
+
+  .titulo p {
+    margin-left: 12px;
+    margin-top: 15px;
+  }
+  .form {
+    display: block;
+    width: 112.3%;
+    height: 88vh;
+  }
+  .form1 {
+    display: block;
+    width: 112.3%;
+    height: 88vh;
+  }
+  .form1 p {
+    margin: 70px 0;
+  }
+  .form .form-group {
+    margin: 50px 0;
   }
 }
