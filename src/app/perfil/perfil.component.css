@@ -433,7 +433,7 @@
     height: 13%;
     margin-left: -10px;
     background-color: rgb(231, 33, 33);
-    margin-top: 25px;
+    margin-top: 5px;
     color: rgb(248, 247, 247);
   }
   .menu p {
@@ -466,9 +466,9 @@
     height: 88vh;
   }
   .form1 p {
-    margin: 70px 0;
+    margin: 50px 0;
   }
   .form .form-group {
-    margin: 50px 0;
+    margin: 20px 0;
   }
 }
