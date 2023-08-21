@@ -162,7 +162,8 @@ div a img {
   transform: scale(1.1);
   transition: 3s;
 }
-@media screen and (max-width: 390px) {
+
+@media screen and (min-width: 390px) {
   .col {
     width: 100%;
     justify-content: center;

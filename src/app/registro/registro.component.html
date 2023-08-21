@@ -20,9 +20,9 @@
                   class="form"
                 >
                   <div class="name">
-                    <label class="form-label" for="form2Example22">Name</label>
+                    <label class="form-label" for="name">Name</label>
                     <input
-                      type="name"
+                      type="text"
                       id="name"
                       class="form-control"
                       formControlName="name"
@@ -30,11 +30,7 @@
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      *ngIf="
-                        name.invalid &&
-                        formSubmitted &&
-                        (name.dirty || name.touched)
-                      "
+                      *ngIf="name.invalid && formSubmitted"
                     >
                       <span *ngIf="name.errors?.['required']"
                         >This field is required.</span
@@ -46,23 +42,17 @@
                   </div>
 
                   <div class="lastname">
-                    <label class="form-label" for="form2Example22"
-                      >Lastname</label
-                    >
+                    <label class="form-label" for="lastname">Lastname</label>
                     <input
-                      type="lastname"
+                      type="text"
                       id="lastname"
                       class="form-control"
                       formControlName="lastname"
-                      placeholder="Enter your Lastame"
+                      placeholder="Enter your Lastname"
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      *ngIf="
-                        lastname.invalid &&
-                        formSubmitted &&
-                        (lastname.dirty || lastname.touched)
-                      "
+                      *ngIf="lastname.invalid && formSubmitted"
                     >
                       <span *ngIf="lastname.errors?.['required']"
                         >This field is required.</span
@@ -73,9 +63,9 @@
                     </div>
                   </div>
                   <div class="email">
-                    <label class="form-label" for="form2Example22">Email</label>
+                    <label class="form-label" for="email">Email</label>
                     <input
-                      type="email"
+                      type="text"
                       id="email"
                       class="form-control"
                       formControlName="email"
@@ -83,11 +73,7 @@
                     />
                     <div
                       class="alert alert-danger mb-2"
-                      *ngIf="
-                        email.invalid &&
-                        formSubmitted &&
-                        (email.dirty || email.touched)
-                      "
+                      *ngIf="email.invalid && formSubmitted"
                     >
                       <span *ngIf="email.errors?.['required']"
                         >This field is required.</span
@@ -98,9 +84,7 @@
                     </div>
                   </div>
                   <div class="form-group">
-                    <label class="form-label" for="form2Example22"
-                      >Password</label
-                    >
+                    <label class="form-label" for="password">Password</label>
                     <input
                       [type]="changetypePassword ? 'password' : 'text'"
                       id="password"
@@ -115,28 +99,24 @@
                         [ngClass]="
                           visiblePassword ? 'fa fa-eye-slash' : 'fa fa-eye'
                         "
-                      ></i
-                    ></span>
+                      ></i>
+                    </span>
 
                     <div
                       class="alert alert-danger mb-2"
-                      *ngIf="
-                        password.invalid &&
-                        formSubmitted &&
-                        (password.dirty || password.touched)
-                      "
+                      *ngIf="password.invalid && formSubmitted"
                     >
                       <span *ngIf="password.errors?.['required']"
                         >This field is required.</span
                       >
                       <span *ngIf="password.errors?.['minlength']"
-                        >minimum 8 characters.</span
+                        >Minimum 8 characters.</span
                       >
                     </div>
                   </div>
 
                   <div class="form-group">
-                    <label class="form-label" for="form2Example22"
+                    <label class="form-label" for="confirmPassword"
                       >Confirm Password</label
                     >
 
@@ -154,16 +134,12 @@
                         [ngClass]="
                           visibleConfirm ? 'fa fa-eye-slash' : 'fa fa-eye'
                         "
-                      ></i
-                    ></span>
+                      ></i>
+                    </span>
 
                     <div
                       class="alert alert-danger mb-2"
-                      *ngIf="
-                        confirmPassword.invalid &&
-                        formSubmitted &&
-                        (confirmPassword.dirty || confirmPassword.touched)
-                      "
+                      *ngIf="confirmPassword.invalid && formSubmitted"
                     >
                       <span *ngIf="confirmPassword.errors?.['required']"
                         >This field is required.</span
@@ -174,30 +150,28 @@
                         >Passwords don't match.</span
                       >
                     </div>
-                    <div class="form-group">
-                      <input
-                        class="cuadro"
-                        type="checkbox"
-                        id="termsAndConditions"
-                        formControlName="termsAndConditions"
-                        (change)="termsAccepted = !termsAccepted"
-                      />
-                      <label class="form-label" for="form2Example22"
-                        ><a [routerLink]="'/terminos'"
-                          >Términos y Condiciones</a
-                        >
-                      </label>
-                      <div
-                        class="alert alert-danger mb-2"
-                        *ngIf="!termsAccepted && formSubmitted"
-                      >
-                        <span class="infor">
-                          You must accept the terms and conditions.
-                        </span>
-                      </div>
-                    </div>
                   </div>
 
+                  <div class="form-group">
+                    <input
+                      class="cuadro"
+                      type="checkbox"
+                      id="termsAndConditions"
+                      formControlName="termsAndConditions"
+                      (change)="termsAccepted = !termsAccepted"
+                    />
+                    <label class="form-label" for="form2Example22"
+                      ><a [routerLink]="'/terminos'">Terms and Conditions</a>
+                    </label>
+                    <div
+                      class="alert alert-danger mb-2"
+                      *ngIf="!termsAccepted && formSubmitted"
+                    >
+                      <span class="infor">
+                        You must accept the terms and conditions.
+                      </span>
+                    </div>
+                  </div>
                   <div class="boton">
                     <button
                       class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
