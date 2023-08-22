@@ -345,53 +345,14 @@ a {
     width: 100%;
     height: 8%;
   }
-  .menu_d a {
-    display: flex;
-  }
-
-  .menu_centro {
-    width: 10px;
-    place-items: center;
-    display: none;
-  }
 }
 @media screen and (max-width: 480px) {
   .navbar {
     width: 100%;
     height: 8%;
   }
-  .menu_d a {
-    display: flex;
-  }
-
-  .menu_derecha ul li a {
-    display: none;
-  }
-  .menu_centro {
-    width: 10px;
-    place-items: center;
-    display: none;
-  }
 }
-@media screen and (max-width: 520px) {
-  .navbar {
-    width: 100%;
-    height: 8%;
-  }
-  .menu_d a {
-    display: flex;
-  }
-
-  .menu_derecha ul li a {
-    display: none;
-  }
-  .menu_centro {
-    width: 10px;
-    place-items: center;
-    display: none;
-  }
-}
-@media screen and (min-width: 778px) {
+@media screen and (max-width: 778px) {
   .menu_d a {
     display: flex;
   }
