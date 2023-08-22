@@ -27,3 +27,21 @@
     margin-top: 20px;
   }
 }
+@media screen and (max-width: 390px) {
+  .header {
+    display: flex;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 422px) {
+  .header {
+    display: flex;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 442px) {
+  .header {
+    display: flex;
+    margin-top: 10px;
+  }
+}
