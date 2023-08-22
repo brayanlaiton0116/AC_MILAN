@@ -346,6 +346,12 @@ a {
     height: 8%;
   }
 }
+@media screen and (max-width: 480px) {
+  .navbar {
+    width: 100%;
+    height: 8%;
+  }
+}
 @media screen and (max-width: 778px) {
   .menu_d a {
     display: flex;
