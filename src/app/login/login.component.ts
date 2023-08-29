@@ -43,7 +43,7 @@ export class LoginComponent implements OnInit {
     );
     if (rememberedData && rememberedData.rememberMe !== null) {
       this.formatoLogin.patchValue({
-        rememberMe: true,
+        rememberMe: false,
       });
     }
   }
@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       const email = this.formatoLogin.value.email;
       const password = this.formatoLogin.value.password;
 
-      if (this.formatoLogin.value.rememberMe) {
+      if (this.formatoLogin) {
         localStorage.setItem(
           'rememberedData',
           JSON.stringify({ rememberMe: true })
