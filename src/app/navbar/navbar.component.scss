@@ -80,21 +80,17 @@ ul {
   padding: 1rem;
   justify-content: space-between;
   display: flex;
-  margin: 15px;
+  margin: 20px;
   position: absolute;
-  right: -5px;
+  right: 5px;
   font-size: 18px;
-}
-
-.menu_derecha a:hover {
-  transition: 0.5s;
 }
 
 .menu_derecha li a {
   position: relative;
   border-radius: 5px;
   line-height: 10px;
-  margin-right: 25px;
+  margin-right: 20px;
   font-size: 17px;
   padding: 7px;
 }
@@ -131,7 +127,7 @@ a {
   position: absolute;
   width: 35px;
   height: 45px;
-  top: -0rem;
+  top: 0.1rem;
   font-size: 22px;
 }
 .carrito {
@@ -234,20 +230,19 @@ a {
 .cart {
   width: 30px;
   height: 30px;
-  margin: 0 10px;
+  margin: 0 15px;
   border-radius: 5px;
 }
 .iconos {
   display: flex;
-  padding: 1px;
-  gap: 18px;
-  justify-content: center;
+  gap: 15px;
+  justify-content: space-between;
   align-items: center;
   position: relative;
-  top: 0.5rem;
+  top: 0.4rem;
   color: white;
-  margin: 0 15px;
-  right: -3px;
+  margin: 0 10px;
+  right: -14px;
 }
 
 .user {

@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegistroComponent } from './registro/registro.component';
-import { CaruselComponent } from './carusel/carusel.component';
 import { ShopComponent } from './shop/shop.component';
 import { ProductoComponent } from './producto/producto.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
@@ -51,7 +50,6 @@ const routes: Routes = [
     FooterComponent,
     LoginComponent,
     RegistroComponent,
-    CaruselComponent,
     ShopComponent,
     ProductoComponent,
     CartComponent,

@@ -162,6 +162,30 @@ div a img {
   transform: scale(1.1);
   transition: 3s;
 }
+.header {
+  display: block;
+  margin-top: 48px;
+}
+.carousel slide {
+  position: relative;
+  justify-content: center;
+}
+.carousel-control-prev-icon {
+  color: black;
+  background-color: black;
+  border-radius: 5px;
+  z-index: 1;
+}
+.carousel-control-next-icon {
+  color: black;
+  background-color: black;
+  border-radius: 5px;
+  z-index: 1;
+}
+.carousel-indicators {
+  z-index: 4;
+}
+
 @media screen and (max-width: 390px) {
   .col {
     width: 100%;
@@ -195,9 +219,7 @@ div a img {
   .contar {
     width: 92%;
     height: 100%;
-    justify-content: center;
-    display: block;
-    align-items: center;
+
     margin: 0;
     margin-top: 0;
   }
@@ -281,6 +303,7 @@ div a img {
     align-items: center;
   }
 }
+
 @media screen and (min-width: 912px) {
   .contar {
     width: 30%;
@@ -289,7 +312,6 @@ div a img {
     display: flex;
     align-items: center;
     margin: 0;
-    margin-left: 320px;
     gap: 20px;
   }
 }
@@ -327,7 +349,7 @@ div a img {
     display: flex;
     align-items: center;
     margin: 0;
-    margin-left: 360px;
+
     gap: 5px;
   }
 }
@@ -340,7 +362,6 @@ div a img {
     align-items: center;
     margin: 0;
     gap: 10px;
-    margin-left: 450px;
   }
   .marcas {
     display: block;
