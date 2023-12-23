@@ -47,18 +47,29 @@
           </a>
         </li>
       </ul>
-
-      <div *ngIf="!AuthService.isLogged()">
-        <div
-          class="user"
-          *ngIf="iconosAbierto"
-          [(ngModel)]="selectedOption"
-          (change)="navigateToOption()"
-        >
-          <option [routerLink]="['/login']" value="login">Login</option>
-          <option [routerLink]="['/registro']" value="register">
-            Register
-          </option>
+      <div>
+        <div *ngIf="!AuthService.isLogged()">
+          <div
+            class="user"
+            *ngIf="iconosAbierto"
+            [(ngModel)]="selectedOption"
+            (change)="navigateToOption()"
+          >
+            <option
+              [routerLink]="['/login']"
+              value="login"
+              *ngIf="!AuthService.isLogged()"
+            >
+              Login
+            </option>
+            <option
+              [routerLink]="['/registro']"
+              value="register"
+              *ngIf="!AuthService.isLogged()"
+            >
+              Register
+            </option>
+          </div>
         </div>
       </div>
     </div>
